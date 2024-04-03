@@ -56,3 +56,29 @@ class GaussianOverlapFunction:
         return (np.pi / (alpha + beta)) ** (3 / 2) * np.exp(
             -alpha * beta / (alpha + beta) * np.linalg.norm(RA - RB) ** 2
         )
+
+    # @staticmethod
+    # def U(alpha, beta, gamma, delta, RA, RB, RC, RD):
+    #    RP = (alpha * RA + gamma * RC) / (alpha + gamma)
+    #    RQ = (beta * RB + delta * RD) / (beta + delta)
+    #    return (
+    #        2
+    #        * np.pi ** (5 / 2)
+    #        / ((alpha + gamma) * (beta + delta) * np.sqrt(alpha + gamma + beta + delta))
+    #        * np.exp(
+    #            -alpha * gamma * np.linalg.norm(RA - RC, axis=1) ** 2 / (alpha + gamma)
+    #            - beta * delta * np.linalg.norm(RB - RD, axis=1) ** 2 / (beta + delta)
+    #        )
+    #        * GaussianOverlapFunction.F(
+    #            (alpha + gamma)
+    #            * (beta + delta)
+    #            * np.linalg.norm(RP - RQ, axis=1) ** 2
+    #            / (alpha + gamma + beta + delta)
+    #        )
+    #    )
+
+    # @staticmethod
+    # def S(alpha, beta, RA, RB):
+    #    return (np.pi / (alpha + beta)) ** (3 / 2) * np.exp(
+    #        -alpha * beta * np.linalg.norm(RA - RB, axis=1) ** 2 / (alpha + beta)
+    #    )
