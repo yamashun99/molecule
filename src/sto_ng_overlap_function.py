@@ -5,24 +5,22 @@ from gaussian_overlap_function import *
 
 class Sto3g:
     @staticmethod
-    def kinetic(cs, alphas, RA, RB):
-        return cs @ GaussianOverlapFunction.T(alphas, alphas, RA, RB) @ cs
+    def kinetic(cs, alphas, betas, RA, RB):
+        return cs @ GaussianOverlapFunction.T(alphas, betas, RA, RB) @ cs
 
     @staticmethod
-    def norm(cs, alphas, RA, RB):
+    def norm(cs, alphas, betas, RA, RB):
         return (
-            cs
-            @ GaussianOverlapFunction.S(alphas[:, None], alphas[None, :], RA, RB)
-            @ cs
+            cs @ GaussianOverlapFunction.S(alphas[:, None], betas[None, :], RA, RB) @ cs
         )
 
     @staticmethod
-    def potential(cs, alphas, RA, RB, RC):
+    def potential(cs, alphas, betas, RA, RB, RC):
         return (
             cs
             @ GaussianOverlapFunction.V(
                 alphas,
-                alphas,
+                betas,
                 RA,
                 RB,
                 RC,
@@ -31,12 +29,12 @@ class Sto3g:
         )
 
     @staticmethod
-    def ee_coulomb(cs, alphas, RA, RB, RC, RD):
+    def ee_coulomb(cs, alphas, betas, gammas, deltas, RA, RB, RC, RD):
         U_mat = GaussianOverlapFunction.U(
             alphas,
-            alphas,
-            alphas,
-            alphas,
+            betas,
+            gammas,
+            deltas,
             RA,
             RB,
             RC,
