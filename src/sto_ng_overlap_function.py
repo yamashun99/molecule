@@ -96,8 +96,10 @@ class StoNGMatrix:
                 )
         return potential_mat
 
-    def get_electron_ion_mat(self):
-        return self.get_electron_ion0_mat() + self.get_electron_ion1_mat()
+    def get_electron_ion_mat(self, Zs=[1, 1]):
+        return (
+            Zs[0] * self.get_electron_ion0_mat() + Zs[1] * self.get_electron_ion1_mat()
+        )
 
     def get_electron_electron_mat(self):
         M = len(self.zetas)
@@ -118,9 +120,9 @@ class StoNGMatrix:
                         )
         return ee_coulomb_mat
 
-    def get_h_mat(self):
+    def get_h_mat(self, Zs=[1, 1]):
         kinetic_mat = self.get_kinetic_mat()
-        electron_ion_mat = self.get_electron_ion_mat()
+        electron_ion_mat = self.get_electron_ion_mat(Zs=Zs)
         return kinetic_mat + electron_ion_mat
 
     def get_J_mat(self, c_sto3g):
