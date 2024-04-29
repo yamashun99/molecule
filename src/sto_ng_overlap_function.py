@@ -1,6 +1,6 @@
 import numpy as np
 
-from gaussian_overlap_function import *
+from gaussian_overlap_s import *
 
 
 class StoNG:
