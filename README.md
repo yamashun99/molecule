@@ -1,0 +1,2 @@
+# STO-NG基底による分子の電子状態計算
+ガウシアンの積分は J. Goings "A (hopefully) gentle guide to the computer implementation of molecular integrals over Gaussian basis functions." (https://joshuagoings.com/2017/04/28/integrals/) に従って計算しています。

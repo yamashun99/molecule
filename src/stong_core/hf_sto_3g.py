@@ -15,32 +15,33 @@ from sto_ng_matrix import *
 
 
 def make_matrix(zeta_1s, zeta_2sp, df, Z):
+    center = np.array([0, 0, 0])
     param1s = {
-        "center": np.array([0, 0, 0]),
+        "center": center,
         "lmn": (0, 0, 0),
         "exps": np.array(df["exps_1"]) * zeta_1s**2,
         "coefs": np.array(df["coefs_1s"]),
     }
     param2s = {
-        "center": np.array([0, 0, 0]),
+        "center": center,
         "lmn": (0, 0, 0),
         "exps": np.array(df["exps_2"]) * zeta_2sp**2,
         "coefs": np.array(df["coefs_2s"]),
     }
     param2px = {
-        "center": np.array([0, 0, 0]),
+        "center": center,
         "lmn": (1, 0, 0),
         "exps": np.array(df["exps_2"]) * zeta_2sp**2,
         "coefs": np.array(df["coefs_2p"]),
     }
     param2py = {
-        "center": np.array([0, 0, 0]),
+        "center": center,
         "lmn": (0, 1, 0),
         "exps": np.array(df["exps_2"]) * zeta_2sp**2,
         "coefs": np.array(df["coefs_2p"]),
     }
     param2pz = {
-        "center": np.array([0, 0, 0]),
+        "center": center,
         "lmn": (0, 0, 1),
         "exps": np.array(df["exps_2"]) * zeta_2sp**2,
         "coefs": np.array(df["coefs_2p"]),

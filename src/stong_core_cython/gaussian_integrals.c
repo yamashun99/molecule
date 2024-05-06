@@ -4,12 +4,12 @@
 {
     "distutils": {
         "depends": [],
-        "name": "src.stong_core_cython.gaussian_overlap",
+        "name": "src.stong_core_cython.gaussian_integrals",
         "sources": [
-            "./src/stong_core_cython/gaussian_overlap.pyx"
+            "./src/stong_core_cython/gaussian_integrals.pyx"
         ]
     },
-    "module_name": "src.stong_core_cython.gaussian_overlap"
+    "module_name": "src.stong_core_cython.gaussian_integrals"
 }
 END: Cython Metadata */
 
@@ -1229,8 +1229,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__src__stong_core_cython__gaussian_overlap
-#define __PYX_HAVE_API__src__stong_core_cython__gaussian_overlap
+#define __PYX_HAVE__src__stong_core_cython__gaussian_integrals
+#define __PYX_HAVE_API__src__stong_core_cython__gaussian_integrals
 /* Early includes */
 #include <math.h>
 #include <string.h>
@@ -1515,7 +1515,7 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "src/stong_core_cython/gaussian_overlap.pyx",
+  "src/stong_core_cython/gaussian_integrals.pyx",
   "<stringsource>",
   "__init__.cython-30.pxd",
   "type.pxd",
@@ -1862,7 +1862,7 @@ static CYTHON_INLINE __pyx_t_float_complex __pyx_t_float_complex_from_parts(floa
 /* #### Code section: type_declarations ### */
 
 /*--- Type declarations ---*/
-struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction;
+struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction;
 struct __pyx_array_obj;
 struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
@@ -1978,7 +1978,7 @@ struct __pyx_fuse_1__pyx_opt_args_5scipy_7special_14cython_special_spherical_kn 
 struct __pyx_ctuple_long__and_long__and_long;
 typedef struct __pyx_ctuple_long__and_long__and_long __pyx_ctuple_long__and_long__and_long;
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":21
+/* "src/stong_core_cython/gaussian_integrals.pyx":21
  * cdef class BasisFunction:
  *     cdef public double[:] origin
  *     cdef public tuple[long, long, long] lmn             # <<<<<<<<<<<<<<
@@ -1991,16 +1991,16 @@ struct __pyx_ctuple_long__and_long__and_long {
   long f2;
 };
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":19
+/* "src/stong_core_cython/gaussian_integrals.pyx":19
  *     return result
  * 
  * cdef class BasisFunction:             # <<<<<<<<<<<<<<
  *     cdef public double[:] origin
  *     cdef public tuple[long, long, long] lmn
  */
-struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction {
+struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction {
   PyObject_HEAD
-  struct __pyx_vtabstruct_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_vtab;
+  struct __pyx_vtabstruct_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_vtab;
   __Pyx_memviewslice origin;
   __pyx_ctuple_long__and_long__and_long lmn;
   __Pyx_memviewslice exps;
@@ -2086,7 +2086,7 @@ struct __pyx_memoryviewslice_obj {
 
 
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":19
+/* "src/stong_core_cython/gaussian_integrals.pyx":19
  *     return result
  * 
  * cdef class BasisFunction:             # <<<<<<<<<<<<<<
@@ -2094,10 +2094,10 @@ struct __pyx_memoryviewslice_obj {
  *     cdef public tuple[long, long, long] lmn
  */
 
-struct __pyx_vtabstruct_3src_17stong_core_cython_16gaussian_overlap_BasisFunction {
-  void (*normalize)(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *);
+struct __pyx_vtabstruct_3src_17stong_core_cython_18gaussian_integrals_BasisFunction {
+  void (*normalize)(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *);
 };
-static struct __pyx_vtabstruct_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_vtabptr_3src_17stong_core_cython_16gaussian_overlap_BasisFunction;
+static struct __pyx_vtabstruct_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_vtabptr_3src_17stong_core_cython_18gaussian_integrals_BasisFunction;
 
 
 /* "View.MemoryView":114
@@ -3263,7 +3263,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self); /* proto*/
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self); /* proto*/
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self); /* proto*/
-static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_normalize(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self); /* proto*/
+static void __pyx_f_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_normalize(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self); /* proto*/
 
 /* Module declarations from "libc.math" */
 
@@ -3297,7 +3297,7 @@ static double (*__pyx_fuse_1__pyx_f_5scipy_7special_14cython_special_hyp1f1)(dou
 
 /* Module declarations from "cython" */
 
-/* Module declarations from "src.stong_core_cython.gaussian_overlap" */
+/* Module declarations from "src.stong_core_cython.gaussian_integrals" */
 static PyObject *__pyx_collections_abc_Sequence = 0;
 static PyObject *generic = 0;
 static PyObject *strided = 0;
@@ -3306,21 +3306,21 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static long __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(long); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long, long, long, double, double, double, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(long, long, long, double, double, double, int __pyx_skip_dispatch); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, int __pyx_skip_dispatch); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, int __pyx_skip_dispatch); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_boys(int, double); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int, int, int, int, double, __Pyx_memviewslice, PyObject *); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(int, int, int, int, double, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attraction(double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repulsion(double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_f_3src_17stong_core_cython_16gaussian_overlap___pyx_unpickle_BasisFunction__set_state(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *, PyObject *); /*proto*/
+static long __pyx_f_3src_17stong_core_cython_18gaussian_integrals_custom_fact2(long); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo(long, long, long, double, double, double, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(long, long, long, double, double, double, int __pyx_skip_dispatch); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_S(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, int __pyx_skip_dispatch); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_kinetic(double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_T(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, int __pyx_skip_dispatch); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_boys(int, double); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo(int, int, int, int, double, __Pyx_memviewslice, PyObject *); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R(int, int, int, int, double, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_nuclear_attraction(double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_V(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_electron_repulsion(double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice, double, __pyx_ctuple_long__and_long__and_long, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_ERI(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_3src_17stong_core_cython_18gaussian_integrals___pyx_unpickle_BasisFunction__set_state(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *, PyObject *); /*proto*/
 static int __pyx_array_allocate_buffer(struct __pyx_array_obj *); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -3358,11 +3358,11 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, 
 /* #### Code section: typeinfo ### */
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "src.stong_core_cython.gaussian_overlap"
-extern int __pyx_module_is_main_src__stong_core_cython__gaussian_overlap;
-int __pyx_module_is_main_src__stong_core_cython__gaussian_overlap = 0;
+#define __Pyx_MODULE_NAME "src.stong_core_cython.gaussian_integrals"
+extern int __pyx_module_is_main_src__stong_core_cython__gaussian_integrals;
+int __pyx_module_is_main_src__stong_core_cython__gaussian_integrals = 0;
 
-/* Implementation of "src.stong_core_cython.gaussian_overlap" */
+/* Implementation of "src.stong_core_cython.gaussian_integrals" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin___import__;
@@ -3524,10 +3524,10 @@ static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to conver
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension ";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
-static const char __pyx_k_src_stong_core_cython_gaussian_o[] = "src.stong_core_cython.gaussian_overlap";
+static const char __pyx_k_src_stong_core_cython_gaussian_i[] = "src.stong_core_cython.gaussian_integrals";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_2[] = "Incompatible checksums (0x%x vs (0x2e09439, 0xeba322b, 0x45c2e29) = (coefs, exps, lmn, norm, origin))";
-static const char __pyx_k_src_stong_core_cython_gaussian_o_2[] = "src/stong_core_cython/gaussian_overlap.pyx";
+static const char __pyx_k_src_stong_core_cython_gaussian_i_2[] = "src/stong_core_cython/gaussian_integrals.pyx";
 /* #### Code section: decls ### */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
@@ -3570,26 +3570,26 @@ static void __pyx_memoryviewslice___pyx_pf_15View_dot_MemoryView_16_memoryviewsl
 static PyObject *__pyx_pf___pyx_memoryviewslice___reduce_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf___pyx_memoryviewslice_2__setstate_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_15View_dot_MemoryView___pyx_unpickle_Enum(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction___init__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, __Pyx_memviewslice __pyx_v_center, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn, __Pyx_memviewslice __pyx_v_exps, __Pyx_memviewslice __pyx_v_coefs); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self); /* proto */
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self); /* proto */
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self); /* proto */
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self); /* proto */
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self); /* proto */
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_2__reduce_cython__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4__setstate_cython__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_E(CYTHON_UNUSED PyObject *__pyx_self, long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_2S(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_4T(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_6V(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_8ERI(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_c, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_d); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_10__pyx_unpickle_BasisFunction(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_tp_new_3src_17stong_core_cython_16gaussian_overlap_BasisFunction(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction___init__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, __Pyx_memviewslice __pyx_v_center, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn, __Pyx_memviewslice __pyx_v_exps, __Pyx_memviewslice __pyx_v_coefs); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self); /* proto */
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self); /* proto */
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self); /* proto */
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self); /* proto */
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self); /* proto */
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_2__reduce_cython__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4__setstate_cython__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_E(CYTHON_UNUSED PyObject *__pyx_self, long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_2S(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_4T(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_6V(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_8ERI(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_c, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_d); /* proto */
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_10__pyx_unpickle_BasisFunction(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_tp_new_3src_17stong_core_cython_18gaussian_integrals_BasisFunction(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_array(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_Enum(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_memoryview(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -3668,13 +3668,13 @@ typedef struct {
   #if CYTHON_USE_MODULE_STATE
   #endif
   #if CYTHON_USE_MODULE_STATE
-  PyObject *__pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction;
+  PyObject *__pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction;
   PyObject *__pyx_type___pyx_array;
   PyObject *__pyx_type___pyx_MemviewEnum;
   PyObject *__pyx_type___pyx_memoryview;
   PyObject *__pyx_type___pyx_memoryviewslice;
   #endif
-  PyTypeObject *__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction;
+  PyTypeObject *__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction;
   PyTypeObject *__pyx_array_type;
   PyTypeObject *__pyx_MemviewEnum_type;
   PyTypeObject *__pyx_memoryview_type;
@@ -3812,8 +3812,8 @@ typedef struct {
   PyObject *__pyx_n_s_shape;
   PyObject *__pyx_n_s_size;
   PyObject *__pyx_n_s_spec;
-  PyObject *__pyx_n_s_src_stong_core_cython_gaussian_o;
-  PyObject *__pyx_kp_s_src_stong_core_cython_gaussian_o_2;
+  PyObject *__pyx_n_s_src_stong_core_cython_gaussian_i;
+  PyObject *__pyx_kp_s_src_stong_core_cython_gaussian_i_2;
   PyObject *__pyx_n_s_start;
   PyObject *__pyx_n_s_state;
   PyObject *__pyx_n_s_step;
@@ -3935,8 +3935,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_flexible);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_character);
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_ufunc);
-  Py_CLEAR(clear_module_state->__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction);
-  Py_CLEAR(clear_module_state->__pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction);
+  Py_CLEAR(clear_module_state->__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction);
+  Py_CLEAR(clear_module_state->__pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction);
   Py_CLEAR(clear_module_state->__pyx_array_type);
   Py_CLEAR(clear_module_state->__pyx_type___pyx_array);
   Py_CLEAR(clear_module_state->__pyx_MemviewEnum_type);
@@ -4078,8 +4078,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_shape);
   Py_CLEAR(clear_module_state->__pyx_n_s_size);
   Py_CLEAR(clear_module_state->__pyx_n_s_spec);
-  Py_CLEAR(clear_module_state->__pyx_n_s_src_stong_core_cython_gaussian_o);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_src_stong_core_cython_gaussian_o_2);
+  Py_CLEAR(clear_module_state->__pyx_n_s_src_stong_core_cython_gaussian_i);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_src_stong_core_cython_gaussian_i_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_start);
   Py_CLEAR(clear_module_state->__pyx_n_s_state);
   Py_CLEAR(clear_module_state->__pyx_n_s_step);
@@ -4179,8 +4179,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_flexible);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_character);
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_ufunc);
-  Py_VISIT(traverse_module_state->__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction);
-  Py_VISIT(traverse_module_state->__pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction);
+  Py_VISIT(traverse_module_state->__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction);
+  Py_VISIT(traverse_module_state->__pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction);
   Py_VISIT(traverse_module_state->__pyx_array_type);
   Py_VISIT(traverse_module_state->__pyx_type___pyx_array);
   Py_VISIT(traverse_module_state->__pyx_MemviewEnum_type);
@@ -4322,8 +4322,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_shape);
   Py_VISIT(traverse_module_state->__pyx_n_s_size);
   Py_VISIT(traverse_module_state->__pyx_n_s_spec);
-  Py_VISIT(traverse_module_state->__pyx_n_s_src_stong_core_cython_gaussian_o);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_src_stong_core_cython_gaussian_o_2);
+  Py_VISIT(traverse_module_state->__pyx_n_s_src_stong_core_cython_gaussian_i);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_src_stong_core_cython_gaussian_i_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_start);
   Py_VISIT(traverse_module_state->__pyx_n_s_state);
   Py_VISIT(traverse_module_state->__pyx_n_s_step);
@@ -4462,13 +4462,13 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #if CYTHON_USE_MODULE_STATE
 #endif
 #if CYTHON_USE_MODULE_STATE
-#define __pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction __pyx_mstate_global->__pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction
+#define __pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction __pyx_mstate_global->__pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction
 #define __pyx_type___pyx_array __pyx_mstate_global->__pyx_type___pyx_array
 #define __pyx_type___pyx_MemviewEnum __pyx_mstate_global->__pyx_type___pyx_MemviewEnum
 #define __pyx_type___pyx_memoryview __pyx_mstate_global->__pyx_type___pyx_memoryview
 #define __pyx_type___pyx_memoryviewslice __pyx_mstate_global->__pyx_type___pyx_memoryviewslice
 #endif
-#define __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction __pyx_mstate_global->__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction
+#define __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction __pyx_mstate_global->__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction
 #define __pyx_array_type __pyx_mstate_global->__pyx_array_type
 #define __pyx_MemviewEnum_type __pyx_mstate_global->__pyx_MemviewEnum_type
 #define __pyx_memoryview_type __pyx_mstate_global->__pyx_memoryview_type
@@ -4606,8 +4606,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_shape __pyx_mstate_global->__pyx_n_s_shape
 #define __pyx_n_s_size __pyx_mstate_global->__pyx_n_s_size
 #define __pyx_n_s_spec __pyx_mstate_global->__pyx_n_s_spec
-#define __pyx_n_s_src_stong_core_cython_gaussian_o __pyx_mstate_global->__pyx_n_s_src_stong_core_cython_gaussian_o
-#define __pyx_kp_s_src_stong_core_cython_gaussian_o_2 __pyx_mstate_global->__pyx_kp_s_src_stong_core_cython_gaussian_o_2
+#define __pyx_n_s_src_stong_core_cython_gaussian_i __pyx_mstate_global->__pyx_n_s_src_stong_core_cython_gaussian_i
+#define __pyx_kp_s_src_stong_core_cython_gaussian_i_2 __pyx_mstate_global->__pyx_kp_s_src_stong_core_cython_gaussian_i_2
 #define __pyx_n_s_start __pyx_mstate_global->__pyx_n_s_start
 #define __pyx_n_s_state __pyx_mstate_global->__pyx_n_s_state
 #define __pyx_n_s_step __pyx_mstate_global->__pyx_n_s_step
@@ -19561,7 +19561,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":12
+/* "src/stong_core_cython/gaussian_integrals.pyx":12
  * from cython cimport view
  * 
  * cdef long custom_fact2(long n):             # <<<<<<<<<<<<<<
@@ -19569,13 +19569,13 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
  *     cdef long i
  */
 
-static long __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(long __pyx_v_n) {
+static long __pyx_f_3src_17stong_core_cython_18gaussian_integrals_custom_fact2(long __pyx_v_n) {
   long __pyx_v_result;
   long __pyx_v_i;
   long __pyx_r;
   long __pyx_t_1;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":13
+  /* "src/stong_core_cython/gaussian_integrals.pyx":13
  * 
  * cdef long custom_fact2(long n):
  *     cdef long result = 1             # <<<<<<<<<<<<<<
@@ -19584,7 +19584,7 @@ static long __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(lon
  */
   __pyx_v_result = 1;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":15
+  /* "src/stong_core_cython/gaussian_integrals.pyx":15
  *     cdef long result = 1
  *     cdef long i
  *     for i in range(n, 0, -2):             # <<<<<<<<<<<<<<
@@ -19594,7 +19594,7 @@ static long __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(lon
   for (__pyx_t_1 = __pyx_v_n; __pyx_t_1 > 0; __pyx_t_1-=2) {
     __pyx_v_i = __pyx_t_1;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":16
+    /* "src/stong_core_cython/gaussian_integrals.pyx":16
  *     cdef long i
  *     for i in range(n, 0, -2):
  *         result *= i             # <<<<<<<<<<<<<<
@@ -19604,7 +19604,7 @@ static long __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(lon
     __pyx_v_result = (__pyx_v_result * __pyx_v_i);
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":17
+  /* "src/stong_core_cython/gaussian_integrals.pyx":17
  *     for i in range(n, 0, -2):
  *         result *= i
  *     return result             # <<<<<<<<<<<<<<
@@ -19614,7 +19614,7 @@ static long __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(lon
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":12
+  /* "src/stong_core_cython/gaussian_integrals.pyx":12
  * from cython cimport view
  * 
  * cdef long custom_fact2(long n):             # <<<<<<<<<<<<<<
@@ -19627,7 +19627,7 @@ static long __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(lon
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":26
+/* "src/stong_core_cython/gaussian_integrals.pyx":26
  *     cdef public double[:] norm
  * 
  *     def __init__(self, double[:] center, tuple[long, long, long] lmn, double[:] exps, double[:] coefs):             # <<<<<<<<<<<<<<
@@ -19636,8 +19636,8 @@ static long __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(lon
  */
 
 /* Python wrapper */
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_center = { 0, 0, { 0 }, { 0 }, { 0 } };
   __pyx_ctuple_long__and_long__and_long __pyx_v_lmn;
   __Pyx_memviewslice __pyx_v_exps = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -19745,11 +19745,11 @@ static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_center, 1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_exps, 1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_coefs, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction___init__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self), __pyx_v_center, __pyx_v_lmn, __pyx_v_exps, __pyx_v_coefs);
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction___init__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self), __pyx_v_center, __pyx_v_lmn, __pyx_v_exps, __pyx_v_coefs);
 
   /* function exit code */
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_center, 1);
@@ -19765,7 +19765,7 @@ static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   return __pyx_r;
 }
 
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction___init__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, __Pyx_memviewslice __pyx_v_center, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn, __Pyx_memviewslice __pyx_v_exps, __Pyx_memviewslice __pyx_v_coefs) {
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction___init__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, __Pyx_memviewslice __pyx_v_center, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn, __Pyx_memviewslice __pyx_v_exps, __Pyx_memviewslice __pyx_v_coefs) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -19779,7 +19779,7 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":27
+  /* "src/stong_core_cython/gaussian_integrals.pyx":27
  * 
  *     def __init__(self, double[:] center, tuple[long, long, long] lmn, double[:] exps, double[:] coefs):
  *         self.origin = center             # <<<<<<<<<<<<<<
@@ -19790,7 +19790,7 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __PYX_INC_MEMVIEW(&__pyx_v_center, 1);
   __pyx_v_self->origin = __pyx_v_center;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":28
+  /* "src/stong_core_cython/gaussian_integrals.pyx":28
  *     def __init__(self, double[:] center, tuple[long, long, long] lmn, double[:] exps, double[:] coefs):
  *         self.origin = center
  *         self.lmn = lmn             # <<<<<<<<<<<<<<
@@ -19799,7 +19799,7 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
   __pyx_v_self->lmn = __pyx_v_lmn;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":29
+  /* "src/stong_core_cython/gaussian_integrals.pyx":29
  *         self.origin = center
  *         self.lmn = lmn
  *         self.exps = exps             # <<<<<<<<<<<<<<
@@ -19810,7 +19810,7 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __PYX_INC_MEMVIEW(&__pyx_v_exps, 1);
   __pyx_v_self->exps = __pyx_v_exps;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":30
+  /* "src/stong_core_cython/gaussian_integrals.pyx":30
  *         self.lmn = lmn
  *         self.exps = exps
  *         self.coefs = coefs             # <<<<<<<<<<<<<<
@@ -19821,7 +19821,7 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __PYX_INC_MEMVIEW(&__pyx_v_coefs, 1);
   __pyx_v_self->coefs = __pyx_v_coefs;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":31
+  /* "src/stong_core_cython/gaussian_integrals.pyx":31
  *         self.exps = exps
  *         self.coefs = coefs
  *         self.norm = np.zeros_like(coefs)             # <<<<<<<<<<<<<<
@@ -19865,16 +19865,16 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":32
+  /* "src/stong_core_cython/gaussian_integrals.pyx":32
  *         self.coefs = coefs
  *         self.norm = np.zeros_like(coefs)
  *         self.normalize()             # <<<<<<<<<<<<<<
  * 
  *     cdef void normalize(self):
  */
-  ((struct __pyx_vtabstruct_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self->__pyx_vtab)->normalize(__pyx_v_self); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 32, __pyx_L1_error)
+  ((struct __pyx_vtabstruct_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self->__pyx_vtab)->normalize(__pyx_v_self); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 32, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":26
+  /* "src/stong_core_cython/gaussian_integrals.pyx":26
  *     cdef public double[:] norm
  * 
  *     def __init__(self, double[:] center, tuple[long, long, long] lmn, double[:] exps, double[:] coefs):             # <<<<<<<<<<<<<<
@@ -19891,14 +19891,14 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_6, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":34
+/* "src/stong_core_cython/gaussian_integrals.pyx":34
  *         self.normalize()
  * 
  *     cdef void normalize(self):             # <<<<<<<<<<<<<<
@@ -19906,7 +19906,7 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  *         cdef double prefactor, N, L
  */
 
-static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_normalize(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self) {
+static void __pyx_f_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_normalize(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self) {
   long __pyx_v_l;
   long __pyx_v_m;
   long __pyx_v_n;
@@ -19939,7 +19939,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":37
+  /* "src/stong_core_cython/gaussian_integrals.pyx":37
  *         cdef long l, m, n, num_exps, ia, ja
  *         cdef double prefactor, N, L
  *         cdef double[:] norm_view = self.norm             # <<<<<<<<<<<<<<
@@ -19953,7 +19953,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __pyx_t_1.memview = NULL;
   __pyx_t_1.data = NULL;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":38
+  /* "src/stong_core_cython/gaussian_integrals.pyx":38
  *         cdef double prefactor, N, L
  *         cdef double[:] norm_view = self.norm
  *         cdef double[:] exps_view = self.exps             # <<<<<<<<<<<<<<
@@ -19967,7 +19967,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __pyx_t_1.memview = NULL;
   __pyx_t_1.data = NULL;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":39
+  /* "src/stong_core_cython/gaussian_integrals.pyx":39
  *         cdef double[:] norm_view = self.norm
  *         cdef double[:] exps_view = self.exps
  *         cdef double[:] coefs_view = self.coefs             # <<<<<<<<<<<<<<
@@ -19981,7 +19981,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __pyx_t_1.memview = NULL;
   __pyx_t_1.data = NULL;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":41
+  /* "src/stong_core_cython/gaussian_integrals.pyx":41
  *         cdef double[:] coefs_view = self.coefs
  * 
  *         l, m, n = self.lmn             # <<<<<<<<<<<<<<
@@ -19996,7 +19996,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __pyx_v_m = __pyx_t_4;
   __pyx_v_n = __pyx_t_5;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":42
+  /* "src/stong_core_cython/gaussian_integrals.pyx":42
  * 
  *         l, m, n = self.lmn
  *         L = l + m + n             # <<<<<<<<<<<<<<
@@ -20005,34 +20005,34 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
   __pyx_v_L = ((__pyx_v_l + __pyx_v_m) + __pyx_v_n);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":44
+  /* "src/stong_core_cython/gaussian_integrals.pyx":44
  *         L = l + m + n
  *         prefactor = (
  *             custom_fact2(2 * l - 1)             # <<<<<<<<<<<<<<
  *             * custom_fact2(2 * m - 1)
  *             * custom_fact2(2 * n - 1)
  */
-  __pyx_t_5 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(((2 * __pyx_v_l) - 1)); if (unlikely(__pyx_t_5 == ((long)-1) && PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_custom_fact2(((2 * __pyx_v_l) - 1)); if (unlikely(__pyx_t_5 == ((long)-1) && PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":45
+  /* "src/stong_core_cython/gaussian_integrals.pyx":45
  *         prefactor = (
  *             custom_fact2(2 * l - 1)
  *             * custom_fact2(2 * m - 1)             # <<<<<<<<<<<<<<
  *             * custom_fact2(2 * n - 1)
  *             * M_PI ** 1.5
  */
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(((2 * __pyx_v_m) - 1)); if (unlikely(__pyx_t_4 == ((long)-1) && PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_custom_fact2(((2 * __pyx_v_m) - 1)); if (unlikely(__pyx_t_4 == ((long)-1) && PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":46
+  /* "src/stong_core_cython/gaussian_integrals.pyx":46
  *             custom_fact2(2 * l - 1)
  *             * custom_fact2(2 * m - 1)
  *             * custom_fact2(2 * n - 1)             # <<<<<<<<<<<<<<
  *             * M_PI ** 1.5
  *             / 2 ** (2 * L + 1.5)
  */
-  __pyx_t_3 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_custom_fact2(((2 * __pyx_v_n) - 1)); if (unlikely(__pyx_t_3 == ((long)-1) && PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_t_3 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_custom_fact2(((2 * __pyx_v_n) - 1)); if (unlikely(__pyx_t_3 == ((long)-1) && PyErr_Occurred())) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":47
+  /* "src/stong_core_cython/gaussian_integrals.pyx":47
  *             * custom_fact2(2 * m - 1)
  *             * custom_fact2(2 * n - 1)
  *             * M_PI ** 1.5             # <<<<<<<<<<<<<<
@@ -20041,7 +20041,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
   __pyx_t_6 = __Pyx_c_prod_double(__pyx_t_double_complex_from_parts(((__pyx_t_5 * __pyx_t_4) * __pyx_t_3), 0), __Pyx_c_pow_double(__pyx_t_double_complex_from_parts(M_PI, 0), __pyx_t_double_complex_from_parts(1.5, 0)));
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":48
+  /* "src/stong_core_cython/gaussian_integrals.pyx":48
  *             * custom_fact2(2 * n - 1)
  *             * M_PI ** 1.5
  *             / 2 ** (2 * L + 1.5)             # <<<<<<<<<<<<<<
@@ -20056,7 +20056,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __pyx_t_8 = __Pyx_SoftComplexToDouble(__Pyx_c_quot_double(__pyx_t_6, __pyx_t_7), 1); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L1_error)
   __pyx_v_prefactor = __pyx_t_8;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":51
+  /* "src/stong_core_cython/gaussian_integrals.pyx":51
  *         )
  * 
  *         num_exps = exps_view.shape[0]             # <<<<<<<<<<<<<<
@@ -20065,7 +20065,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
   __pyx_v_num_exps = (__pyx_v_exps_view.shape[0]);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":52
+  /* "src/stong_core_cython/gaussian_integrals.pyx":52
  * 
  *         num_exps = exps_view.shape[0]
  *         for ia in range(num_exps):             # <<<<<<<<<<<<<<
@@ -20077,7 +20077,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_ia = __pyx_t_5;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":53
+    /* "src/stong_core_cython/gaussian_integrals.pyx":53
  *         num_exps = exps_view.shape[0]
  *         for ia in range(num_exps):
  *             norm_view[ia] = exps_view[ia] ** (L / 2 + 0.75) / sqrt(prefactor)             # <<<<<<<<<<<<<<
@@ -20114,7 +20114,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
     *((double *) ( /* dim=0 */ (__pyx_v_norm_view.data + __pyx_t_9 * __pyx_v_norm_view.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":55
+  /* "src/stong_core_cython/gaussian_integrals.pyx":55
  *             norm_view[ia] = exps_view[ia] ** (L / 2 + 0.75) / sqrt(prefactor)
  * 
  *         N = 0             # <<<<<<<<<<<<<<
@@ -20123,7 +20123,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
   __pyx_v_N = 0.0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":56
+  /* "src/stong_core_cython/gaussian_integrals.pyx":56
  * 
  *         N = 0
  *         for ia in range(num_exps):             # <<<<<<<<<<<<<<
@@ -20135,7 +20135,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_ia = __pyx_t_5;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":57
+    /* "src/stong_core_cython/gaussian_integrals.pyx":57
  *         N = 0
  *         for ia in range(num_exps):
  *             for ja in range(num_exps):             # <<<<<<<<<<<<<<
@@ -20147,7 +20147,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
     for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
       __pyx_v_ja = __pyx_t_13;
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":59
+      /* "src/stong_core_cython/gaussian_integrals.pyx":59
  *             for ja in range(num_exps):
  *                 N += (
  *                     coefs_view[ia]             # <<<<<<<<<<<<<<
@@ -20165,7 +20165,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
         __PYX_ERR(0, 59, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":60
+      /* "src/stong_core_cython/gaussian_integrals.pyx":60
  *                 N += (
  *                     coefs_view[ia]
  *                     * coefs_view[ja]             # <<<<<<<<<<<<<<
@@ -20183,7 +20183,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
         __PYX_ERR(0, 60, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":61
+      /* "src/stong_core_cython/gaussian_integrals.pyx":61
  *                     coefs_view[ia]
  *                     * coefs_view[ja]
  *                     * norm_view[ia]             # <<<<<<<<<<<<<<
@@ -20201,7 +20201,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
         __PYX_ERR(0, 61, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":62
+      /* "src/stong_core_cython/gaussian_integrals.pyx":62
  *                     * coefs_view[ja]
  *                     * norm_view[ia]
  *                     * norm_view[ja]             # <<<<<<<<<<<<<<
@@ -20220,7 +20220,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
       }
       __pyx_t_6 = __pyx_t_double_complex_from_parts(((((*((double *) ( /* dim=0 */ (__pyx_v_coefs_view.data + __pyx_t_9 * __pyx_v_coefs_view.strides[0]) ))) * (*((double *) ( /* dim=0 */ (__pyx_v_coefs_view.data + __pyx_t_14 * __pyx_v_coefs_view.strides[0]) )))) * (*((double *) ( /* dim=0 */ (__pyx_v_norm_view.data + __pyx_t_15 * __pyx_v_norm_view.strides[0]) )))) * (*((double *) ( /* dim=0 */ (__pyx_v_norm_view.data + __pyx_t_16 * __pyx_v_norm_view.strides[0]) )))), 0);
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":63
+      /* "src/stong_core_cython/gaussian_integrals.pyx":63
  *                     * norm_view[ia]
  *                     * norm_view[ja]
  *                     / ((exps_view[ia] + exps_view[ja]) / 2) ** (L + 1.5)             # <<<<<<<<<<<<<<
@@ -20253,7 +20253,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
         __PYX_ERR(0, 63, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":58
+      /* "src/stong_core_cython/gaussian_integrals.pyx":58
  *         for ia in range(num_exps):
  *             for ja in range(num_exps):
  *                 N += (             # <<<<<<<<<<<<<<
@@ -20265,7 +20265,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
     }
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":66
+  /* "src/stong_core_cython/gaussian_integrals.pyx":66
  *                 )
  * 
  *         N *= prefactor             # <<<<<<<<<<<<<<
@@ -20274,7 +20274,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
   __pyx_v_N = (__pyx_v_N * __pyx_v_prefactor);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":67
+  /* "src/stong_core_cython/gaussian_integrals.pyx":67
  * 
  *         N *= prefactor
  *         N = 1 / sqrt(N)             # <<<<<<<<<<<<<<
@@ -20288,7 +20288,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   }
   __pyx_v_N = (1.0 / __pyx_t_8);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":69
+  /* "src/stong_core_cython/gaussian_integrals.pyx":69
  *         N = 1 / sqrt(N)
  * 
  *         for ia in range(num_exps):             # <<<<<<<<<<<<<<
@@ -20300,7 +20300,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_ia = __pyx_t_5;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":70
+    /* "src/stong_core_cython/gaussian_integrals.pyx":70
  * 
  *         for ia in range(num_exps):
  *             coefs_view[ia] = coefs_view[ia] * N             # <<<<<<<<<<<<<<
@@ -20330,7 +20330,7 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
     *((double *) ( /* dim=0 */ (__pyx_v_coefs_view.data + __pyx_t_16 * __pyx_v_coefs_view.strides[0]) )) = ((*((double *) ( /* dim=0 */ (__pyx_v_coefs_view.data + __pyx_t_15 * __pyx_v_coefs_view.strides[0]) ))) * __pyx_v_N);
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":34
+  /* "src/stong_core_cython/gaussian_integrals.pyx":34
  *         self.normalize()
  * 
  *     cdef void normalize(self):             # <<<<<<<<<<<<<<
@@ -20342,14 +20342,14 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.normalize", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.normalize", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_norm_view, 1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_exps_view, 1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_coefs_view, 1);
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":20
+/* "src/stong_core_cython/gaussian_integrals.pyx":20
  * 
  * cdef class BasisFunction:
  *     cdef public double[:] origin             # <<<<<<<<<<<<<<
@@ -20358,21 +20358,21 @@ static void __pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin___get__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin___get__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -20391,7 +20391,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.origin.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.origin.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -20400,21 +20400,21 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
 }
 
 /* Python wrapper */
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_2__set__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_2__set__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
@@ -20431,13 +20431,13 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.origin.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.origin.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":21
+/* "src/stong_core_cython/gaussian_integrals.pyx":21
  * cdef class BasisFunction:
  *     cdef public double[:] origin
  *     cdef public tuple[long, long, long] lmn             # <<<<<<<<<<<<<<
@@ -20446,21 +20446,21 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn___get__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn___get__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -20478,7 +20478,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.lmn.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.lmn.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -20487,21 +20487,21 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
 }
 
 /* Python wrapper */
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_2__set__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_2__set__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __pyx_ctuple_long__and_long__and_long __pyx_t_1;
   int __pyx_lineno = 0;
@@ -20514,13 +20514,13 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.lmn.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.lmn.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":22
+/* "src/stong_core_cython/gaussian_integrals.pyx":22
  *     cdef public double[:] origin
  *     cdef public tuple[long, long, long] lmn
  *     cdef public double[:] exps             # <<<<<<<<<<<<<<
@@ -20529,21 +20529,21 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps___get__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps___get__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -20562,7 +20562,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.exps.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.exps.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -20571,21 +20571,21 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
 }
 
 /* Python wrapper */
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_2__set__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_2__set__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
@@ -20602,13 +20602,13 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.exps.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.exps.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":23
+/* "src/stong_core_cython/gaussian_integrals.pyx":23
  *     cdef public tuple[long, long, long] lmn
  *     cdef public double[:] exps
  *     cdef public double[:] coefs             # <<<<<<<<<<<<<<
@@ -20617,21 +20617,21 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs___get__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs___get__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -20650,7 +20650,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.coefs.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.coefs.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -20659,21 +20659,21 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
 }
 
 /* Python wrapper */
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_2__set__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_2__set__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
@@ -20690,13 +20690,13 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.coefs.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.coefs.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":24
+/* "src/stong_core_cython/gaussian_integrals.pyx":24
  *     cdef public double[:] exps
  *     cdef public double[:] coefs
  *     cdef public double[:] norm             # <<<<<<<<<<<<<<
@@ -20705,21 +20705,21 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm___get__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm___get__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm___get__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm___get__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -20738,7 +20738,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.norm.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.norm.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -20747,21 +20747,21 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
 }
 
 /* Python wrapper */
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_2__set__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_2__set__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_2__set__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_2__set__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   __Pyx_memviewslice __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_lineno = 0;
@@ -20778,7 +20778,7 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
   goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_1, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.norm.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.norm.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -20791,15 +20791,15 @@ static int __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -20824,14 +20824,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_2__reduce_cython__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_2__reduce_cython__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_2__reduce_cython__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_2__reduce_cython__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -21064,7 +21064,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -21082,15 +21082,15 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21160,11 +21160,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4__setstate_cython__(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4__setstate_cython__(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -21177,7 +21177,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4__setstate_cython__(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4__setstate_cython__(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -21192,7 +21192,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
  *     __pyx_unpickle_BasisFunction__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap___pyx_unpickle_BasisFunction__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals___pyx_unpickle_BasisFunction__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -21208,7 +21208,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.BasisFunction.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.BasisFunction.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21216,7 +21216,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":73
+/* "src/stong_core_cython/gaussian_integrals.pyx":73
  * 
  * 
  * cdef double E_memo(long i, long j, long t, double a, double b, double Qx, double[:, :, :] memo):             # <<<<<<<<<<<<<<
@@ -21224,7 +21224,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_13BasisFun
  *         return 0
  */
 
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx, __Pyx_memviewslice __pyx_v_memo) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo(long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx, __Pyx_memviewslice __pyx_v_memo) {
   double __pyx_v_result;
   double __pyx_r;
   int __pyx_t_1;
@@ -21243,7 +21243,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":74
+  /* "src/stong_core_cython/gaussian_integrals.pyx":74
  * 
  * cdef double E_memo(long i, long j, long t, double a, double b, double Qx, double[:, :, :] memo):
  *     if i < 0 or j < 0 or t < 0 or i + j < t:             # <<<<<<<<<<<<<<
@@ -21273,7 +21273,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":75
+    /* "src/stong_core_cython/gaussian_integrals.pyx":75
  * cdef double E_memo(long i, long j, long t, double a, double b, double Qx, double[:, :, :] memo):
  *     if i < 0 or j < 0 or t < 0 or i + j < t:
  *         return 0             # <<<<<<<<<<<<<<
@@ -21283,7 +21283,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
     __pyx_r = 0.0;
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":74
+    /* "src/stong_core_cython/gaussian_integrals.pyx":74
  * 
  * cdef double E_memo(long i, long j, long t, double a, double b, double Qx, double[:, :, :] memo):
  *     if i < 0 or j < 0 or t < 0 or i + j < t:             # <<<<<<<<<<<<<<
@@ -21292,7 +21292,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
  */
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":77
+  /* "src/stong_core_cython/gaussian_integrals.pyx":77
  *         return 0
  * 
  *     if memo[i, j, t] != 0:             # <<<<<<<<<<<<<<
@@ -21322,7 +21322,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
   __pyx_t_1 = ((*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_memo.data + __pyx_t_3 * __pyx_v_memo.strides[0]) ) + __pyx_t_4 * __pyx_v_memo.strides[1]) ) + __pyx_t_5 * __pyx_v_memo.strides[2]) ))) != 0.0);
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":78
+    /* "src/stong_core_cython/gaussian_integrals.pyx":78
  * 
  *     if memo[i, j, t] != 0:
  *         return memo[i, j, t]             # <<<<<<<<<<<<<<
@@ -21352,7 +21352,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
     __pyx_r = (*((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_memo.data + __pyx_t_5 * __pyx_v_memo.strides[0]) ) + __pyx_t_4 * __pyx_v_memo.strides[1]) ) + __pyx_t_3 * __pyx_v_memo.strides[2]) )));
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":77
+    /* "src/stong_core_cython/gaussian_integrals.pyx":77
  *         return 0
  * 
  *     if memo[i, j, t] != 0:             # <<<<<<<<<<<<<<
@@ -21361,7 +21361,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
  */
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":81
+  /* "src/stong_core_cython/gaussian_integrals.pyx":81
  * 
  *     cdef double result
  *     if i == j == t == 0:             # <<<<<<<<<<<<<<
@@ -21377,7 +21377,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
   }
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":82
+    /* "src/stong_core_cython/gaussian_integrals.pyx":82
  *     cdef double result
  *     if i == j == t == 0:
  *         result = exp(-a * b * Qx * Qx / (a + b))             # <<<<<<<<<<<<<<
@@ -21392,7 +21392,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
     }
     __pyx_v_result = exp((__pyx_t_7 / __pyx_t_8));
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":81
+    /* "src/stong_core_cython/gaussian_integrals.pyx":81
  * 
  *     cdef double result
  *     if i == j == t == 0:             # <<<<<<<<<<<<<<
@@ -21402,7 +21402,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
     goto __pyx_L9;
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":83
+  /* "src/stong_core_cython/gaussian_integrals.pyx":83
  *     if i == j == t == 0:
  *         result = exp(-a * b * Qx * Qx / (a + b))
  *     elif j == 0:  # decrement i             # <<<<<<<<<<<<<<
@@ -21412,7 +21412,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
   __pyx_t_1 = (__pyx_v_j == 0);
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":85
+    /* "src/stong_core_cython/gaussian_integrals.pyx":85
  *     elif j == 0:  # decrement i
  *         result = (
  *             1 / (2 * (a + b)) * E_memo(i - 1, j, t - 1, a, b, Qx, memo)             # <<<<<<<<<<<<<<
@@ -21424,9 +21424,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
       __PYX_ERR(0, 85, __pyx_L1_error)
     }
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L1_error)
+    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L1_error)
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":86
+    /* "src/stong_core_cython/gaussian_integrals.pyx":86
  *         result = (
  *             1 / (2 * (a + b)) * E_memo(i - 1, j, t - 1, a, b, Qx, memo)
  *             - a * b * Qx / (a * (a + b)) * E_memo(i - 1, j, t, a, b, Qx, memo)             # <<<<<<<<<<<<<<
@@ -21439,19 +21439,19 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
       __PYX_ERR(0, 86, __pyx_L1_error)
     }
-    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo((__pyx_v_i - 1), __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 86, __pyx_L1_error)
+    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo((__pyx_v_i - 1), __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 86, __pyx_L1_error)
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":87
+    /* "src/stong_core_cython/gaussian_integrals.pyx":87
  *             1 / (2 * (a + b)) * E_memo(i - 1, j, t - 1, a, b, Qx, memo)
  *             - a * b * Qx / (a * (a + b)) * E_memo(i - 1, j, t, a, b, Qx, memo)
  *             + (t + 1) * E_memo(i - 1, j, t + 1, a, b, Qx, memo)             # <<<<<<<<<<<<<<
  *         )
  *     else:  # decrement j
  */
-    __pyx_t_12 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_12 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L1_error)
+    __pyx_t_12 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_12 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L1_error)
     __pyx_v_result = ((((1.0 / __pyx_t_8) * __pyx_t_7) - ((__pyx_t_9 / __pyx_t_10) * __pyx_t_11)) + ((__pyx_v_t + 1) * __pyx_t_12));
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":83
+    /* "src/stong_core_cython/gaussian_integrals.pyx":83
  *     if i == j == t == 0:
  *         result = exp(-a * b * Qx * Qx / (a + b))
  *     elif j == 0:  # decrement i             # <<<<<<<<<<<<<<
@@ -21461,7 +21461,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
     goto __pyx_L9;
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":93
+  /* "src/stong_core_cython/gaussian_integrals.pyx":93
  *             1 / (2 * (a + b)) * E_memo(i, j - 1, t - 1, a, b, Qx, memo)
  *             + a * b * Qx / (b * (a + b)) * E_memo(i, j - 1, t, a, b, Qx, memo)
  *             + (t + 1) * E_memo(i, j - 1, t + 1, a, b, Qx, memo)             # <<<<<<<<<<<<<<
@@ -21470,7 +21470,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
  */
   /*else*/ {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":91
+    /* "src/stong_core_cython/gaussian_integrals.pyx":91
  *     else:  # decrement j
  *         result = (
  *             1 / (2 * (a + b)) * E_memo(i, j - 1, t - 1, a, b, Qx, memo)             # <<<<<<<<<<<<<<
@@ -21482,9 +21482,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
       __PYX_ERR(0, 91, __pyx_L1_error)
     }
-    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L1_error)
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":92
+    /* "src/stong_core_cython/gaussian_integrals.pyx":92
  *         result = (
  *             1 / (2 * (a + b)) * E_memo(i, j - 1, t - 1, a, b, Qx, memo)
  *             + a * b * Qx / (b * (a + b)) * E_memo(i, j - 1, t, a, b, Qx, memo)             # <<<<<<<<<<<<<<
@@ -21497,21 +21497,21 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
       __PYX_ERR(0, 92, __pyx_L1_error)
     }
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(__pyx_v_i, (__pyx_v_j - 1), __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 92, __pyx_L1_error)
+    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo(__pyx_v_i, (__pyx_v_j - 1), __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 92, __pyx_L1_error)
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":93
+    /* "src/stong_core_cython/gaussian_integrals.pyx":93
  *             1 / (2 * (a + b)) * E_memo(i, j - 1, t - 1, a, b, Qx, memo)
  *             + a * b * Qx / (b * (a + b)) * E_memo(i, j - 1, t, a, b, Qx, memo)
  *             + (t + 1) * E_memo(i, j - 1, t + 1, a, b, Qx, memo)             # <<<<<<<<<<<<<<
  *         )
  * 
  */
-    __pyx_t_8 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_8 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 93, __pyx_L1_error)
     __pyx_v_result = ((((1.0 / __pyx_t_12) * __pyx_t_11) + ((__pyx_t_10 / __pyx_t_9) * __pyx_t_7)) + ((__pyx_v_t + 1) * __pyx_t_8));
   }
   __pyx_L9:;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":96
+  /* "src/stong_core_cython/gaussian_integrals.pyx":96
  *         )
  * 
  *     memo[i, j, t] = result             # <<<<<<<<<<<<<<
@@ -21540,7 +21540,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
   }
   *((double *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_memo.data + __pyx_t_3 * __pyx_v_memo.strides[0]) ) + __pyx_t_4 * __pyx_v_memo.strides[1]) ) + __pyx_t_5 * __pyx_v_memo.strides[2]) )) = __pyx_v_result;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":97
+  /* "src/stong_core_cython/gaussian_integrals.pyx":97
  * 
  *     memo[i, j, t] = result
  *     return result             # <<<<<<<<<<<<<<
@@ -21550,7 +21550,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":73
+  /* "src/stong_core_cython/gaussian_integrals.pyx":73
  * 
  * 
  * cdef double E_memo(long i, long j, long t, double a, double b, double Qx, double[:, :, :] memo):             # <<<<<<<<<<<<<<
@@ -21560,13 +21560,13 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.E_memo", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.E_memo", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":99
+/* "src/stong_core_cython/gaussian_integrals.pyx":99
  *     return result
  * 
  * cpdef double E(long i, long j, long t, double a, double b, double Qx):             # <<<<<<<<<<<<<<
@@ -21574,14 +21574,14 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(long __
  * 
  */
 
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_1E(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_1E(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx, CYTHON_UNUSED int __pyx_skip_dispatch) {
   __Pyx_memviewslice __pyx_v_memo = { 0, 0, { 0 }, { 0 }, { 0 } };
   double __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -21597,7 +21597,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(long __pyx_v
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("E", 1);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":123
+  /* "src/stong_core_cython/gaussian_integrals.pyx":123
  * 
  *     """
  *     cdef double[:, :, :] memo = np.zeros((i+2, j+2, i+j+t+2), dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -21651,18 +21651,18 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(long __pyx_v
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":124
+  /* "src/stong_core_cython/gaussian_integrals.pyx":124
  *     """
  *     cdef double[:, :, :] memo = np.zeros((i+2, j+2, i+j+t+2), dtype=np.float64)
  *     return E_memo(i, j, t, a, b, Qx, memo)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_7 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E_memo(__pyx_v_i, __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L1_error)
+  __pyx_t_7 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E_memo(__pyx_v_i, __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx, __pyx_v_memo); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L1_error)
   __pyx_r = __pyx_t_7;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":99
+  /* "src/stong_core_cython/gaussian_integrals.pyx":99
  *     return result
  * 
  * cpdef double E(long i, long j, long t, double a, double b, double Qx):             # <<<<<<<<<<<<<<
@@ -21678,7 +21678,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(long __pyx_v
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_6, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_memo, 1);
@@ -21687,16 +21687,16 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(long __pyx_v
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_1E(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_1E(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_16gaussian_overlap_E, "\n    \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\347\251\215\343\202\222\343\202\250\343\203\253\343\203\237\343\203\274\343\203\210\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\247\345\261\225\351\226\213\343\201\227\343\201\237\343\201\250\343\201\215\343\201\256\344\277\202\346\225\260\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    \n    Parameters\n    ----------\n    i : int\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\346\254\241\346\225\260\n    j : int\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\346\254\241\346\225\260\n    t : int\n        \343\202\250\343\203\253\343\203\237\343\203\274\343\203\210\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\346\254\241\346\225\260\n    a : float\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\345\271\205\343\201\256\351\200\206\346\225\260\n    b : float\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\345\271\205\343\201\256\351\200\206\346\225\260\n    Qx : float\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\344\275\215\347\275\256\343\201\256\345\267\256\n    \n    Returns\n    -------\n    float\n        \343\202\250\343\203\253\343\203\237\343\203\274\343\203\210\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\344\277\202\346\225\260\n    ");
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_1E = {"E", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_1E, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_16gaussian_overlap_E};
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_1E(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_18gaussian_integrals_E, "\n    \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\347\251\215\343\202\222\343\202\250\343\203\253\343\203\237\343\203\274\343\203\210\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\247\345\261\225\351\226\213\343\201\227\343\201\237\343\201\250\343\201\215\343\201\256\344\277\202\346\225\260\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    \n    Parameters\n    ----------\n    i : int\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\346\254\241\346\225\260\n    j : int\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\346\254\241\346\225\260\n    t : int\n        \343\202\250\343\203\253\343\203\237\343\203\274\343\203\210\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\346\254\241\346\225\260\n    a : float\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\345\271\205\343\201\256\351\200\206\346\225\260\n    b : float\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\345\271\205\343\201\256\351\200\206\346\225\260\n    Qx : float\n        \343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\344\275\215\347\275\256\343\201\256\345\267\256\n    \n    Returns\n    -------\n    float\n        \343\202\250\343\203\253\343\203\237\343\203\274\343\203\210\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\344\277\202\346\225\260\n    ");
+static PyMethodDef __pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_1E = {"E", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_1E, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_18gaussian_integrals_E};
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_1E(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21841,11 +21841,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_self, __pyx_v_i, __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx);
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_self, __pyx_v_i, __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx);
 
   /* function exit code */
   {
@@ -21858,7 +21858,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_E(CYTHON_UNUSED PyObject *__pyx_self, long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_E(CYTHON_UNUSED PyObject *__pyx_self, long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -21868,7 +21868,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_E(CYTHON_U
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("E", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_i, __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_i, __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 99, __pyx_L1_error)
   __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -21878,7 +21878,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_E(CYTHON_U
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21886,7 +21886,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_E(CYTHON_U
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":127
+/* "src/stong_core_cython/gaussian_integrals.pyx":127
  * 
  * 
  * cdef double overlap(double a, tuple[long, long, long] lmn1, double[:] A, double b, tuple[long, long, long] lmn2, double[:] B):             # <<<<<<<<<<<<<<
@@ -21894,7 +21894,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_E(CYTHON_U
  * 
  */
 
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double __pyx_v_a, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(double __pyx_v_a, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B) {
   long __pyx_v_l1;
   long __pyx_v_m1;
   long __pyx_v_n1;
@@ -21918,7 +21918,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("overlap", 1);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":131
+  /* "src/stong_core_cython/gaussian_integrals.pyx":131
  * 
  *     """
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]             # <<<<<<<<<<<<<<
@@ -21929,7 +21929,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
   __pyx_v_m1 = __pyx_v_lmn1.f1;
   __pyx_v_n1 = __pyx_v_lmn1.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":132
+  /* "src/stong_core_cython/gaussian_integrals.pyx":132
  *     """
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]             # <<<<<<<<<<<<<<
@@ -21940,7 +21940,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
   __pyx_v_m2 = __pyx_v_lmn2.f1;
   __pyx_v_n2 = __pyx_v_lmn2.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":133
+  /* "src/stong_core_cython/gaussian_integrals.pyx":133
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef double S1 = E(l1, l2, 0, a, b, A[0] - B[0])             # <<<<<<<<<<<<<<
@@ -21967,10 +21967,10 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
     __Pyx_RaiseBufferIndexError(__pyx_t_2);
     __PYX_ERR(0, 133, __pyx_L1_error)
   }
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_l1, __pyx_v_l2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_1 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_3 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_l1, __pyx_v_l2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_1 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_3 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L1_error)
   __pyx_v_S1 = __pyx_t_4;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":134
+  /* "src/stong_core_cython/gaussian_integrals.pyx":134
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef double S1 = E(l1, l2, 0, a, b, A[0] - B[0])
  *     cdef double S2 = E(m1, m2, 0, a, b, A[1] - B[1])             # <<<<<<<<<<<<<<
@@ -21997,10 +21997,10 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
     __Pyx_RaiseBufferIndexError(__pyx_t_2);
     __PYX_ERR(0, 134, __pyx_L1_error)
   }
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_m1, __pyx_v_m2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_3 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_1 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_m1, __pyx_v_m2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_3 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_1 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 134, __pyx_L1_error)
   __pyx_v_S2 = __pyx_t_4;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":135
+  /* "src/stong_core_cython/gaussian_integrals.pyx":135
  *     cdef double S1 = E(l1, l2, 0, a, b, A[0] - B[0])
  *     cdef double S2 = E(m1, m2, 0, a, b, A[1] - B[1])
  *     cdef double S3 = E(n1, n2, 0, a, b, A[2] - B[2])             # <<<<<<<<<<<<<<
@@ -22027,10 +22027,10 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
     __Pyx_RaiseBufferIndexError(__pyx_t_2);
     __PYX_ERR(0, 135, __pyx_L1_error)
   }
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_n1, __pyx_v_n2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_1 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_3 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_n1, __pyx_v_n2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_1 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_3 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L1_error)
   __pyx_v_S3 = __pyx_t_4;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":136
+  /* "src/stong_core_cython/gaussian_integrals.pyx":136
  *     cdef double S2 = E(m1, m2, 0, a, b, A[1] - B[1])
  *     cdef double S3 = E(n1, n2, 0, a, b, A[2] - B[2])
  *     return S1 * S2 * S3 * pow(M_PI / (a+b), 1.5)             # <<<<<<<<<<<<<<
@@ -22058,7 +22058,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
   __pyx_r = __pyx_t_4;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":127
+  /* "src/stong_core_cython/gaussian_integrals.pyx":127
  * 
  * 
  * cdef double overlap(double a, tuple[long, long, long] lmn1, double[:] A, double b, tuple[long, long, long] lmn2, double[:] B):             # <<<<<<<<<<<<<<
@@ -22071,14 +22071,14 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.overlap", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.overlap", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":139
+/* "src/stong_core_cython/gaussian_integrals.pyx":139
  * 
  * 
  * cpdef double S(BasisFunction a, BasisFunction b):             # <<<<<<<<<<<<<<
@@ -22086,14 +22086,14 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(double
  * 
  */
 
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_3S(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_3S(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_S(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
   long __pyx_v_num_exps;
   long __pyx_v_i;
   long __pyx_v_j;
@@ -22118,7 +22118,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":143
+  /* "src/stong_core_cython/gaussian_integrals.pyx":143
  * 
  *     """
  *     cdef long num_exps = len(a.exps), i, j             # <<<<<<<<<<<<<<
@@ -22129,7 +22129,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_a->exps); 
   __pyx_v_num_exps = __pyx_t_1;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":144
+  /* "src/stong_core_cython/gaussian_integrals.pyx":144
  *     """
  *     cdef long num_exps = len(a.exps), i, j
  *     cdef double s = 0.0             # <<<<<<<<<<<<<<
@@ -22138,7 +22138,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
  */
   __pyx_v_s = 0.0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":145
+  /* "src/stong_core_cython/gaussian_integrals.pyx":145
  *     cdef long num_exps = len(a.exps), i, j
  *     cdef double s = 0.0
  *     for i in range(num_exps):             # <<<<<<<<<<<<<<
@@ -22150,7 +22150,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":146
+    /* "src/stong_core_cython/gaussian_integrals.pyx":146
  *     cdef double s = 0.0
  *     for i in range(num_exps):
  *         for j in range(num_exps):             # <<<<<<<<<<<<<<
@@ -22162,7 +22162,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
     for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_j = __pyx_t_7;
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":148
+      /* "src/stong_core_cython/gaussian_integrals.pyx":148
  *         for j in range(num_exps):
  *             s += (
  *                 a.norm[i]             # <<<<<<<<<<<<<<
@@ -22181,7 +22181,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
         __PYX_ERR(0, 148, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":149
+      /* "src/stong_core_cython/gaussian_integrals.pyx":149
  *             s += (
  *                 a.norm[i]
  *                 * b.norm[j]             # <<<<<<<<<<<<<<
@@ -22200,7 +22200,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
         __PYX_ERR(0, 149, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":150
+      /* "src/stong_core_cython/gaussian_integrals.pyx":150
  *                 a.norm[i]
  *                 * b.norm[j]
  *                 * a.coefs[i]             # <<<<<<<<<<<<<<
@@ -22219,7 +22219,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
         __PYX_ERR(0, 150, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":151
+      /* "src/stong_core_cython/gaussian_integrals.pyx":151
  *                 * b.norm[j]
  *                 * a.coefs[i]
  *                 * b.coefs[j]             # <<<<<<<<<<<<<<
@@ -22238,7 +22238,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
         __PYX_ERR(0, 151, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":152
+      /* "src/stong_core_cython/gaussian_integrals.pyx":152
  *                 * a.coefs[i]
  *                 * b.coefs[j]
  *                 * overlap(a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin)             # <<<<<<<<<<<<<<
@@ -22269,9 +22269,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
         __PYX_ERR(0, 152, __pyx_L1_error)
       }
       if (unlikely(!__pyx_v_b->origin.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 152, __pyx_L1_error)}
-      __pyx_t_15 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap((*((double *) ( /* dim=0 */ (__pyx_v_a->exps.data + __pyx_t_13 * __pyx_v_a->exps.strides[0]) ))), __pyx_v_a->lmn, __pyx_v_a->origin, (*((double *) ( /* dim=0 */ (__pyx_v_b->exps.data + __pyx_t_14 * __pyx_v_b->exps.strides[0]) ))), __pyx_v_b->lmn, __pyx_v_b->origin); if (unlikely(__pyx_t_15 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L1_error)
+      __pyx_t_15 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap((*((double *) ( /* dim=0 */ (__pyx_v_a->exps.data + __pyx_t_13 * __pyx_v_a->exps.strides[0]) ))), __pyx_v_a->lmn, __pyx_v_a->origin, (*((double *) ( /* dim=0 */ (__pyx_v_b->exps.data + __pyx_t_14 * __pyx_v_b->exps.strides[0]) ))), __pyx_v_b->lmn, __pyx_v_b->origin); if (unlikely(__pyx_t_15 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L1_error)
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":147
+      /* "src/stong_core_cython/gaussian_integrals.pyx":147
  *     for i in range(num_exps):
  *         for j in range(num_exps):
  *             s += (             # <<<<<<<<<<<<<<
@@ -22282,7 +22282,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
     }
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":154
+  /* "src/stong_core_cython/gaussian_integrals.pyx":154
  *                 * overlap(a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin)
  *             )
  *     return s             # <<<<<<<<<<<<<<
@@ -22292,7 +22292,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
   __pyx_r = __pyx_v_s;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":139
+  /* "src/stong_core_cython/gaussian_integrals.pyx":139
  * 
  * 
  * cpdef double S(BasisFunction a, BasisFunction b):             # <<<<<<<<<<<<<<
@@ -22302,31 +22302,31 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(struct __pyx
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_3S(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_3S(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_16gaussian_overlap_2S, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\207\215\343\201\252\343\202\212\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_3S = {"S", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_3S, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_16gaussian_overlap_2S};
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_3S(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_18gaussian_integrals_2S, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\207\215\343\201\252\343\202\212\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
+static PyMethodDef __pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_3S = {"S", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_3S, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_18gaussian_integrals_2S};
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_3S(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a = 0;
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -22388,8 +22388,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_a = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[0]);
-    __pyx_v_b = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[1]);
+    __pyx_v_a = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[0]);
+    __pyx_v_b = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -22403,13 +22403,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "a", 0))) __PYX_ERR(0, 139, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "b", 0))) __PYX_ERR(0, 139, __pyx_L1_error)
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_2S(__pyx_self, __pyx_v_a, __pyx_v_b);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "a", 0))) __PYX_ERR(0, 139, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "b", 0))) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_2S(__pyx_self, __pyx_v_a, __pyx_v_b);
 
   /* function exit code */
   goto __pyx_L0;
@@ -22426,7 +22426,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_2S(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_2S(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -22436,7 +22436,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_2S(CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("S", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_S(__pyx_v_a, __pyx_v_b, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_S(__pyx_v_a, __pyx_v_b, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
   __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -22446,7 +22446,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_2S(CYTHON_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -22454,7 +22454,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_2S(CYTHON_
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":157
+/* "src/stong_core_cython/gaussian_integrals.pyx":157
  * 
  * 
  * cdef double kinetic(double a, tuple[long, long, long] lmn1, double[:] A, double b, tuple[long, long, long] lmn2, double[:] B):             # <<<<<<<<<<<<<<
@@ -22462,7 +22462,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_2S(CYTHON_
  * 
  */
 
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double __pyx_v_a, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_kinetic(double __pyx_v_a, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B) {
   long __pyx_v_l2;
   long __pyx_v_m2;
   long __pyx_v_n2;
@@ -22478,7 +22478,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":161
+  /* "src/stong_core_cython/gaussian_integrals.pyx":161
  * 
  *     """
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]             # <<<<<<<<<<<<<<
@@ -22489,17 +22489,17 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   __pyx_v_m2 = __pyx_v_lmn2.f1;
   __pyx_v_n2 = __pyx_v_lmn2.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":162
+  /* "src/stong_core_cython/gaussian_integrals.pyx":162
  *     """
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef double term0 = b * (2 * (l2 + m2 + n2) + 3) * overlap(a, lmn1, A, b, lmn2, B)             # <<<<<<<<<<<<<<
  *     cdef double term1 = (
  *         -2
  */
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2, __pyx_v_B); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2, __pyx_v_B); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 162, __pyx_L1_error)
   __pyx_v_term0 = ((__pyx_v_b * ((2 * ((__pyx_v_l2 + __pyx_v_m2) + __pyx_v_n2)) + 3)) * __pyx_t_1);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":167
+  /* "src/stong_core_cython/gaussian_integrals.pyx":167
  *         * b**2
  *         * (
  *             overlap(a, lmn1, A, b, (l2 + 2, m2, n2), B)             # <<<<<<<<<<<<<<
@@ -22509,9 +22509,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   __pyx_t_2.f0 = (__pyx_v_l2 + 2);
   __pyx_t_2.f1 = __pyx_v_m2;
   __pyx_t_2.f2 = __pyx_v_n2;
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":168
+  /* "src/stong_core_cython/gaussian_integrals.pyx":168
  *         * (
  *             overlap(a, lmn1, A, b, (l2 + 2, m2, n2), B)
  *             + overlap(a, lmn1, A, b, (l2, m2 + 2, n2), B)             # <<<<<<<<<<<<<<
@@ -22521,9 +22521,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   __pyx_t_2.f0 = __pyx_v_l2;
   __pyx_t_2.f1 = (__pyx_v_m2 + 2);
   __pyx_t_2.f2 = __pyx_v_n2;
-  __pyx_t_3 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_3 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_3 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_3 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":169
+  /* "src/stong_core_cython/gaussian_integrals.pyx":169
  *             overlap(a, lmn1, A, b, (l2 + 2, m2, n2), B)
  *             + overlap(a, lmn1, A, b, (l2, m2 + 2, n2), B)
  *             + overlap(a, lmn1, A, b, (l2, m2, n2 + 2), B)             # <<<<<<<<<<<<<<
@@ -22533,9 +22533,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   __pyx_t_2.f0 = __pyx_v_l2;
   __pyx_t_2.f1 = __pyx_v_m2;
   __pyx_t_2.f2 = (__pyx_v_n2 + 2);
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":166
+  /* "src/stong_core_cython/gaussian_integrals.pyx":166
  *         -2
  *         * b**2
  *         * (             # <<<<<<<<<<<<<<
@@ -22544,7 +22544,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
  */
   __pyx_v_term1 = ((-2.0 * pow(__pyx_v_b, 2.0)) * ((__pyx_t_1 + __pyx_t_3) + __pyx_t_4));
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":173
+  /* "src/stong_core_cython/gaussian_integrals.pyx":173
  *     )
  *     cdef double term2 = -0.5 * (
  *         l2 * (l2 - 1) * overlap(a, lmn1, A, b, (l2 - 2, m2, n2), B)             # <<<<<<<<<<<<<<
@@ -22554,9 +22554,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   __pyx_t_2.f0 = (__pyx_v_l2 - 2);
   __pyx_t_2.f1 = __pyx_v_m2;
   __pyx_t_2.f2 = __pyx_v_n2;
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 173, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":174
+  /* "src/stong_core_cython/gaussian_integrals.pyx":174
  *     cdef double term2 = -0.5 * (
  *         l2 * (l2 - 1) * overlap(a, lmn1, A, b, (l2 - 2, m2, n2), B)
  *         + m2 * (m2 - 1) * overlap(a, lmn1, A, b, (l2, m2 - 2, n2), B)             # <<<<<<<<<<<<<<
@@ -22566,9 +22566,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   __pyx_t_2.f0 = __pyx_v_l2;
   __pyx_t_2.f1 = (__pyx_v_m2 - 2);
   __pyx_t_2.f2 = __pyx_v_n2;
-  __pyx_t_3 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_3 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_3 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_3 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 174, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":175
+  /* "src/stong_core_cython/gaussian_integrals.pyx":175
  *         l2 * (l2 - 1) * overlap(a, lmn1, A, b, (l2 - 2, m2, n2), B)
  *         + m2 * (m2 - 1) * overlap(a, lmn1, A, b, (l2, m2 - 2, n2), B)
  *         + n2 * (n2 - 1) * overlap(a, lmn1, A, b, (l2, m2, n2 - 2), B)             # <<<<<<<<<<<<<<
@@ -22578,9 +22578,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   __pyx_t_2.f0 = __pyx_v_l2;
   __pyx_t_2.f1 = __pyx_v_m2;
   __pyx_t_2.f2 = (__pyx_v_n2 - 2);
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_t_2, __pyx_v_B); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":172
+  /* "src/stong_core_cython/gaussian_integrals.pyx":172
  *         )
  *     )
  *     cdef double term2 = -0.5 * (             # <<<<<<<<<<<<<<
@@ -22589,7 +22589,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
  */
   __pyx_v_term2 = (-0.5 * ((((__pyx_v_l2 * (__pyx_v_l2 - 1)) * __pyx_t_4) + ((__pyx_v_m2 * (__pyx_v_m2 - 1)) * __pyx_t_3)) + ((__pyx_v_n2 * (__pyx_v_n2 - 1)) * __pyx_t_1)));
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":177
+  /* "src/stong_core_cython/gaussian_integrals.pyx":177
  *         + n2 * (n2 - 1) * overlap(a, lmn1, A, b, (l2, m2, n2 - 2), B)
  *     )
  *     return term0 + term1 + term2             # <<<<<<<<<<<<<<
@@ -22599,7 +22599,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
   __pyx_r = ((__pyx_v_term0 + __pyx_v_term1) + __pyx_v_term2);
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":157
+  /* "src/stong_core_cython/gaussian_integrals.pyx":157
  * 
  * 
  * cdef double kinetic(double a, tuple[long, long, long] lmn1, double[:] A, double b, tuple[long, long, long] lmn2, double[:] B):             # <<<<<<<<<<<<<<
@@ -22609,13 +22609,13 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.kinetic", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.kinetic", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":180
+/* "src/stong_core_cython/gaussian_integrals.pyx":180
  * 
  * 
  * cpdef double T(BasisFunction a, BasisFunction b):             # <<<<<<<<<<<<<<
@@ -22623,14 +22623,14 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic(double
  * 
  */
 
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_5T(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_5T(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_T(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double __pyx_v_t;
   int __pyx_v_i;
   int __pyx_v_j;
@@ -22655,7 +22655,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":184
+  /* "src/stong_core_cython/gaussian_integrals.pyx":184
  * 
  *     """
  *     cdef double t = 0.0             # <<<<<<<<<<<<<<
@@ -22664,7 +22664,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
  */
   __pyx_v_t = 0.0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":185
+  /* "src/stong_core_cython/gaussian_integrals.pyx":185
  *     """
  *     cdef double t = 0.0
  *     cdef int i, j, num_exps = len(a.exps)             # <<<<<<<<<<<<<<
@@ -22675,7 +22675,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_a->exps); 
   __pyx_v_num_exps = __pyx_t_1;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":186
+  /* "src/stong_core_cython/gaussian_integrals.pyx":186
  *     cdef double t = 0.0
  *     cdef int i, j, num_exps = len(a.exps)
  *     for i in range(num_exps):             # <<<<<<<<<<<<<<
@@ -22687,7 +22687,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":187
+    /* "src/stong_core_cython/gaussian_integrals.pyx":187
  *     cdef int i, j, num_exps = len(a.exps)
  *     for i in range(num_exps):
  *         for j in range(num_exps):             # <<<<<<<<<<<<<<
@@ -22699,7 +22699,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
     for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_j = __pyx_t_7;
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":189
+      /* "src/stong_core_cython/gaussian_integrals.pyx":189
  *         for j in range(num_exps):
  *             t += (
  *                 a.norm[i]             # <<<<<<<<<<<<<<
@@ -22718,7 +22718,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
         __PYX_ERR(0, 189, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":190
+      /* "src/stong_core_cython/gaussian_integrals.pyx":190
  *             t += (
  *                 a.norm[i]
  *                 * b.norm[j]             # <<<<<<<<<<<<<<
@@ -22737,7 +22737,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
         __PYX_ERR(0, 190, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":191
+      /* "src/stong_core_cython/gaussian_integrals.pyx":191
  *                 a.norm[i]
  *                 * b.norm[j]
  *                 * a.coefs[i]             # <<<<<<<<<<<<<<
@@ -22756,7 +22756,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
         __PYX_ERR(0, 191, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":192
+      /* "src/stong_core_cython/gaussian_integrals.pyx":192
  *                 * b.norm[j]
  *                 * a.coefs[i]
  *                 * b.coefs[j]             # <<<<<<<<<<<<<<
@@ -22775,7 +22775,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
         __PYX_ERR(0, 192, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":193
+      /* "src/stong_core_cython/gaussian_integrals.pyx":193
  *                 * a.coefs[i]
  *                 * b.coefs[j]
  *                 * kinetic(a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin)             # <<<<<<<<<<<<<<
@@ -22806,9 +22806,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
         __PYX_ERR(0, 193, __pyx_L1_error)
       }
       if (unlikely(!__pyx_v_b->origin.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 193, __pyx_L1_error)}
-      __pyx_t_15 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_kinetic((*((double *) ( /* dim=0 */ (__pyx_v_a->exps.data + __pyx_t_13 * __pyx_v_a->exps.strides[0]) ))), __pyx_v_a->lmn, __pyx_v_a->origin, (*((double *) ( /* dim=0 */ (__pyx_v_b->exps.data + __pyx_t_14 * __pyx_v_b->exps.strides[0]) ))), __pyx_v_b->lmn, __pyx_v_b->origin); if (unlikely(__pyx_t_15 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L1_error)
+      __pyx_t_15 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_kinetic((*((double *) ( /* dim=0 */ (__pyx_v_a->exps.data + __pyx_t_13 * __pyx_v_a->exps.strides[0]) ))), __pyx_v_a->lmn, __pyx_v_a->origin, (*((double *) ( /* dim=0 */ (__pyx_v_b->exps.data + __pyx_t_14 * __pyx_v_b->exps.strides[0]) ))), __pyx_v_b->lmn, __pyx_v_b->origin); if (unlikely(__pyx_t_15 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 193, __pyx_L1_error)
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":188
+      /* "src/stong_core_cython/gaussian_integrals.pyx":188
  *     for i in range(num_exps):
  *         for j in range(num_exps):
  *             t += (             # <<<<<<<<<<<<<<
@@ -22819,7 +22819,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
     }
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":195
+  /* "src/stong_core_cython/gaussian_integrals.pyx":195
  *                 * kinetic(a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin)
  *             )
  *     return t             # <<<<<<<<<<<<<<
@@ -22829,7 +22829,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
   __pyx_r = __pyx_v_t;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":180
+  /* "src/stong_core_cython/gaussian_integrals.pyx":180
  * 
  * 
  * cpdef double T(BasisFunction a, BasisFunction b):             # <<<<<<<<<<<<<<
@@ -22839,31 +22839,31 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(struct __pyx
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_5T(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_5T(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_16gaussian_overlap_4T, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\201\213\345\213\225\343\202\250\343\203\215\343\203\253\343\202\256\343\203\274\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_5T = {"T", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_5T, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_16gaussian_overlap_4T};
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_5T(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_18gaussian_integrals_4T, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\201\213\345\213\225\343\202\250\343\203\215\343\203\253\343\202\256\343\203\274\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
+static PyMethodDef __pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_5T = {"T", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_5T, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_18gaussian_integrals_4T};
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_5T(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a = 0;
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -22925,8 +22925,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_a = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[0]);
-    __pyx_v_b = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[1]);
+    __pyx_v_a = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[0]);
+    __pyx_v_b = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -22940,13 +22940,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "a", 0))) __PYX_ERR(0, 180, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "b", 0))) __PYX_ERR(0, 180, __pyx_L1_error)
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_4T(__pyx_self, __pyx_v_a, __pyx_v_b);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "a", 0))) __PYX_ERR(0, 180, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "b", 0))) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_4T(__pyx_self, __pyx_v_a, __pyx_v_b);
 
   /* function exit code */
   goto __pyx_L0;
@@ -22963,7 +22963,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_4T(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_4T(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -22973,7 +22973,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_4T(CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("T", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_T(__pyx_v_a, __pyx_v_b, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_T(__pyx_v_a, __pyx_v_b, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 180, __pyx_L1_error)
   __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -22983,7 +22983,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_4T(CYTHON_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -22991,7 +22991,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_4T(CYTHON_
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":197
+/* "src/stong_core_cython/gaussian_integrals.pyx":197
  *     return t
  * 
  * cdef double boys(int n, double T):             # <<<<<<<<<<<<<<
@@ -22999,7 +22999,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_4T(CYTHON_
  * 
  */
 
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_boys(int __pyx_v_n, double __pyx_v_T) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_boys(int __pyx_v_n, double __pyx_v_T) {
   double __pyx_r;
   double __pyx_t_1;
   long __pyx_t_2;
@@ -23007,7 +23007,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_boys(int __pyx
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":198
+  /* "src/stong_core_cython/gaussian_integrals.pyx":198
  * 
  * cdef double boys(int n, double T):
  *     return hyp1f1(n + 0.5, n + 1.5, -T) / (2 * n + 1)             # <<<<<<<<<<<<<<
@@ -23023,7 +23023,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_boys(int __pyx
   __pyx_r = (__pyx_t_1 / ((double)__pyx_t_2));
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":197
+  /* "src/stong_core_cython/gaussian_integrals.pyx":197
  *     return t
  * 
  * cdef double boys(int n, double T):             # <<<<<<<<<<<<<<
@@ -23033,13 +23033,13 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_boys(int __pyx
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.boys", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.boys", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":200
+/* "src/stong_core_cython/gaussian_integrals.pyx":200
  *     return hyp1f1(n + 0.5, n + 1.5, -T) / (2 * n + 1)
  * 
  * cdef double R_memo(int n, int t, int u, int v, double p, double[:] RPC, dict memo):             # <<<<<<<<<<<<<<
@@ -23047,7 +23047,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_boys(int __pyx
  *     cdef tuple key = (n, t, u, v)
  */
 
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __pyx_v_n, int __pyx_v_t, int __pyx_v_u, int __pyx_v_v, double __pyx_v_p, __Pyx_memviewslice __pyx_v_RPC, PyObject *__pyx_v_memo) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo(int __pyx_v_n, int __pyx_v_t, int __pyx_v_u, int __pyx_v_v, double __pyx_v_p, __Pyx_memviewslice __pyx_v_RPC, PyObject *__pyx_v_memo) {
   double __pyx_v_norm_RPC_sq;
   PyObject *__pyx_v_key = 0;
   double __pyx_v_result;
@@ -23071,7 +23071,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("R_memo", 1);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":201
+  /* "src/stong_core_cython/gaussian_integrals.pyx":201
  * 
  * cdef double R_memo(int n, int t, int u, int v, double p, double[:] RPC, dict memo):
  *     cdef double norm_RPC_sq = RPC[0]**2 + RPC[1]**2 + RPC[2]** 2             # <<<<<<<<<<<<<<
@@ -23110,7 +23110,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   }
   __pyx_v_norm_RPC_sq = ((pow((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_1 * __pyx_v_RPC.strides[0]) ))), 2.0) + pow((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_3 * __pyx_v_RPC.strides[0]) ))), 2.0)) + pow((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_4 * __pyx_v_RPC.strides[0]) ))), 2.0));
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":202
+  /* "src/stong_core_cython/gaussian_integrals.pyx":202
  * cdef double R_memo(int n, int t, int u, int v, double p, double[:] RPC, dict memo):
  *     cdef double norm_RPC_sq = RPC[0]**2 + RPC[1]**2 + RPC[2]** 2
  *     cdef tuple key = (n, t, u, v)             # <<<<<<<<<<<<<<
@@ -23142,7 +23142,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   __pyx_v_key = ((PyObject*)__pyx_t_9);
   __pyx_t_9 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":204
+  /* "src/stong_core_cython/gaussian_integrals.pyx":204
  *     cdef tuple key = (n, t, u, v)
  * 
  *     if key in memo:             # <<<<<<<<<<<<<<
@@ -23156,7 +23156,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   __pyx_t_10 = (__Pyx_PyDict_ContainsTF(__pyx_v_key, __pyx_v_memo, Py_EQ)); if (unlikely((__pyx_t_10 < 0))) __PYX_ERR(0, 204, __pyx_L1_error)
   if (__pyx_t_10) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":205
+    /* "src/stong_core_cython/gaussian_integrals.pyx":205
  * 
  *     if key in memo:
  *         return memo[key]             # <<<<<<<<<<<<<<
@@ -23174,7 +23174,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
     __pyx_r = __pyx_t_11;
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":204
+    /* "src/stong_core_cython/gaussian_integrals.pyx":204
  *     cdef tuple key = (n, t, u, v)
  * 
  *     if key in memo:             # <<<<<<<<<<<<<<
@@ -23183,7 +23183,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
  */
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":208
+  /* "src/stong_core_cython/gaussian_integrals.pyx":208
  * 
  *     cdef double result
  *     if t < 0 or u < 0 or v < 0:             # <<<<<<<<<<<<<<
@@ -23207,7 +23207,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   __pyx_L5_bool_binop_done:;
   if (__pyx_t_10) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":209
+    /* "src/stong_core_cython/gaussian_integrals.pyx":209
  *     cdef double result
  *     if t < 0 or u < 0 or v < 0:
  *         result = 0             # <<<<<<<<<<<<<<
@@ -23216,7 +23216,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
  */
     __pyx_v_result = 0.0;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":208
+    /* "src/stong_core_cython/gaussian_integrals.pyx":208
  * 
  *     cdef double result
  *     if t < 0 or u < 0 or v < 0:             # <<<<<<<<<<<<<<
@@ -23226,7 +23226,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
     goto __pyx_L4;
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":210
+  /* "src/stong_core_cython/gaussian_integrals.pyx":210
  *     if t < 0 or u < 0 or v < 0:
  *         result = 0
  *     elif t == 0 and u == 0 and v == 0:             # <<<<<<<<<<<<<<
@@ -23250,17 +23250,17 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   __pyx_L8_bool_binop_done:;
   if (__pyx_t_10) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":211
+    /* "src/stong_core_cython/gaussian_integrals.pyx":211
  *         result = 0
  *     elif t == 0 and u == 0 and v == 0:
  *         result = (-2 * p) ** n * boys(n, p * norm_RPC_sq)             # <<<<<<<<<<<<<<
  *     elif t == 0 and u == 0:
  *         result = (v - 1) * R_memo(n + 1, t, u, v - 2, p, RPC, memo) + RPC[2] * R_memo(n + 1, t, u, v - 1, p, RPC, memo)
  */
-    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_boys(__pyx_v_n, (__pyx_v_p * __pyx_v_norm_RPC_sq)); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 211, __pyx_L1_error)
+    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_boys(__pyx_v_n, (__pyx_v_p * __pyx_v_norm_RPC_sq)); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 211, __pyx_L1_error)
     __pyx_v_result = (pow((-2.0 * __pyx_v_p), ((double)__pyx_v_n)) * __pyx_t_11);
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":210
+    /* "src/stong_core_cython/gaussian_integrals.pyx":210
  *     if t < 0 or u < 0 or v < 0:
  *         result = 0
  *     elif t == 0 and u == 0 and v == 0:             # <<<<<<<<<<<<<<
@@ -23270,7 +23270,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
     goto __pyx_L4;
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":212
+  /* "src/stong_core_cython/gaussian_integrals.pyx":212
  *     elif t == 0 and u == 0 and v == 0:
  *         result = (-2 * p) ** n * boys(n, p * norm_RPC_sq)
  *     elif t == 0 and u == 0:             # <<<<<<<<<<<<<<
@@ -23288,14 +23288,14 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   __pyx_L11_bool_binop_done:;
   if (__pyx_t_10) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":213
+    /* "src/stong_core_cython/gaussian_integrals.pyx":213
  *         result = (-2 * p) ** n * boys(n, p * norm_RPC_sq)
  *     elif t == 0 and u == 0:
  *         result = (v - 1) * R_memo(n + 1, t, u, v - 2, p, RPC, memo) + RPC[2] * R_memo(n + 1, t, u, v - 1, p, RPC, memo)             # <<<<<<<<<<<<<<
  *     elif t == 0:
  *         result = (u - 1) * R_memo(n + 1, t, u - 2, v, p, RPC, memo) + RPC[1] * R_memo(n + 1, t, u - 1, v, p, RPC, memo)
  */
-    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 2), __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 213, __pyx_L1_error)
+    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 2), __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 213, __pyx_L1_error)
     __pyx_t_4 = 2;
     __pyx_t_2 = -1;
     if (__pyx_t_4 < 0) {
@@ -23306,10 +23306,10 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
       __PYX_ERR(0, 213, __pyx_L1_error)
     }
-    __pyx_t_13 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 1), __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_13 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 213, __pyx_L1_error)
+    __pyx_t_13 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 1), __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_13 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 213, __pyx_L1_error)
     __pyx_v_result = (((__pyx_v_v - 1) * __pyx_t_11) + ((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_4 * __pyx_v_RPC.strides[0]) ))) * __pyx_t_13));
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":212
+    /* "src/stong_core_cython/gaussian_integrals.pyx":212
  *     elif t == 0 and u == 0 and v == 0:
  *         result = (-2 * p) ** n * boys(n, p * norm_RPC_sq)
  *     elif t == 0 and u == 0:             # <<<<<<<<<<<<<<
@@ -23319,7 +23319,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
     goto __pyx_L4;
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":214
+  /* "src/stong_core_cython/gaussian_integrals.pyx":214
  *     elif t == 0 and u == 0:
  *         result = (v - 1) * R_memo(n + 1, t, u, v - 2, p, RPC, memo) + RPC[2] * R_memo(n + 1, t, u, v - 1, p, RPC, memo)
  *     elif t == 0:             # <<<<<<<<<<<<<<
@@ -23329,14 +23329,14 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   __pyx_t_10 = (__pyx_v_t == 0);
   if (__pyx_t_10) {
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":215
+    /* "src/stong_core_cython/gaussian_integrals.pyx":215
  *         result = (v - 1) * R_memo(n + 1, t, u, v - 2, p, RPC, memo) + RPC[2] * R_memo(n + 1, t, u, v - 1, p, RPC, memo)
  *     elif t == 0:
  *         result = (u - 1) * R_memo(n + 1, t, u - 2, v, p, RPC, memo) + RPC[1] * R_memo(n + 1, t, u - 1, v, p, RPC, memo)             # <<<<<<<<<<<<<<
  *     else:
  *         result = (t - 1) * R_memo(n + 1, t - 2, u, v, p, RPC, memo) + RPC[0] * R_memo(n + 1, t - 1, u, v, p, RPC, memo)
  */
-    __pyx_t_13 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 2), __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_13 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_13 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 2), __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_13 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 215, __pyx_L1_error)
     __pyx_t_4 = 1;
     __pyx_t_2 = -1;
     if (__pyx_t_4 < 0) {
@@ -23347,10 +23347,10 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
       __PYX_ERR(0, 215, __pyx_L1_error)
     }
-    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 1), __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 1), __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 215, __pyx_L1_error)
     __pyx_v_result = (((__pyx_v_u - 1) * __pyx_t_13) + ((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_4 * __pyx_v_RPC.strides[0]) ))) * __pyx_t_11));
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":214
+    /* "src/stong_core_cython/gaussian_integrals.pyx":214
  *     elif t == 0 and u == 0:
  *         result = (v - 1) * R_memo(n + 1, t, u, v - 2, p, RPC, memo) + RPC[2] * R_memo(n + 1, t, u, v - 1, p, RPC, memo)
  *     elif t == 0:             # <<<<<<<<<<<<<<
@@ -23360,7 +23360,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
     goto __pyx_L4;
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":217
+  /* "src/stong_core_cython/gaussian_integrals.pyx":217
  *         result = (u - 1) * R_memo(n + 1, t, u - 2, v, p, RPC, memo) + RPC[1] * R_memo(n + 1, t, u - 1, v, p, RPC, memo)
  *     else:
  *         result = (t - 1) * R_memo(n + 1, t - 2, u, v, p, RPC, memo) + RPC[0] * R_memo(n + 1, t - 1, u, v, p, RPC, memo)             # <<<<<<<<<<<<<<
@@ -23368,7 +23368,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
  *     memo[key] = result
  */
   /*else*/ {
-    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo((__pyx_v_n + 1), (__pyx_v_t - 2), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 217, __pyx_L1_error)
+    __pyx_t_11 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo((__pyx_v_n + 1), (__pyx_v_t - 2), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 217, __pyx_L1_error)
     __pyx_t_4 = 0;
     __pyx_t_2 = -1;
     if (__pyx_t_4 < 0) {
@@ -23379,12 +23379,12 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
       __PYX_ERR(0, 217, __pyx_L1_error)
     }
-    __pyx_t_13 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo((__pyx_v_n + 1), (__pyx_v_t - 1), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_13 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 217, __pyx_L1_error)
+    __pyx_t_13 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo((__pyx_v_n + 1), (__pyx_v_t - 1), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_13 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 217, __pyx_L1_error)
     __pyx_v_result = (((__pyx_v_t - 1) * __pyx_t_11) + ((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_4 * __pyx_v_RPC.strides[0]) ))) * __pyx_t_13));
   }
   __pyx_L4:;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":219
+  /* "src/stong_core_cython/gaussian_integrals.pyx":219
  *         result = (t - 1) * R_memo(n + 1, t - 2, u, v, p, RPC, memo) + RPC[0] * R_memo(n + 1, t - 1, u, v, p, RPC, memo)
  * 
  *     memo[key] = result             # <<<<<<<<<<<<<<
@@ -23400,7 +23400,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   if (unlikely((PyDict_SetItem(__pyx_v_memo, __pyx_v_key, __pyx_t_9) < 0))) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":220
+  /* "src/stong_core_cython/gaussian_integrals.pyx":220
  * 
  *     memo[key] = result
  *     return result             # <<<<<<<<<<<<<<
@@ -23410,7 +23410,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":200
+  /* "src/stong_core_cython/gaussian_integrals.pyx":200
  *     return hyp1f1(n + 0.5, n + 1.5, -T) / (2 * n + 1)
  * 
  * cdef double R_memo(int n, int t, int u, int v, double p, double[:] RPC, dict memo):             # <<<<<<<<<<<<<<
@@ -23425,7 +23425,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.R_memo", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.R_memo", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_key);
@@ -23433,7 +23433,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":222
+/* "src/stong_core_cython/gaussian_integrals.pyx":222
  *     return result
  * 
  * cdef double R(int n, int t, int u, int v, double p, double[:] RPC):             # <<<<<<<<<<<<<<
@@ -23441,7 +23441,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(int __p
  *     return R_memo(n, t, u, v, p, RPC, memo)
  */
 
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(int __pyx_v_n, int __pyx_v_t, int __pyx_v_u, int __pyx_v_v, double __pyx_v_p, __Pyx_memviewslice __pyx_v_RPC) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R(int __pyx_v_n, int __pyx_v_t, int __pyx_v_u, int __pyx_v_v, double __pyx_v_p, __Pyx_memviewslice __pyx_v_RPC) {
   PyObject *__pyx_v_memo = 0;
   double __pyx_r;
   __Pyx_RefNannyDeclarations
@@ -23452,7 +23452,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(int __pyx_v_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("R", 1);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":223
+  /* "src/stong_core_cython/gaussian_integrals.pyx":223
  * 
  * cdef double R(int n, int t, int u, int v, double p, double[:] RPC):
  *     cdef dict memo = {}             # <<<<<<<<<<<<<<
@@ -23464,18 +23464,18 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(int __pyx_v_
   __pyx_v_memo = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":224
+  /* "src/stong_core_cython/gaussian_integrals.pyx":224
  * cdef double R(int n, int t, int u, int v, double p, double[:] RPC):
  *     cdef dict memo = {}
  *     return R_memo(n, t, u, v, p, RPC, memo)             # <<<<<<<<<<<<<<
  * 
  * #cdef double R_memo(int n, int t, int u, int v, double p, double[:] RPC, double[:, :, :, :] memo):
  */
-  __pyx_t_2 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R_memo(__pyx_v_n, __pyx_v_t, __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_2 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 224, __pyx_L1_error)
+  __pyx_t_2 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R_memo(__pyx_v_n, __pyx_v_t, __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC, __pyx_v_memo); if (unlikely(__pyx_t_2 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 224, __pyx_L1_error)
   __pyx_r = __pyx_t_2;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":222
+  /* "src/stong_core_cython/gaussian_integrals.pyx":222
  *     return result
  * 
  * cdef double R(int n, int t, int u, int v, double p, double[:] RPC):             # <<<<<<<<<<<<<<
@@ -23486,7 +23486,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(int __pyx_v_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.R", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.R", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_memo);
@@ -23494,7 +23494,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(int __pyx_v_
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":251
+/* "src/stong_core_cython/gaussian_integrals.pyx":251
  * #    return R_memo(n, t, u, v, p, RPC, memo)
  * 
  * cdef double nuclear_attraction(double a, tuple[long, long, long] lmn1, double[:] A,             # <<<<<<<<<<<<<<
@@ -23502,7 +23502,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(int __pyx_v_
  *     """
  */
 
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attraction(double __pyx_v_a, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_C) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_nuclear_attraction(double __pyx_v_a, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_C) {
   double __pyx_v_p;
   long __pyx_v_l1;
   long __pyx_v_m1;
@@ -23542,7 +23542,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("nuclear_attraction", 1);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":256
+  /* "src/stong_core_cython/gaussian_integrals.pyx":256
  * 
  *     """
  *     cdef double p = a + b             # <<<<<<<<<<<<<<
@@ -23551,7 +23551,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
  */
   __pyx_v_p = (__pyx_v_a + __pyx_v_b);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":257
+  /* "src/stong_core_cython/gaussian_integrals.pyx":257
  *     """
  *     cdef double p = a + b
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]             # <<<<<<<<<<<<<<
@@ -23562,7 +23562,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   __pyx_v_m1 = __pyx_v_lmn1.f1;
   __pyx_v_n1 = __pyx_v_lmn1.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":258
+  /* "src/stong_core_cython/gaussian_integrals.pyx":258
  *     cdef double p = a + b
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]             # <<<<<<<<<<<<<<
@@ -23573,7 +23573,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   __pyx_v_m2 = __pyx_v_lmn2.f1;
   __pyx_v_n2 = __pyx_v_lmn2.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":259
+  /* "src/stong_core_cython/gaussian_integrals.pyx":259
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef double[:] RPC = view.array(shape=(3,), itemsize=sizeof(double), format="d")             # <<<<<<<<<<<<<<
@@ -23597,7 +23597,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":261
+  /* "src/stong_core_cython/gaussian_integrals.pyx":261
  *     cdef double[:] RPC = view.array(shape=(3,), itemsize=sizeof(double), format="d")
  *     cdef long t, u, v, i
  *     for i in range(3):             # <<<<<<<<<<<<<<
@@ -23607,7 +23607,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   for (__pyx_t_4 = 0; __pyx_t_4 < 3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":262
+    /* "src/stong_core_cython/gaussian_integrals.pyx":262
  *     cdef long t, u, v, i
  *     for i in range(3):
  *         RPC[i] = (a * A[i] + b * B[i]) / p - C[i]             # <<<<<<<<<<<<<<
@@ -23662,7 +23662,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
     *((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_5 * __pyx_v_RPC.strides[0]) )) = ((__pyx_t_8 / __pyx_v_p) - (*((double *) ( /* dim=0 */ (__pyx_v_C.data + __pyx_t_7 * __pyx_v_C.strides[0]) ))));
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":263
+  /* "src/stong_core_cython/gaussian_integrals.pyx":263
  *     for i in range(3):
  *         RPC[i] = (a * A[i] + b * B[i]) / p - C[i]
  *     cdef double val = 0.0             # <<<<<<<<<<<<<<
@@ -23671,7 +23671,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
  */
   __pyx_v_val = 0.0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":264
+  /* "src/stong_core_cython/gaussian_integrals.pyx":264
  *         RPC[i] = (a * A[i] + b * B[i]) / p - C[i]
  *     cdef double val = 0.0
  *     for t in range(l1 + l2 + 1):             # <<<<<<<<<<<<<<
@@ -23683,7 +23683,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v_t = __pyx_t_10;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":265
+    /* "src/stong_core_cython/gaussian_integrals.pyx":265
  *     cdef double val = 0.0
  *     for t in range(l1 + l2 + 1):
  *         for u in range(m1 + m2 + 1):             # <<<<<<<<<<<<<<
@@ -23695,7 +23695,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
     for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
       __pyx_v_u = __pyx_t_13;
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":266
+      /* "src/stong_core_cython/gaussian_integrals.pyx":266
  *     for t in range(l1 + l2 + 1):
  *         for u in range(m1 + m2 + 1):
  *             for v in range(n1 + n2 + 1):             # <<<<<<<<<<<<<<
@@ -23707,7 +23707,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
       for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
         __pyx_v_v = __pyx_t_16;
 
-        /* "src/stong_core_cython/gaussian_overlap.pyx":268
+        /* "src/stong_core_cython/gaussian_integrals.pyx":268
  *             for v in range(n1 + n2 + 1):
  *                 val += (
  *                     E(l1, l2, t, a, b, A[0] - B[0])             # <<<<<<<<<<<<<<
@@ -23734,9 +23734,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
           __Pyx_RaiseBufferIndexError(__pyx_t_6);
           __PYX_ERR(0, 268, __pyx_L1_error)
         }
-        __pyx_t_8 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_l1, __pyx_v_l2, __pyx_v_t, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_7 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_5 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_8 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_l1, __pyx_v_l2, __pyx_v_t, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_7 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_5 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
 
-        /* "src/stong_core_cython/gaussian_overlap.pyx":269
+        /* "src/stong_core_cython/gaussian_integrals.pyx":269
  *                 val += (
  *                     E(l1, l2, t, a, b, A[0] - B[0])
  *                     * E(m1, m2, u, a, b, A[1] - B[1])             # <<<<<<<<<<<<<<
@@ -23763,9 +23763,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
           __Pyx_RaiseBufferIndexError(__pyx_t_6);
           __PYX_ERR(0, 269, __pyx_L1_error)
         }
-        __pyx_t_17 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_m1, __pyx_v_m2, __pyx_v_u, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_5 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_17 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 269, __pyx_L1_error)
+        __pyx_t_17 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_m1, __pyx_v_m2, __pyx_v_u, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_5 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_17 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 269, __pyx_L1_error)
 
-        /* "src/stong_core_cython/gaussian_overlap.pyx":270
+        /* "src/stong_core_cython/gaussian_integrals.pyx":270
  *                     E(l1, l2, t, a, b, A[0] - B[0])
  *                     * E(m1, m2, u, a, b, A[1] - B[1])
  *                     * E(n1, n2, v, a, b, A[2] - B[2])             # <<<<<<<<<<<<<<
@@ -23792,18 +23792,18 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
           __Pyx_RaiseBufferIndexError(__pyx_t_6);
           __PYX_ERR(0, 270, __pyx_L1_error)
         }
-        __pyx_t_18 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_n1, __pyx_v_n2, __pyx_v_v, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_7 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_5 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_18 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 270, __pyx_L1_error)
+        __pyx_t_18 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_n1, __pyx_v_n2, __pyx_v_v, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_7 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_5 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_18 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 270, __pyx_L1_error)
 
-        /* "src/stong_core_cython/gaussian_overlap.pyx":271
+        /* "src/stong_core_cython/gaussian_integrals.pyx":271
  *                     * E(m1, m2, u, a, b, A[1] - B[1])
  *                     * E(n1, n2, v, a, b, A[2] - B[2])
  *                     * R(0, t, u, v, p, RPC)             # <<<<<<<<<<<<<<
  *                 )
  *     return 2 * M_PI / p * val
  */
-        __pyx_t_19 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(0, __pyx_v_t, __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_19 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
+        __pyx_t_19 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R(0, __pyx_v_t, __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_19 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
 
-        /* "src/stong_core_cython/gaussian_overlap.pyx":267
+        /* "src/stong_core_cython/gaussian_integrals.pyx":267
  *         for u in range(m1 + m2 + 1):
  *             for v in range(n1 + n2 + 1):
  *                 val += (             # <<<<<<<<<<<<<<
@@ -23815,7 +23815,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
     }
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":273
+  /* "src/stong_core_cython/gaussian_integrals.pyx":273
  *                     * R(0, t, u, v, p, RPC)
  *                 )
  *     return 2 * M_PI / p * val             # <<<<<<<<<<<<<<
@@ -23830,7 +23830,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   __pyx_r = ((__pyx_t_19 / __pyx_v_p) * __pyx_v_val);
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":251
+  /* "src/stong_core_cython/gaussian_integrals.pyx":251
  * #    return R_memo(n, t, u, v, p, RPC, memo)
  * 
  * cdef double nuclear_attraction(double a, tuple[long, long, long] lmn1, double[:] A,             # <<<<<<<<<<<<<<
@@ -23843,7 +23843,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_3, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.nuclear_attraction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.nuclear_attraction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_RPC, 1);
@@ -23851,7 +23851,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":275
+/* "src/stong_core_cython/gaussian_integrals.pyx":275
  *     return 2 * M_PI / p * val
  * 
  * cpdef double V(BasisFunction a, BasisFunction b, double[:] RC):             # <<<<<<<<<<<<<<
@@ -23859,14 +23859,14 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attrac
  * 
  */
 
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_7V(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_7V(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_V(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double __pyx_v_v;
   long __pyx_v_num_exps;
   long __pyx_v_i;
@@ -23891,7 +23891,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":279
+  /* "src/stong_core_cython/gaussian_integrals.pyx":279
  * 
  *     """
  *     cdef double v = 0.0             # <<<<<<<<<<<<<<
@@ -23900,7 +23900,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
  */
   __pyx_v_v = 0.0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":280
+  /* "src/stong_core_cython/gaussian_integrals.pyx":280
  *     """
  *     cdef double v = 0.0
  *     cdef long num_exps = len(a.exps), i, j             # <<<<<<<<<<<<<<
@@ -23911,7 +23911,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_a->exps); 
   __pyx_v_num_exps = __pyx_t_1;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":282
+  /* "src/stong_core_cython/gaussian_integrals.pyx":282
  *     cdef long num_exps = len(a.exps), i, j
  * 
  *     for i in range(num_exps):             # <<<<<<<<<<<<<<
@@ -23923,7 +23923,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":283
+    /* "src/stong_core_cython/gaussian_integrals.pyx":283
  * 
  *     for i in range(num_exps):
  *         for j in range(num_exps):             # <<<<<<<<<<<<<<
@@ -23935,7 +23935,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
     for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_j = __pyx_t_7;
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":285
+      /* "src/stong_core_cython/gaussian_integrals.pyx":285
  *         for j in range(num_exps):
  *             v += (
  *                 a.norm[i]             # <<<<<<<<<<<<<<
@@ -23954,7 +23954,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
         __PYX_ERR(0, 285, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":286
+      /* "src/stong_core_cython/gaussian_integrals.pyx":286
  *             v += (
  *                 a.norm[i]
  *                 * b.norm[j]             # <<<<<<<<<<<<<<
@@ -23973,7 +23973,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
         __PYX_ERR(0, 286, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":287
+      /* "src/stong_core_cython/gaussian_integrals.pyx":287
  *                 a.norm[i]
  *                 * b.norm[j]
  *                 * a.coefs[i]             # <<<<<<<<<<<<<<
@@ -23992,7 +23992,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
         __PYX_ERR(0, 287, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":288
+      /* "src/stong_core_cython/gaussian_integrals.pyx":288
  *                 * b.norm[j]
  *                 * a.coefs[i]
  *                 * b.coefs[j]             # <<<<<<<<<<<<<<
@@ -24011,7 +24011,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
         __PYX_ERR(0, 288, __pyx_L1_error)
       }
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":290
+      /* "src/stong_core_cython/gaussian_integrals.pyx":290
  *                 * b.coefs[j]
  *                 * nuclear_attraction(
  *                     a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin, RC             # <<<<<<<<<<<<<<
@@ -24043,16 +24043,16 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
       }
       if (unlikely(!__pyx_v_b->origin.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 290, __pyx_L1_error)}
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":289
+      /* "src/stong_core_cython/gaussian_integrals.pyx":289
  *                 * a.coefs[i]
  *                 * b.coefs[j]
  *                 * nuclear_attraction(             # <<<<<<<<<<<<<<
  *                     a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin, RC
  *                 )
  */
-      __pyx_t_15 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_nuclear_attraction((*((double *) ( /* dim=0 */ (__pyx_v_a->exps.data + __pyx_t_13 * __pyx_v_a->exps.strides[0]) ))), __pyx_v_a->lmn, __pyx_v_a->origin, (*((double *) ( /* dim=0 */ (__pyx_v_b->exps.data + __pyx_t_14 * __pyx_v_b->exps.strides[0]) ))), __pyx_v_b->lmn, __pyx_v_b->origin, __pyx_v_RC); if (unlikely(__pyx_t_15 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 289, __pyx_L1_error)
+      __pyx_t_15 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_nuclear_attraction((*((double *) ( /* dim=0 */ (__pyx_v_a->exps.data + __pyx_t_13 * __pyx_v_a->exps.strides[0]) ))), __pyx_v_a->lmn, __pyx_v_a->origin, (*((double *) ( /* dim=0 */ (__pyx_v_b->exps.data + __pyx_t_14 * __pyx_v_b->exps.strides[0]) ))), __pyx_v_b->lmn, __pyx_v_b->origin, __pyx_v_RC); if (unlikely(__pyx_t_15 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 289, __pyx_L1_error)
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":284
+      /* "src/stong_core_cython/gaussian_integrals.pyx":284
  *     for i in range(num_exps):
  *         for j in range(num_exps):
  *             v += (             # <<<<<<<<<<<<<<
@@ -24063,7 +24063,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
     }
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":293
+  /* "src/stong_core_cython/gaussian_integrals.pyx":293
  *                 )
  *             )
  *     return v             # <<<<<<<<<<<<<<
@@ -24073,7 +24073,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
   __pyx_r = __pyx_v_v;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":275
+  /* "src/stong_core_cython/gaussian_integrals.pyx":275
  *     return 2 * M_PI / p * val
  * 
  * cpdef double V(BasisFunction a, BasisFunction b, double[:] RC):             # <<<<<<<<<<<<<<
@@ -24083,31 +24083,31 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(struct __pyx
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_7V(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_7V(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_16gaussian_overlap_6V, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\345\216\237\345\255\220\346\240\270\343\201\213\343\202\211\343\201\256\343\202\257\343\203\274\343\203\255\343\203\263\347\233\270\344\272\222\344\275\234\347\224\250\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_7V = {"V", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_7V, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_16gaussian_overlap_6V};
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_7V(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_18gaussian_integrals_6V, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\345\216\237\345\255\220\346\240\270\343\201\213\343\202\211\343\201\256\343\202\257\343\203\274\343\203\255\343\203\263\347\233\270\344\272\222\344\275\234\347\224\250\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
+static PyMethodDef __pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_7V = {"V", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_7V, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_18gaussian_integrals_6V};
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_7V(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a = 0;
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b = 0;
   __Pyx_memviewslice __pyx_v_RC = { 0, 0, { 0 }, { 0 }, { 0 } };
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
@@ -24183,8 +24183,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
       values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
     }
-    __pyx_v_a = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[0]);
-    __pyx_v_b = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[1]);
+    __pyx_v_a = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[0]);
+    __pyx_v_b = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[1]);
     __pyx_v_RC = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[2], PyBUF_WRITABLE); if (unlikely(!__pyx_v_RC.memview)) __PYX_ERR(0, 275, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
@@ -24200,13 +24200,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
   }
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_RC, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "a", 0))) __PYX_ERR(0, 275, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "b", 0))) __PYX_ERR(0, 275, __pyx_L1_error)
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_6V(__pyx_self, __pyx_v_a, __pyx_v_b, __pyx_v_RC);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "a", 0))) __PYX_ERR(0, 275, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "b", 0))) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_6V(__pyx_self, __pyx_v_a, __pyx_v_b, __pyx_v_RC);
 
   /* function exit code */
   goto __pyx_L0;
@@ -24224,7 +24224,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_6V(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_6V(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -24235,7 +24235,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_6V(CYTHON_
   __Pyx_RefNannySetupContext("V", 1);
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_RC.memview)) { __Pyx_RaiseUnboundLocalError("RC"); __PYX_ERR(0, 275, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_V(__pyx_v_a, __pyx_v_b, __pyx_v_RC, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_V(__pyx_v_a, __pyx_v_b, __pyx_v_RC, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 275, __pyx_L1_error)
   __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 275, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -24245,7 +24245,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_6V(CYTHON_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -24253,7 +24253,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_6V(CYTHON_
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":296
+/* "src/stong_core_cython/gaussian_integrals.pyx":296
  * 
  * 
  * cdef double electron_repulsion(double a, tuple[long, long, long] lmn1, double[:] A,             # <<<<<<<<<<<<<<
@@ -24261,7 +24261,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_6V(CYTHON_
  *                          double c, tuple[long, long, long] lmn3, double[:] C,
  */
 
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repulsion(double __pyx_v_a, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B, double __pyx_v_c, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn3, __Pyx_memviewslice __pyx_v_C, double __pyx_v_d, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn4, __Pyx_memviewslice __pyx_v_D) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_electron_repulsion(double __pyx_v_a, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B, double __pyx_v_c, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn3, __Pyx_memviewslice __pyx_v_C, double __pyx_v_d, __pyx_ctuple_long__and_long__and_long __pyx_v_lmn4, __Pyx_memviewslice __pyx_v_D) {
   double __pyx_v_p;
   double __pyx_v_q;
   double __pyx_v_alpha;
@@ -24326,7 +24326,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("electron_repulsion", 1);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":303
+  /* "src/stong_core_cython/gaussian_integrals.pyx":303
  * 
  *     """
  *     cdef double p = a + b             # <<<<<<<<<<<<<<
@@ -24335,7 +24335,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
  */
   __pyx_v_p = (__pyx_v_a + __pyx_v_b);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":304
+  /* "src/stong_core_cython/gaussian_integrals.pyx":304
  *     """
  *     cdef double p = a + b
  *     cdef double q = c + d             # <<<<<<<<<<<<<<
@@ -24344,7 +24344,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
  */
   __pyx_v_q = (__pyx_v_c + __pyx_v_d);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":305
+  /* "src/stong_core_cython/gaussian_integrals.pyx":305
  *     cdef double p = a + b
  *     cdef double q = c + d
  *     cdef double alpha = p * q / (p + q)             # <<<<<<<<<<<<<<
@@ -24359,7 +24359,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   }
   __pyx_v_alpha = (__pyx_t_1 / __pyx_t_2);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":306
+  /* "src/stong_core_cython/gaussian_integrals.pyx":306
  *     cdef double q = c + d
  *     cdef double alpha = p * q / (p + q)
  *     cdef double[:] RPQ = view.array(shape=(3,), itemsize=sizeof(double), format="d")             # <<<<<<<<<<<<<<
@@ -24383,7 +24383,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   __pyx_t_5.memview = NULL;
   __pyx_t_5.data = NULL;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":308
+  /* "src/stong_core_cython/gaussian_integrals.pyx":308
  *     cdef double[:] RPQ = view.array(shape=(3,), itemsize=sizeof(double), format="d")
  * 
  *     for i in range(3):             # <<<<<<<<<<<<<<
@@ -24393,7 +24393,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   for (__pyx_t_6 = 0; __pyx_t_6 < 3; __pyx_t_6+=1) {
     __pyx_v_i = __pyx_t_6;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":309
+    /* "src/stong_core_cython/gaussian_integrals.pyx":309
  * 
  *     for i in range(3):
  *         RPQ[i] = (a * A[i] + b * B[i]) / p - (c * C[i] + d * D[i]) / q             # <<<<<<<<<<<<<<
@@ -24463,7 +24463,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
     *((double *) ( /* dim=0 */ (__pyx_v_RPQ.data + __pyx_t_7 * __pyx_v_RPQ.strides[0]) )) = ((__pyx_t_2 / __pyx_v_p) - (__pyx_t_1 / __pyx_v_q));
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":310
+  /* "src/stong_core_cython/gaussian_integrals.pyx":310
  *     for i in range(3):
  *         RPQ[i] = (a * A[i] + b * B[i]) / p - (c * C[i] + d * D[i]) / q
  *     cdef long l1 = lmn1[0], m1=lmn1[1], n1 = lmn1[2]             # <<<<<<<<<<<<<<
@@ -24474,7 +24474,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   __pyx_v_m1 = __pyx_v_lmn1.f1;
   __pyx_v_n1 = __pyx_v_lmn1.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":311
+  /* "src/stong_core_cython/gaussian_integrals.pyx":311
  *         RPQ[i] = (a * A[i] + b * B[i]) / p - (c * C[i] + d * D[i]) / q
  *     cdef long l1 = lmn1[0], m1=lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2=lmn2[1], n2 = lmn2[2]             # <<<<<<<<<<<<<<
@@ -24485,7 +24485,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   __pyx_v_m2 = __pyx_v_lmn2.f1;
   __pyx_v_n2 = __pyx_v_lmn2.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":312
+  /* "src/stong_core_cython/gaussian_integrals.pyx":312
  *     cdef long l1 = lmn1[0], m1=lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2=lmn2[1], n2 = lmn2[2]
  *     cdef long l3 = lmn3[0], m3=lmn3[1], n3 = lmn3[2]             # <<<<<<<<<<<<<<
@@ -24496,7 +24496,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   __pyx_v_m3 = __pyx_v_lmn3.f1;
   __pyx_v_n3 = __pyx_v_lmn3.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":313
+  /* "src/stong_core_cython/gaussian_integrals.pyx":313
  *     cdef long l2 = lmn2[0], m2=lmn2[1], n2 = lmn2[2]
  *     cdef long l3 = lmn3[0], m3=lmn3[1], n3 = lmn3[2]
  *     cdef long l4 = lmn4[0], m4=lmn4[1], n4 = lmn4[2]             # <<<<<<<<<<<<<<
@@ -24507,7 +24507,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   __pyx_v_m4 = __pyx_v_lmn4.f1;
   __pyx_v_n4 = __pyx_v_lmn4.f2;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":314
+  /* "src/stong_core_cython/gaussian_integrals.pyx":314
  *     cdef long l3 = lmn3[0], m3=lmn3[1], n3 = lmn3[2]
  *     cdef long l4 = lmn4[0], m4=lmn4[1], n4 = lmn4[2]
  *     cdef double val = 0.0             # <<<<<<<<<<<<<<
@@ -24516,7 +24516,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
  */
   __pyx_v_val = 0.0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":316
+  /* "src/stong_core_cython/gaussian_integrals.pyx":316
  *     cdef double val = 0.0
  *     cdef long t, u, v, tau, nu, phi
  *     for t in range(l1 + l2 + 1):             # <<<<<<<<<<<<<<
@@ -24528,7 +24528,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
     __pyx_v_t = __pyx_t_11;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":317
+    /* "src/stong_core_cython/gaussian_integrals.pyx":317
  *     cdef long t, u, v, tau, nu, phi
  *     for t in range(l1 + l2 + 1):
  *         for u in range(m1 + m2 + 1):             # <<<<<<<<<<<<<<
@@ -24540,7 +24540,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
     for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
       __pyx_v_u = __pyx_t_14;
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":318
+      /* "src/stong_core_cython/gaussian_integrals.pyx":318
  *     for t in range(l1 + l2 + 1):
  *         for u in range(m1 + m2 + 1):
  *             for v in range(n1 + n2 + 1):             # <<<<<<<<<<<<<<
@@ -24552,7 +24552,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
       for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
         __pyx_v_v = __pyx_t_17;
 
-        /* "src/stong_core_cython/gaussian_overlap.pyx":319
+        /* "src/stong_core_cython/gaussian_integrals.pyx":319
  *         for u in range(m1 + m2 + 1):
  *             for v in range(n1 + n2 + 1):
  *                 for tau in range(l3 + l4 + 1):             # <<<<<<<<<<<<<<
@@ -24564,7 +24564,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
         for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
           __pyx_v_tau = __pyx_t_20;
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":320
+          /* "src/stong_core_cython/gaussian_integrals.pyx":320
  *             for v in range(n1 + n2 + 1):
  *                 for tau in range(l3 + l4 + 1):
  *                     for nu in range(m3 + m4 + 1):             # <<<<<<<<<<<<<<
@@ -24576,7 +24576,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
           for (__pyx_t_23 = 0; __pyx_t_23 < __pyx_t_22; __pyx_t_23+=1) {
             __pyx_v_nu = __pyx_t_23;
 
-            /* "src/stong_core_cython/gaussian_overlap.pyx":321
+            /* "src/stong_core_cython/gaussian_integrals.pyx":321
  *                 for tau in range(l3 + l4 + 1):
  *                     for nu in range(m3 + m4 + 1):
  *                         for phi in range(n3 + n4 + 1):             # <<<<<<<<<<<<<<
@@ -24588,7 +24588,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
             for (__pyx_t_26 = 0; __pyx_t_26 < __pyx_t_25; __pyx_t_26+=1) {
               __pyx_v_phi = __pyx_t_26;
 
-              /* "src/stong_core_cython/gaussian_overlap.pyx":324
+              /* "src/stong_core_cython/gaussian_integrals.pyx":324
  *                             val += (
  *                                 (-1) ** (tau + nu + phi)
  *                                 * E(l1, l2, t, a, b, A[0] - B[0])             # <<<<<<<<<<<<<<
@@ -24615,9 +24615,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
                 __Pyx_RaiseBufferIndexError(__pyx_t_8);
                 __PYX_ERR(0, 324, __pyx_L1_error)
               }
-              __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_l1, __pyx_v_l2, __pyx_v_t, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_7 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_9 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 324, __pyx_L1_error)
+              __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_l1, __pyx_v_l2, __pyx_v_t, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_7 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_9 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 324, __pyx_L1_error)
 
-              /* "src/stong_core_cython/gaussian_overlap.pyx":325
+              /* "src/stong_core_cython/gaussian_integrals.pyx":325
  *                                 (-1) ** (tau + nu + phi)
  *                                 * E(l1, l2, t, a, b, A[0] - B[0])
  *                                 * E(m1, m2, u, a, b, A[1] - B[1])             # <<<<<<<<<<<<<<
@@ -24644,9 +24644,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
                 __Pyx_RaiseBufferIndexError(__pyx_t_8);
                 __PYX_ERR(0, 325, __pyx_L1_error)
               }
-              __pyx_t_2 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_m1, __pyx_v_m2, __pyx_v_u, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_9 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_2 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 325, __pyx_L1_error)
+              __pyx_t_2 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_m1, __pyx_v_m2, __pyx_v_u, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_9 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_7 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_2 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 325, __pyx_L1_error)
 
-              /* "src/stong_core_cython/gaussian_overlap.pyx":326
+              /* "src/stong_core_cython/gaussian_integrals.pyx":326
  *                                 * E(l1, l2, t, a, b, A[0] - B[0])
  *                                 * E(m1, m2, u, a, b, A[1] - B[1])
  *                                 * E(n1, n2, v, a, b, A[2] - B[2])             # <<<<<<<<<<<<<<
@@ -24673,9 +24673,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
                 __Pyx_RaiseBufferIndexError(__pyx_t_8);
                 __PYX_ERR(0, 326, __pyx_L1_error)
               }
-              __pyx_t_27 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_n1, __pyx_v_n2, __pyx_v_v, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_7 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_9 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_27 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 326, __pyx_L1_error)
+              __pyx_t_27 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_n1, __pyx_v_n2, __pyx_v_v, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_7 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_9 * __pyx_v_B.strides[0]) )))), 0); if (unlikely(__pyx_t_27 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 326, __pyx_L1_error)
 
-              /* "src/stong_core_cython/gaussian_overlap.pyx":327
+              /* "src/stong_core_cython/gaussian_integrals.pyx":327
  *                                 * E(m1, m2, u, a, b, A[1] - B[1])
  *                                 * E(n1, n2, v, a, b, A[2] - B[2])
  *                                 * E(l3, l4, tau, c, d, C[0] - D[0])             # <<<<<<<<<<<<<<
@@ -24702,9 +24702,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
                 __Pyx_RaiseBufferIndexError(__pyx_t_8);
                 __PYX_ERR(0, 327, __pyx_L1_error)
               }
-              __pyx_t_28 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_l3, __pyx_v_l4, __pyx_v_tau, __pyx_v_c, __pyx_v_d, ((*((double *) ( /* dim=0 */ (__pyx_v_C.data + __pyx_t_9 * __pyx_v_C.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_D.data + __pyx_t_7 * __pyx_v_D.strides[0]) )))), 0); if (unlikely(__pyx_t_28 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+              __pyx_t_28 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_l3, __pyx_v_l4, __pyx_v_tau, __pyx_v_c, __pyx_v_d, ((*((double *) ( /* dim=0 */ (__pyx_v_C.data + __pyx_t_9 * __pyx_v_C.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_D.data + __pyx_t_7 * __pyx_v_D.strides[0]) )))), 0); if (unlikely(__pyx_t_28 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
 
-              /* "src/stong_core_cython/gaussian_overlap.pyx":328
+              /* "src/stong_core_cython/gaussian_integrals.pyx":328
  *                                 * E(n1, n2, v, a, b, A[2] - B[2])
  *                                 * E(l3, l4, tau, c, d, C[0] - D[0])
  *                                 * E(m3, m4, nu, c, d, C[1] - D[1])             # <<<<<<<<<<<<<<
@@ -24731,9 +24731,9 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
                 __Pyx_RaiseBufferIndexError(__pyx_t_8);
                 __PYX_ERR(0, 328, __pyx_L1_error)
               }
-              __pyx_t_29 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_m3, __pyx_v_m4, __pyx_v_nu, __pyx_v_c, __pyx_v_d, ((*((double *) ( /* dim=0 */ (__pyx_v_C.data + __pyx_t_7 * __pyx_v_C.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_D.data + __pyx_t_9 * __pyx_v_D.strides[0]) )))), 0); if (unlikely(__pyx_t_29 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 328, __pyx_L1_error)
+              __pyx_t_29 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_m3, __pyx_v_m4, __pyx_v_nu, __pyx_v_c, __pyx_v_d, ((*((double *) ( /* dim=0 */ (__pyx_v_C.data + __pyx_t_7 * __pyx_v_C.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_D.data + __pyx_t_9 * __pyx_v_D.strides[0]) )))), 0); if (unlikely(__pyx_t_29 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 328, __pyx_L1_error)
 
-              /* "src/stong_core_cython/gaussian_overlap.pyx":329
+              /* "src/stong_core_cython/gaussian_integrals.pyx":329
  *                                 * E(l3, l4, tau, c, d, C[0] - D[0])
  *                                 * E(m3, m4, nu, c, d, C[1] - D[1])
  *                                 * E(n3, n4, phi, c, d, C[2] - D[2])             # <<<<<<<<<<<<<<
@@ -24760,18 +24760,18 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
                 __Pyx_RaiseBufferIndexError(__pyx_t_8);
                 __PYX_ERR(0, 329, __pyx_L1_error)
               }
-              __pyx_t_30 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_E(__pyx_v_n3, __pyx_v_n4, __pyx_v_phi, __pyx_v_c, __pyx_v_d, ((*((double *) ( /* dim=0 */ (__pyx_v_C.data + __pyx_t_9 * __pyx_v_C.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_D.data + __pyx_t_7 * __pyx_v_D.strides[0]) )))), 0); if (unlikely(__pyx_t_30 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 329, __pyx_L1_error)
+              __pyx_t_30 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_E(__pyx_v_n3, __pyx_v_n4, __pyx_v_phi, __pyx_v_c, __pyx_v_d, ((*((double *) ( /* dim=0 */ (__pyx_v_C.data + __pyx_t_9 * __pyx_v_C.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_D.data + __pyx_t_7 * __pyx_v_D.strides[0]) )))), 0); if (unlikely(__pyx_t_30 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 329, __pyx_L1_error)
 
-              /* "src/stong_core_cython/gaussian_overlap.pyx":330
+              /* "src/stong_core_cython/gaussian_integrals.pyx":330
  *                                 * E(m3, m4, nu, c, d, C[1] - D[1])
  *                                 * E(n3, n4, phi, c, d, C[2] - D[2])
  *                                 * R(0, t + tau, u + nu, v + phi, alpha, RPQ)             # <<<<<<<<<<<<<<
  *                             )
  *     return 2 * M_PI**2.5 / (p * q * sqrt(p + q)) * val
  */
-              __pyx_t_31 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_R(0, (__pyx_v_t + __pyx_v_tau), (__pyx_v_u + __pyx_v_nu), (__pyx_v_v + __pyx_v_phi), __pyx_v_alpha, __pyx_v_RPQ); if (unlikely(__pyx_t_31 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 330, __pyx_L1_error)
+              __pyx_t_31 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_R(0, (__pyx_v_t + __pyx_v_tau), (__pyx_v_u + __pyx_v_nu), (__pyx_v_v + __pyx_v_phi), __pyx_v_alpha, __pyx_v_RPQ); if (unlikely(__pyx_t_31 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 330, __pyx_L1_error)
 
-              /* "src/stong_core_cython/gaussian_overlap.pyx":322
+              /* "src/stong_core_cython/gaussian_integrals.pyx":322
  *                     for nu in range(m3 + m4 + 1):
  *                         for phi in range(n3 + n4 + 1):
  *                             val += (             # <<<<<<<<<<<<<<
@@ -24786,7 +24786,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
     }
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":332
+  /* "src/stong_core_cython/gaussian_integrals.pyx":332
  *                                 * R(0, t + tau, u + nu, v + phi, alpha, RPQ)
  *                             )
  *     return 2 * M_PI**2.5 / (p * q * sqrt(p + q)) * val             # <<<<<<<<<<<<<<
@@ -24803,7 +24803,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   __pyx_r = __pyx_t_31;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":296
+  /* "src/stong_core_cython/gaussian_integrals.pyx":296
  * 
  * 
  * cdef double electron_repulsion(double a, tuple[long, long, long] lmn1, double[:] A,             # <<<<<<<<<<<<<<
@@ -24816,7 +24816,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_5, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.electron_repulsion", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.electron_repulsion", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_RPQ, 1);
@@ -24824,7 +24824,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/gaussian_overlap.pyx":335
+/* "src/stong_core_cython/gaussian_integrals.pyx":335
  * 
  * 
  * cpdef double ERI(BasisFunction a, BasisFunction b, BasisFunction c, BasisFunction d):             # <<<<<<<<<<<<<<
@@ -24832,14 +24832,14 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repul
  * 
  */
 
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_9ERI(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_9ERI(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_c, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_d, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static double __pyx_f_3src_17stong_core_cython_18gaussian_integrals_ERI(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_c, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_d, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double __pyx_v_e;
   long __pyx_v_i;
   long __pyx_v_j;
@@ -24878,7 +24878,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":339
+  /* "src/stong_core_cython/gaussian_integrals.pyx":339
  * 
  *     """
  *     cdef double e = 0.0             # <<<<<<<<<<<<<<
@@ -24887,7 +24887,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
  */
   __pyx_v_e = 0.0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":341
+  /* "src/stong_core_cython/gaussian_integrals.pyx":341
  *     cdef double e = 0.0
  *     cdef long i, j, k, l
  *     cdef long num_exps = len(a.exps)             # <<<<<<<<<<<<<<
@@ -24898,7 +24898,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
   __pyx_t_1 = __Pyx_MemoryView_Len(__pyx_v_a->exps); 
   __pyx_v_num_exps = __pyx_t_1;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":342
+  /* "src/stong_core_cython/gaussian_integrals.pyx":342
  *     cdef long i, j, k, l
  *     cdef long num_exps = len(a.exps)
  *     for i in range(num_exps):             # <<<<<<<<<<<<<<
@@ -24910,7 +24910,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "src/stong_core_cython/gaussian_overlap.pyx":343
+    /* "src/stong_core_cython/gaussian_integrals.pyx":343
  *     cdef long num_exps = len(a.exps)
  *     for i in range(num_exps):
  *         for j in range(num_exps):             # <<<<<<<<<<<<<<
@@ -24922,7 +24922,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
     for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_j = __pyx_t_7;
 
-      /* "src/stong_core_cython/gaussian_overlap.pyx":344
+      /* "src/stong_core_cython/gaussian_integrals.pyx":344
  *     for i in range(num_exps):
  *         for j in range(num_exps):
  *             for k in range(num_exps):             # <<<<<<<<<<<<<<
@@ -24934,7 +24934,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
       for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
         __pyx_v_k = __pyx_t_10;
 
-        /* "src/stong_core_cython/gaussian_overlap.pyx":345
+        /* "src/stong_core_cython/gaussian_integrals.pyx":345
  *         for j in range(num_exps):
  *             for k in range(num_exps):
  *                 for l in range(num_exps):             # <<<<<<<<<<<<<<
@@ -24946,7 +24946,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
         for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
           __pyx_v_l = __pyx_t_13;
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":347
+          /* "src/stong_core_cython/gaussian_integrals.pyx":347
  *                 for l in range(num_exps):
  *                     e += (
  *                         a.norm[i]             # <<<<<<<<<<<<<<
@@ -24965,7 +24965,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 347, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":348
+          /* "src/stong_core_cython/gaussian_integrals.pyx":348
  *                     e += (
  *                         a.norm[i]
  *                         * b.norm[j]             # <<<<<<<<<<<<<<
@@ -24984,7 +24984,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 348, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":349
+          /* "src/stong_core_cython/gaussian_integrals.pyx":349
  *                         a.norm[i]
  *                         * b.norm[j]
  *                         * c.norm[k]             # <<<<<<<<<<<<<<
@@ -25003,7 +25003,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 349, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":350
+          /* "src/stong_core_cython/gaussian_integrals.pyx":350
  *                         * b.norm[j]
  *                         * c.norm[k]
  *                         * d.norm[l]             # <<<<<<<<<<<<<<
@@ -25022,7 +25022,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 350, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":351
+          /* "src/stong_core_cython/gaussian_integrals.pyx":351
  *                         * c.norm[k]
  *                         * d.norm[l]
  *                         * a.coefs[i]             # <<<<<<<<<<<<<<
@@ -25041,7 +25041,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 351, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":352
+          /* "src/stong_core_cython/gaussian_integrals.pyx":352
  *                         * d.norm[l]
  *                         * a.coefs[i]
  *                         * b.coefs[j]             # <<<<<<<<<<<<<<
@@ -25060,7 +25060,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 352, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":353
+          /* "src/stong_core_cython/gaussian_integrals.pyx":353
  *                         * a.coefs[i]
  *                         * b.coefs[j]
  *                         * c.coefs[k]             # <<<<<<<<<<<<<<
@@ -25079,7 +25079,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 353, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":354
+          /* "src/stong_core_cython/gaussian_integrals.pyx":354
  *                         * b.coefs[j]
  *                         * c.coefs[k]
  *                         * d.coefs[l]             # <<<<<<<<<<<<<<
@@ -25098,7 +25098,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 354, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":356
+          /* "src/stong_core_cython/gaussian_integrals.pyx":356
  *                         * d.coefs[l]
  *                         * electron_repulsion(
  *                             a.exps[i],             # <<<<<<<<<<<<<<
@@ -25117,7 +25117,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 356, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":358
+          /* "src/stong_core_cython/gaussian_integrals.pyx":358
  *                             a.exps[i],
  *                             a.lmn,
  *                             a.origin,             # <<<<<<<<<<<<<<
@@ -25126,7 +25126,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
  */
           if (unlikely(!__pyx_v_a->origin.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 358, __pyx_L1_error)}
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":359
+          /* "src/stong_core_cython/gaussian_integrals.pyx":359
  *                             a.lmn,
  *                             a.origin,
  *                             b.exps[j],             # <<<<<<<<<<<<<<
@@ -25145,7 +25145,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 359, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":361
+          /* "src/stong_core_cython/gaussian_integrals.pyx":361
  *                             b.exps[j],
  *                             b.lmn,
  *                             b.origin,             # <<<<<<<<<<<<<<
@@ -25154,7 +25154,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
  */
           if (unlikely(!__pyx_v_b->origin.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 361, __pyx_L1_error)}
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":362
+          /* "src/stong_core_cython/gaussian_integrals.pyx":362
  *                             b.lmn,
  *                             b.origin,
  *                             c.exps[k],             # <<<<<<<<<<<<<<
@@ -25173,7 +25173,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 362, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":364
+          /* "src/stong_core_cython/gaussian_integrals.pyx":364
  *                             c.exps[k],
  *                             c.lmn,
  *                             c.origin,             # <<<<<<<<<<<<<<
@@ -25182,7 +25182,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
  */
           if (unlikely(!__pyx_v_c->origin.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 364, __pyx_L1_error)}
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":365
+          /* "src/stong_core_cython/gaussian_integrals.pyx":365
  *                             c.lmn,
  *                             c.origin,
  *                             d.exps[l],             # <<<<<<<<<<<<<<
@@ -25201,7 +25201,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
             __PYX_ERR(0, 365, __pyx_L1_error)
           }
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":367
+          /* "src/stong_core_cython/gaussian_integrals.pyx":367
  *                             d.exps[l],
  *                             d.lmn,
  *                             d.origin,             # <<<<<<<<<<<<<<
@@ -25210,16 +25210,16 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
  */
           if (unlikely(!__pyx_v_d->origin.memview)) {PyErr_SetString(PyExc_AttributeError,"Memoryview is not initialized");__PYX_ERR(0, 367, __pyx_L1_error)}
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":355
+          /* "src/stong_core_cython/gaussian_integrals.pyx":355
  *                         * c.coefs[k]
  *                         * d.coefs[l]
  *                         * electron_repulsion(             # <<<<<<<<<<<<<<
  *                             a.exps[i],
  *                             a.lmn,
  */
-          __pyx_t_27 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_electron_repulsion((*((double *) ( /* dim=0 */ (__pyx_v_a->exps.data + __pyx_t_23 * __pyx_v_a->exps.strides[0]) ))), __pyx_v_a->lmn, __pyx_v_a->origin, (*((double *) ( /* dim=0 */ (__pyx_v_b->exps.data + __pyx_t_24 * __pyx_v_b->exps.strides[0]) ))), __pyx_v_b->lmn, __pyx_v_b->origin, (*((double *) ( /* dim=0 */ (__pyx_v_c->exps.data + __pyx_t_25 * __pyx_v_c->exps.strides[0]) ))), __pyx_v_c->lmn, __pyx_v_c->origin, (*((double *) ( /* dim=0 */ (__pyx_v_d->exps.data + __pyx_t_26 * __pyx_v_d->exps.strides[0]) ))), __pyx_v_d->lmn, __pyx_v_d->origin); if (unlikely(__pyx_t_27 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 355, __pyx_L1_error)
+          __pyx_t_27 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_electron_repulsion((*((double *) ( /* dim=0 */ (__pyx_v_a->exps.data + __pyx_t_23 * __pyx_v_a->exps.strides[0]) ))), __pyx_v_a->lmn, __pyx_v_a->origin, (*((double *) ( /* dim=0 */ (__pyx_v_b->exps.data + __pyx_t_24 * __pyx_v_b->exps.strides[0]) ))), __pyx_v_b->lmn, __pyx_v_b->origin, (*((double *) ( /* dim=0 */ (__pyx_v_c->exps.data + __pyx_t_25 * __pyx_v_c->exps.strides[0]) ))), __pyx_v_c->lmn, __pyx_v_c->origin, (*((double *) ( /* dim=0 */ (__pyx_v_d->exps.data + __pyx_t_26 * __pyx_v_d->exps.strides[0]) ))), __pyx_v_d->lmn, __pyx_v_d->origin); if (unlikely(__pyx_t_27 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 355, __pyx_L1_error)
 
-          /* "src/stong_core_cython/gaussian_overlap.pyx":346
+          /* "src/stong_core_cython/gaussian_integrals.pyx":346
  *             for k in range(num_exps):
  *                 for l in range(num_exps):
  *                     e += (             # <<<<<<<<<<<<<<
@@ -25232,7 +25232,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
     }
   }
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":370
+  /* "src/stong_core_cython/gaussian_integrals.pyx":370
  *                         )
  *                     )
  *     return e             # <<<<<<<<<<<<<<
@@ -25240,7 +25240,7 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
   __pyx_r = __pyx_v_e;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":335
+  /* "src/stong_core_cython/gaussian_integrals.pyx":335
  * 
  * 
  * cpdef double ERI(BasisFunction a, BasisFunction b, BasisFunction c, BasisFunction d):             # <<<<<<<<<<<<<<
@@ -25250,33 +25250,33 @@ static double __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(struct __p
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.ERI", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.ERI", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_9ERI(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_9ERI(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_16gaussian_overlap_8ERI, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\233\273\345\255\220\351\226\223\345\217\215\347\231\272\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_9ERI = {"ERI", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_9ERI, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_16gaussian_overlap_8ERI};
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_9ERI(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_18gaussian_integrals_8ERI, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\233\273\345\255\220\351\226\223\345\217\215\347\231\272\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
+static PyMethodDef __pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_9ERI = {"ERI", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_9ERI, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_18gaussian_integrals_8ERI};
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_9ERI(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a = 0;
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b = 0;
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_c = 0;
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_d = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_c = 0;
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_d = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -25364,10 +25364,10 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[2] = __Pyx_Arg_FASTCALL(__pyx_args, 2);
       values[3] = __Pyx_Arg_FASTCALL(__pyx_args, 3);
     }
-    __pyx_v_a = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[0]);
-    __pyx_v_b = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[1]);
-    __pyx_v_c = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[2]);
-    __pyx_v_d = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)values[3]);
+    __pyx_v_a = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[0]);
+    __pyx_v_b = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[1]);
+    __pyx_v_c = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[2]);
+    __pyx_v_d = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)values[3]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -25381,15 +25381,15 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.ERI", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.ERI", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "a", 0))) __PYX_ERR(0, 335, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "b", 0))) __PYX_ERR(0, 335, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_c), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "c", 0))) __PYX_ERR(0, 335, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_d), __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, 1, "d", 0))) __PYX_ERR(0, 335, __pyx_L1_error)
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_8ERI(__pyx_self, __pyx_v_a, __pyx_v_b, __pyx_v_c, __pyx_v_d);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "a", 0))) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_b), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "b", 0))) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_c), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "c", 0))) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_d), __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, 1, "d", 0))) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_8ERI(__pyx_self, __pyx_v_a, __pyx_v_b, __pyx_v_c, __pyx_v_d);
 
   /* function exit code */
   goto __pyx_L0;
@@ -25406,7 +25406,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_8ERI(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_b, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_c, struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v_d) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_8ERI(CYTHON_UNUSED PyObject *__pyx_self, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_a, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_b, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_c, struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v_d) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -25416,7 +25416,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_8ERI(CYTHO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ERI", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap_ERI(__pyx_v_a, __pyx_v_b, __pyx_v_c, __pyx_v_d, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals_ERI(__pyx_v_a, __pyx_v_b, __pyx_v_c, __pyx_v_d, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 335, __pyx_L1_error)
   __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 335, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -25426,7 +25426,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_8ERI(CYTHO
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.ERI", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.ERI", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -25441,15 +25441,15 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_8ERI(CYTHO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_11__pyx_unpickle_BasisFunction(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_11__pyx_unpickle_BasisFunction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_11__pyx_unpickle_BasisFunction = {"__pyx_unpickle_BasisFunction", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_11__pyx_unpickle_BasisFunction, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_11__pyx_unpickle_BasisFunction(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_11__pyx_unpickle_BasisFunction = {"__pyx_unpickle_BasisFunction", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_11__pyx_unpickle_BasisFunction, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_11__pyx_unpickle_BasisFunction(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -25549,11 +25549,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.__pyx_unpickle_BasisFunction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.__pyx_unpickle_BasisFunction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_16gaussian_overlap_10__pyx_unpickle_BasisFunction(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_3src_17stong_core_cython_18gaussian_integrals_10__pyx_unpickle_BasisFunction(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -25566,7 +25566,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_10__pyx_unpickle_BasisFunction(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_3src_17stong_core_cython_18gaussian_integrals_10__pyx_unpickle_BasisFunction(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -25648,7 +25648,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_10__pyx_un
  *     if __pyx_state is not None:
  *         __pyx_unpickle_BasisFunction__set_state(<BasisFunction> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -25693,7 +25693,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_10__pyx_un
  * cdef __pyx_unpickle_BasisFunction__set_state(BasisFunction __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_3src_17stong_core_cython_16gaussian_overlap___pyx_unpickle_BasisFunction__set_state(((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_3src_17stong_core_cython_18gaussian_integrals___pyx_unpickle_BasisFunction__set_state(((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -25729,7 +25729,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_10__pyx_un
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.__pyx_unpickle_BasisFunction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.__pyx_unpickle_BasisFunction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -25747,7 +25747,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_16gaussian_overlap_10__pyx_un
  *     if len(__pyx_state) > 5 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_3src_17stong_core_cython_16gaussian_overlap___pyx_unpickle_BasisFunction__set_state(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_3src_17stong_core_cython_18gaussian_integrals___pyx_unpickle_BasisFunction__set_state(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -25918,17 +25918,17 @@ static PyObject *__pyx_f_3src_17stong_core_cython_16gaussian_overlap___pyx_unpic
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("src.stong_core_cython.gaussian_overlap.__pyx_unpickle_BasisFunction__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("src.stong_core_cython.gaussian_integrals.__pyx_unpickle_BasisFunction__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_3src_17stong_core_cython_16gaussian_overlap_BasisFunction __pyx_vtable_3src_17stong_core_cython_16gaussian_overlap_BasisFunction;
+static struct __pyx_vtabstruct_3src_17stong_core_cython_18gaussian_integrals_BasisFunction __pyx_vtable_3src_17stong_core_cython_18gaussian_integrals_BasisFunction;
 
-static PyObject *__pyx_tp_new_3src_17stong_core_cython_16gaussian_overlap_BasisFunction(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *p;
+static PyObject *__pyx_tp_new_3src_17stong_core_cython_18gaussian_integrals_BasisFunction(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -25941,8 +25941,8 @@ static PyObject *__pyx_tp_new_3src_17stong_core_cython_16gaussian_overlap_BasisF
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)o);
-  p->__pyx_vtab = __pyx_vtabptr_3src_17stong_core_cython_16gaussian_overlap_BasisFunction;
+  p = ((struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)o);
+  p->__pyx_vtab = __pyx_vtabptr_3src_17stong_core_cython_18gaussian_integrals_BasisFunction;
   p->origin.data = NULL;
   p->origin.memview = NULL;
   p->exps.data = NULL;
@@ -25954,11 +25954,11 @@ static PyObject *__pyx_tp_new_3src_17stong_core_cython_16gaussian_overlap_BasisF
   return o;
 }
 
-static void __pyx_tp_dealloc_3src_17stong_core_cython_16gaussian_overlap_BasisFunction(PyObject *o) {
-  struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *p = (struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *)o;
+static void __pyx_tp_dealloc_3src_17stong_core_cython_18gaussian_integrals_BasisFunction(PyObject *o) {
+  struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *p = (struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && (!PyType_IS_GC(Py_TYPE(o)) || !__Pyx_PyObject_GC_IsFinalized(o))) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_3src_17stong_core_cython_16gaussian_overlap_BasisFunction) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_3src_17stong_core_cython_18gaussian_integrals_BasisFunction) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -25981,13 +25981,13 @@ static void __pyx_tp_dealloc_3src_17stong_core_cython_16gaussian_overlap_BasisFu
   #endif
 }
 
-static PyObject *__pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_origin(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_1__get__(o);
+static PyObject *__pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_origin(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_1__get__(o);
 }
 
-static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_origin(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_origin(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_6origin_3__set__(o, v);
+    return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_6origin_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -25995,13 +25995,13 @@ static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunc
   }
 }
 
-static PyObject *__pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_lmn(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_1__get__(o);
+static PyObject *__pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_lmn(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_1__get__(o);
 }
 
-static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_lmn(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_lmn(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3lmn_3__set__(o, v);
+    return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3lmn_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -26009,13 +26009,13 @@ static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunc
   }
 }
 
-static PyObject *__pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_exps(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_1__get__(o);
+static PyObject *__pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_exps(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_1__get__(o);
 }
 
-static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_exps(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_exps(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4exps_3__set__(o, v);
+    return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4exps_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -26023,13 +26023,13 @@ static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunc
   }
 }
 
-static PyObject *__pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_coefs(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_1__get__(o);
+static PyObject *__pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_coefs(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_1__get__(o);
 }
 
-static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_coefs(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_coefs(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5coefs_3__set__(o, v);
+    return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5coefs_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -26037,13 +26037,13 @@ static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunc
   }
 }
 
-static PyObject *__pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_norm(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_1__get__(o);
+static PyObject *__pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_norm(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_1__get__(o);
 }
 
-static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_norm(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_norm(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_4norm_3__set__(o, v);
+    return __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_4norm_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -26051,44 +26051,44 @@ static int __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunc
   }
 }
 
-static PyMethodDef __pyx_methods_3src_17stong_core_cython_16gaussian_overlap_BasisFunction[] = {
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_3src_17stong_core_cython_18gaussian_integrals_BasisFunction[] = {
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_3src_17stong_core_cython_16gaussian_overlap_BasisFunction[] = {
-  {(char *)"origin", __pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_origin, __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_origin, (char *)0, 0},
-  {(char *)"lmn", __pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_lmn, __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_lmn, (char *)0, 0},
-  {(char *)"exps", __pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_exps, __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_exps, (char *)0, 0},
-  {(char *)"coefs", __pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_coefs, __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_coefs, (char *)0, 0},
-  {(char *)"norm", __pyx_getprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_norm, __pyx_setprop_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_norm, (char *)0, 0},
+static struct PyGetSetDef __pyx_getsets_3src_17stong_core_cython_18gaussian_integrals_BasisFunction[] = {
+  {(char *)"origin", __pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_origin, __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_origin, (char *)0, 0},
+  {(char *)"lmn", __pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_lmn, __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_lmn, (char *)0, 0},
+  {(char *)"exps", __pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_exps, __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_exps, (char *)0, 0},
+  {(char *)"coefs", __pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_coefs, __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_coefs, (char *)0, 0},
+  {(char *)"norm", __pyx_getprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_norm, __pyx_setprop_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_norm, (char *)0, 0},
   {0, 0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_3src_17stong_core_cython_16gaussian_overlap_BasisFunction},
-  {Py_tp_methods, (void *)__pyx_methods_3src_17stong_core_cython_16gaussian_overlap_BasisFunction},
-  {Py_tp_getset, (void *)__pyx_getsets_3src_17stong_core_cython_16gaussian_overlap_BasisFunction},
-  {Py_tp_init, (void *)__pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_3src_17stong_core_cython_16gaussian_overlap_BasisFunction},
+static PyType_Slot __pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_3src_17stong_core_cython_18gaussian_integrals_BasisFunction},
+  {Py_tp_methods, (void *)__pyx_methods_3src_17stong_core_cython_18gaussian_integrals_BasisFunction},
+  {Py_tp_getset, (void *)__pyx_getsets_3src_17stong_core_cython_18gaussian_integrals_BasisFunction},
+  {Py_tp_init, (void *)__pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_3src_17stong_core_cython_18gaussian_integrals_BasisFunction},
   {0, 0},
 };
-static PyType_Spec __pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction_spec = {
-  "src.stong_core_cython.gaussian_overlap.BasisFunction",
-  sizeof(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction),
+static PyType_Spec __pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction_spec = {
+  "src.stong_core_cython.gaussian_integrals.BasisFunction",
+  sizeof(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE,
-  __pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction_slots,
+  __pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction = {
+static PyTypeObject __pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.gaussian_overlap.""BasisFunction", /*tp_name*/
-  sizeof(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction), /*tp_basicsize*/
+  "src.stong_core_cython.gaussian_integrals.""BasisFunction", /*tp_name*/
+  sizeof(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, /*tp_dealloc*/
+  __pyx_tp_dealloc_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -26121,9 +26121,9 @@ static PyTypeObject __pyx_type_3src_17stong_core_cython_16gaussian_overlap_Basis
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, /*tp_methods*/
+  __pyx_methods_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, /*tp_getset*/
+  __pyx_getsets_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
@@ -26131,9 +26131,9 @@ static PyTypeObject __pyx_type_3src_17stong_core_cython_16gaussian_overlap_Basis
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_1__init__, /*tp_init*/
+  __pyx_pw_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, /*tp_new*/
+  __pyx_tp_new_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -26302,7 +26302,7 @@ static PyType_Slot __pyx_type___pyx_array_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_array_spec = {
-  "src.stong_core_cython.gaussian_overlap.array",
+  "src.stong_core_cython.gaussian_integrals.array",
   sizeof(struct __pyx_array_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_SEQUENCE,
@@ -26348,7 +26348,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.gaussian_overlap.""array", /*tp_name*/
+  "src.stong_core_cython.gaussian_integrals.""array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -26508,7 +26508,7 @@ static PyType_Slot __pyx_type___pyx_MemviewEnum_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_MemviewEnum_spec = {
-  "src.stong_core_cython.gaussian_overlap.Enum",
+  "src.stong_core_cython.gaussian_integrals.Enum",
   sizeof(struct __pyx_MemviewEnum_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
@@ -26518,7 +26518,7 @@ static PyType_Spec __pyx_type___pyx_MemviewEnum_spec = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.gaussian_overlap.""Enum", /*tp_name*/
+  "src.stong_core_cython.gaussian_integrals.""Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -26815,7 +26815,7 @@ static PyType_Slot __pyx_type___pyx_memoryview_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_memoryview_spec = {
-  "src.stong_core_cython.gaussian_overlap.memoryview",
+  "src.stong_core_cython.gaussian_integrals.memoryview",
   sizeof(struct __pyx_memoryview_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
@@ -26861,7 +26861,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.gaussian_overlap.""memoryview", /*tp_name*/
+  "src.stong_core_cython.gaussian_integrals.""memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -27013,7 +27013,7 @@ static PyType_Slot __pyx_type___pyx_memoryviewslice_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_memoryviewslice_spec = {
-  "src.stong_core_cython.gaussian_overlap._memoryviewslice",
+  "src.stong_core_cython.gaussian_integrals._memoryviewslice",
   sizeof(struct __pyx_memoryviewslice_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_SEQUENCE,
@@ -27023,7 +27023,7 @@ static PyType_Spec __pyx_type___pyx_memoryviewslice_spec = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.gaussian_overlap.""_memoryviewslice", /*tp_name*/
+  "src.stong_core_cython.gaussian_integrals.""_memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -27260,8 +27260,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_shape, __pyx_k_shape, sizeof(__pyx_k_shape), 0, 0, 1, 1},
     {&__pyx_n_s_size, __pyx_k_size, sizeof(__pyx_k_size), 0, 0, 1, 1},
     {&__pyx_n_s_spec, __pyx_k_spec, sizeof(__pyx_k_spec), 0, 0, 1, 1},
-    {&__pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_k_src_stong_core_cython_gaussian_o, sizeof(__pyx_k_src_stong_core_cython_gaussian_o), 0, 0, 1, 1},
-    {&__pyx_kp_s_src_stong_core_cython_gaussian_o_2, __pyx_k_src_stong_core_cython_gaussian_o_2, sizeof(__pyx_k_src_stong_core_cython_gaussian_o_2), 0, 0, 1, 0},
+    {&__pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_k_src_stong_core_cython_gaussian_i, sizeof(__pyx_k_src_stong_core_cython_gaussian_i), 0, 0, 1, 1},
+    {&__pyx_kp_s_src_stong_core_cython_gaussian_i_2, __pyx_k_src_stong_core_cython_gaussian_i_2, sizeof(__pyx_k_src_stong_core_cython_gaussian_i_2), 0, 0, 1, 0},
     {&__pyx_n_s_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 0, 1, 1},
     {&__pyx_n_s_state, __pyx_k_state, sizeof(__pyx_k_state), 0, 0, 1, 1},
     {&__pyx_n_s_step, __pyx_k_step, sizeof(__pyx_k_step), 0, 0, 1, 1},
@@ -27367,7 +27367,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":259
+  /* "src/stong_core_cython/gaussian_integrals.pyx":259
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef double[:] RPC = view.array(shape=(3,), itemsize=sizeof(double), format="d")             # <<<<<<<<<<<<<<
@@ -27505,7 +27505,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__26);
   __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":99
+  /* "src/stong_core_cython/gaussian_integrals.pyx":99
  *     return result
  * 
  * cpdef double E(long i, long j, long t, double a, double b, double Qx):             # <<<<<<<<<<<<<<
@@ -27515,9 +27515,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__28 = PyTuple_Pack(6, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_t, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_Qx); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_o_2, __pyx_n_s_E, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_i_2, __pyx_n_s_E, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 99, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":139
+  /* "src/stong_core_cython/gaussian_integrals.pyx":139
  * 
  * 
  * cpdef double S(BasisFunction a, BasisFunction b):             # <<<<<<<<<<<<<<
@@ -27527,18 +27527,18 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__30 = PyTuple_Pack(2, __pyx_n_s_a, __pyx_n_s_b); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_o_2, __pyx_n_s_S, 139, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_i_2, __pyx_n_s_S, 139, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 139, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":180
+  /* "src/stong_core_cython/gaussian_integrals.pyx":180
  * 
  * 
  * cpdef double T(BasisFunction a, BasisFunction b):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_o_2, __pyx_n_s_T, 180, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_i_2, __pyx_n_s_T, 180, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 180, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":275
+  /* "src/stong_core_cython/gaussian_integrals.pyx":275
  *     return 2 * M_PI / p * val
  * 
  * cpdef double V(BasisFunction a, BasisFunction b, double[:] RC):             # <<<<<<<<<<<<<<
@@ -27548,9 +27548,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__33 = PyTuple_Pack(3, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_RC); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 275, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_o_2, __pyx_n_s_V, 275, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_i_2, __pyx_n_s_V, 275, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 275, __pyx_L1_error)
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":335
+  /* "src/stong_core_cython/gaussian_integrals.pyx":335
  * 
  * 
  * cpdef double ERI(BasisFunction a, BasisFunction b, BasisFunction c, BasisFunction d):             # <<<<<<<<<<<<<<
@@ -27560,7 +27560,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__35 = PyTuple_Pack(4, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_c, __pyx_n_s_d); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 335, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_o_2, __pyx_n_s_ERI, 335, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_gaussian_i_2, __pyx_n_s_ERI, 335, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 335, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_BasisFunction(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
@@ -27672,34 +27672,34 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  __pyx_vtabptr_3src_17stong_core_cython_16gaussian_overlap_BasisFunction = &__pyx_vtable_3src_17stong_core_cython_16gaussian_overlap_BasisFunction;
-  __pyx_vtable_3src_17stong_core_cython_16gaussian_overlap_BasisFunction.normalize = (void (*)(struct __pyx_obj_3src_17stong_core_cython_16gaussian_overlap_BasisFunction *))__pyx_f_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_normalize;
+  __pyx_vtabptr_3src_17stong_core_cython_18gaussian_integrals_BasisFunction = &__pyx_vtable_3src_17stong_core_cython_18gaussian_integrals_BasisFunction;
+  __pyx_vtable_3src_17stong_core_cython_18gaussian_integrals_BasisFunction.normalize = (void (*)(struct __pyx_obj_3src_17stong_core_cython_18gaussian_integrals_BasisFunction *))__pyx_f_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_normalize;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction_spec, NULL); if (unlikely(!__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction)) __PYX_ERR(0, 19, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction_spec, __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction_spec, NULL); if (unlikely(!__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction)) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction_spec, __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   #else
-  __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction = &__pyx_type_3src_17stong_core_cython_16gaussian_overlap_BasisFunction;
+  __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction = &__pyx_type_3src_17stong_core_cython_18gaussian_integrals_BasisFunction;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction->tp_print = 0;
+  __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction->tp_dictoffset && __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction->tp_dictoffset && __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, __pyx_vtabptr_3src_17stong_core_cython_16gaussian_overlap_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, __pyx_vtabptr_3src_17stong_core_cython_18gaussian_integrals_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_BasisFunction, (PyObject *) __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_BasisFunction, (PyObject *) __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   #endif
   __pyx_vtabptr_array = &__pyx_vtable_array;
   __pyx_vtable_array.get_memview = (PyObject *(*)(struct __pyx_array_obj *))__pyx_array_get_memview;
@@ -27928,10 +27928,10 @@ static int __Pyx_modinit_function_import_code(void) {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_gaussian_overlap(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_gaussian_integrals(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_gaussian_overlap},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_gaussian_integrals},
   {0, NULL}
 };
 #endif
@@ -27944,7 +27944,7 @@ namespace {
   #endif
   {
       PyModuleDef_HEAD_INIT,
-      "gaussian_overlap",
+      "gaussian_integrals",
       0, /* m_doc */
     #if CYTHON_PEP489_MULTI_PHASE_INIT
       0, /* m_size */
@@ -27992,11 +27992,11 @@ namespace {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initgaussian_overlap(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initgaussian_overlap(void)
+__Pyx_PyMODINIT_FUNC initgaussian_integrals(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initgaussian_integrals(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_gaussian_overlap(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_gaussian_overlap(void)
+__Pyx_PyMODINIT_FUNC PyInit_gaussian_integrals(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_gaussian_integrals(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -28077,7 +28077,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_gaussian_overlap(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_gaussian_integrals(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -28100,7 +28100,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_gaussian_overlap(PyObject *__pyx_p
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'gaussian_overlap' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'gaussian_integrals' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -28112,13 +28112,13 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_gaussian_overlap(PyObject *__pyx_p
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("gaussian_overlap", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("gaussian_integrals", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   if (unlikely(!__pyx_m)) __PYX_ERR(0, 1, __pyx_L1_error)
   #elif CYTHON_USE_MODULE_STATE
   __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   {
     int add_module_result = PyState_AddModule(__pyx_t_1, &__pyx_moduledef);
-    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "gaussian_overlap" pseudovariable */
+    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "gaussian_integrals" pseudovariable */
     if (unlikely((add_module_result < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     pystate_addmodule_run = 1;
   }
@@ -28142,7 +28142,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_gaussian_overlap(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_gaussian_integrals(void)", 0);
   if (__Pyx_check_binary_version(__PYX_LIMITED_VERSION_HEX, __Pyx_get_runtime_version(), CYTHON_COMPILING_IN_LIMITED_API) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -28180,14 +28180,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_src__stong_core_cython__gaussian_overlap) {
+  if (__pyx_module_is_main_src__stong_core_cython__gaussian_integrals) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "src.stong_core_cython.gaussian_overlap")) {
-      if (unlikely((PyDict_SetItemString(modules, "src.stong_core_cython.gaussian_overlap", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "src.stong_core_cython.gaussian_integrals")) {
+      if (unlikely((PyDict_SetItemString(modules, "src.stong_core_cython.gaussian_integrals", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -28721,7 +28721,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_Enum, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":5
+  /* "src/stong_core_cython/gaussian_integrals.pyx":5
  * from libc.math cimport sin
  * from libc.math cimport exp
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -28738,11 +28738,11 @@ if (!__Pyx_RefNanny) {
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_3__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_BasisFunction___reduce_cython, NULL, __pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_3__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_BasisFunction___reduce_cython, NULL, __pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction);
+  PyType_Modified(__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction);
 
   /* "(tree fragment)":16
  *     else:
@@ -28750,68 +28750,68 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_BasisFunction__set_state(self, __pyx_state)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_13BasisFunction_5__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_BasisFunction___setstate_cython, NULL, __pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_13BasisFunction_5__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_BasisFunction___setstate_cython, NULL, __pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  PyType_Modified(__pyx_ptype_3src_17stong_core_cython_16gaussian_overlap_BasisFunction);
+  PyType_Modified(__pyx_ptype_3src_17stong_core_cython_18gaussian_integrals_BasisFunction);
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":99
+  /* "src/stong_core_cython/gaussian_integrals.pyx":99
  *     return result
  * 
  * cpdef double E(long i, long j, long t, double a, double b, double Qx):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_1E, 0, __pyx_n_s_E, NULL, __pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_1E, 0, __pyx_n_s_E, NULL, __pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_E, __pyx_t_7) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":139
+  /* "src/stong_core_cython/gaussian_integrals.pyx":139
  * 
  * 
  * cpdef double S(BasisFunction a, BasisFunction b):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_3S, 0, __pyx_n_s_S, NULL, __pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_3S, 0, __pyx_n_s_S, NULL, __pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_S, __pyx_t_7) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":180
+  /* "src/stong_core_cython/gaussian_integrals.pyx":180
  * 
  * 
  * cpdef double T(BasisFunction a, BasisFunction b):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_5T, 0, __pyx_n_s_T, NULL, __pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_5T, 0, __pyx_n_s_T, NULL, __pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_T, __pyx_t_7) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":275
+  /* "src/stong_core_cython/gaussian_integrals.pyx":275
  *     return 2 * M_PI / p * val
  * 
  * cpdef double V(BasisFunction a, BasisFunction b, double[:] RC):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_7V, 0, __pyx_n_s_V, NULL, __pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_7V, 0, __pyx_n_s_V, NULL, __pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 275, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_V, __pyx_t_7) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":335
+  /* "src/stong_core_cython/gaussian_integrals.pyx":335
  * 
  * 
  * cpdef double ERI(BasisFunction a, BasisFunction b, BasisFunction c, BasisFunction d):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_9ERI, 0, __pyx_n_s_ERI, NULL, __pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_9ERI, 0, __pyx_n_s_ERI, NULL, __pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 335, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ERI, __pyx_t_7) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -28821,12 +28821,12 @@ if (!__Pyx_RefNanny) {
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_16gaussian_overlap_11__pyx_unpickle_BasisFunction, 0, __pyx_n_s_pyx_unpickle_BasisFunction, NULL, __pyx_n_s_src_stong_core_cython_gaussian_o, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_18gaussian_integrals_11__pyx_unpickle_BasisFunction, 0, __pyx_n_s_pyx_unpickle_BasisFunction, NULL, __pyx_n_s_src_stong_core_cython_gaussian_i, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_BasisFunction, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/gaussian_overlap.pyx":1
+  /* "src/stong_core_cython/gaussian_integrals.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * 
  * from libc.math cimport sin
@@ -28845,7 +28845,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_7);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init src.stong_core_cython.gaussian_overlap", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init src.stong_core_cython.gaussian_integrals", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -28859,7 +28859,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init src.stong_core_cython.gaussian_overlap");
+    PyErr_SetString(PyExc_ImportError, "init src.stong_core_cython.gaussian_integrals");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
