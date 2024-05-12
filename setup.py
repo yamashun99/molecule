@@ -10,8 +10,27 @@ import numpy as np
 
 extensions = [
     Extension(
-        "src.stong_core_cython.gaussian_integrals",
-        ["./src/stong_core_cython/gaussian_integrals.pyx"],
+        "src.stong_core_cython.md.sto_ng",
+        ["./src/stong_core_cython/md/sto_ng.pyx"],
+        include_dirs=["./src/stong_core_cython/md"],  # この行を追加
+        extra_compile_args=["-fopenmp"],
+        extra_link_args=["-fopenmp"],
+    ),
+    Extension(
+        "src.stong_core_cython.md.one_electron",
+        [
+            "./src/stong_core_cython/md/one_electron.pyx",
+        ],
+        extra_compile_args=["-fopenmp"],
+        extra_link_args=["-fopenmp"],
+    ),
+    Extension(
+        "src.stong_core_cython.md.two_electron",
+        [
+            "./src/stong_core_cython/md/two_electron.pyx",
+        ],
+        extra_compile_args=["-fopenmp"],
+        extra_link_args=["-fopenmp"],
     ),
 ]
 

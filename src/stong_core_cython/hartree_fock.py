@@ -1,6 +1,7 @@
 from scipy.linalg import eigh
 import numpy as np
-from matrix import *
+from md.matrix import *
+from md.two_electron import *
 
 
 class HartreeFock:
@@ -34,6 +35,7 @@ class HartreeFock:
 
     def scf(self):
         # 自己無撞着フィールド(SCF)プロセス
+        print(f"Start SCF for {self.molecule}")
         self.build_matrices()
         self.P_up = np.ones((self.S.shape[0], self.S.shape[0]))
         self.P_dn = np.zeros((self.S.shape[0], self.S.shape[0]))

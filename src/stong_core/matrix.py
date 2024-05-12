@@ -49,12 +49,7 @@ def get_Smat(basis):
     return mat
 
 
-def create_basis_function(center, lmn, exps, coefs):
-    """基底関数を生成するヘルパー関数"""
-    return BasisFunction(center=center, lmn=lmn, exps=exps, coefs=coefs)
-
-
-def calculate_matrices(molecule, basis_data):
+def create_basis_function(molecule, basis_data):
     basis_functions = []
 
     # 各原子に対して基底関数を設定
@@ -65,8 +60,15 @@ def calculate_matrices(molecule, basis_data):
             exps = np.array(params["exps"]) * params["zeta"] ** 2
             coefs = np.array(params["coefs"])
             lmn = params["lmn"]
-            basis_func = create_basis_function(atom.position, lmn, exps, coefs)
+            basis_func = BasisFunction(
+                center=atom.position, lmn=lmn, exps=exps, coefs=coefs
+            )
             basis_functions.append(basis_func)
+    return
+
+
+def calculate_matrices(molecule, basis_data):
+    basis_functions = create_basis_function(molecule, basis_data)
 
     # マトリックスの計算
     Tmat = get_Tmat(basis_functions)

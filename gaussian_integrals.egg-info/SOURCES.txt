@@ -1,0 +1,9 @@
+README.md
+setup.py
+./src/stong_core_cython/md/one_electron.c
+./src/stong_core_cython/md/sto_ng.c
+./src/stong_core_cython/md/two_electron.c
+gaussian_integrals.egg-info/PKG-INFO
+gaussian_integrals.egg-info/SOURCES.txt
+gaussian_integrals.egg-info/dependency_links.txt
+gaussian_integrals.egg-info/top_level.txt
