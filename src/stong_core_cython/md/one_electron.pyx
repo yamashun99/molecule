@@ -85,7 +85,7 @@ cdef double nuclear_attraction(double a, long[:] lmn1, double[:] A,
     cdef double p = a + b
     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
-    cdef double[:] RPC = view.array(shape=(3,), itemsize=sizeof(double), format="d")
+    cdef double[3] RPC
     cdef long t, u, v, i
     for i in range(3):
         RPC[i] = (a * A[i] + b * B[i]) / p - C[i]

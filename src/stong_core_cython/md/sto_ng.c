@@ -2732,8 +2732,8 @@ static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name);
 static CYTHON_INLINE int __Pyx_HasAttr(PyObject *, PyObject *);
 #endif
 
-/* BufferIndexError.proto */
-static void __Pyx_RaiseBufferIndexError(int axis);
+/* ErrOccurredWithGIL.proto */
+static CYTHON_INLINE int __Pyx_ErrOccurredWithGIL(void);
 
 /* IterFinish.proto */
 static CYTHON_INLINE int __Pyx_IterFinish(void);
@@ -2765,6 +2765,9 @@ static int __Pyx_IternextUnpackEndCheck(PyObject *retval, Py_ssize_t expected);
 
 /* SoftComplexToDouble.proto */
 static double __Pyx_SoftComplexToDouble(__pyx_t_double_complex value, int have_gil);
+
+/* BufferIndexError.proto */
+static void __Pyx_RaiseBufferIndexError(int axis);
 
 /* PyObject_GenericGetAttrNoDict.proto */
 #if CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP && PY_VERSION_HEX < 0x03070000
@@ -3286,7 +3289,7 @@ static PyThread_type_lock __pyx_memoryview_thread_locks[8];
 static long __pyx_f_3src_17stong_core_cython_2md_6sto_ng_custom_fact2(long); /*proto*/
 static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long, long, long, double, double, double); /*proto*/
 static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_boys(int, double); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int, int, int, int, double, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int, int, int, int, double, double *); /*proto*/
 static PyObject *__pyx_f_3src_17stong_core_cython_2md_6sto_ng___pyx_unpickle_BasisFunction__set_state(struct __pyx_obj_3src_17stong_core_cython_2md_6sto_ng_BasisFunction *, PyObject *); /*proto*/
 static int __pyx_array_allocate_buffer(struct __pyx_array_obj *); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
@@ -19390,7 +19393,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
 /* "src/stong_core_cython/md/utils.pxi":10
  * from cython cimport view
  * 
- * cdef long custom_fact2(long n):             # <<<<<<<<<<<<<<
+ * cdef long custom_fact2(long n) nogil:             # <<<<<<<<<<<<<<
  *     cdef long result = 1
  *     cdef long i
  */
@@ -19403,7 +19406,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_6sto_ng_custom_fact2(long __pyx
 
   /* "src/stong_core_cython/md/utils.pxi":11
  * 
- * cdef long custom_fact2(long n):
+ * cdef long custom_fact2(long n) nogil:
  *     cdef long result = 1             # <<<<<<<<<<<<<<
  *     cdef long i
  *     for i in range(n, 0, -2):
@@ -19435,7 +19438,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_6sto_ng_custom_fact2(long __pyx
  *         result *= i
  *     return result             # <<<<<<<<<<<<<<
  * 
- * cdef double E(long i, long j, long t, double a, double b, double Qx):
+ * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:
  */
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
@@ -19443,7 +19446,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_6sto_ng_custom_fact2(long __pyx
   /* "src/stong_core_cython/md/utils.pxi":10
  * from cython cimport view
  * 
- * cdef long custom_fact2(long n):             # <<<<<<<<<<<<<<
+ * cdef long custom_fact2(long n) nogil:             # <<<<<<<<<<<<<<
  *     cdef long result = 1
  *     cdef long i
  */
@@ -19456,7 +19459,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_6sto_ng_custom_fact2(long __pyx
 /* "src/stong_core_cython/md/utils.pxi":17
  *     return result
  * 
- * cdef double E(long i, long j, long t, double a, double b, double Qx):             # <<<<<<<<<<<<<<
+ * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:             # <<<<<<<<<<<<<<
  *     if i < 0 or j < 0 or t < 0 or i + j < t:
  *         return 0
  */
@@ -19474,10 +19477,13 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
+  #ifdef WITH_THREAD
+  PyGILState_STATE __pyx_gilstate_save;
+  #endif
 
   /* "src/stong_core_cython/md/utils.pxi":18
  * 
- * cdef double E(long i, long j, long t, double a, double b, double Qx):
+ * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:
  *     if i < 0 or j < 0 or t < 0 or i + j < t:             # <<<<<<<<<<<<<<
  *         return 0
  * 
@@ -19506,7 +19512,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
   if (__pyx_t_1) {
 
     /* "src/stong_core_cython/md/utils.pxi":19
- * cdef double E(long i, long j, long t, double a, double b, double Qx):
+ * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:
  *     if i < 0 or j < 0 or t < 0 or i + j < t:
  *         return 0             # <<<<<<<<<<<<<<
  * 
@@ -19517,7 +19523,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
 
     /* "src/stong_core_cython/md/utils.pxi":18
  * 
- * cdef double E(long i, long j, long t, double a, double b, double Qx):
+ * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:
  *     if i < 0 or j < 0 or t < 0 or i + j < t:             # <<<<<<<<<<<<<<
  *         return 0
  * 
@@ -19550,7 +19556,13 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
     __pyx_t_3 = ((((-__pyx_v_a) * __pyx_v_b) * __pyx_v_Qx) * __pyx_v_Qx);
     __pyx_t_4 = (__pyx_v_a + __pyx_v_b);
     if (unlikely(__pyx_t_4 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
       __PYX_ERR(0, 22, __pyx_L1_error)
     }
     __pyx_r = exp((__pyx_t_3 / __pyx_t_4));
@@ -19584,10 +19596,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
  */
     __pyx_t_4 = (2.0 * (__pyx_v_a + __pyx_v_b));
     if (unlikely(__pyx_t_4 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
       __PYX_ERR(0, 25, __pyx_L1_error)
     }
-    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_3 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 25, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 25, __pyx_L1_error)
 
     /* "src/stong_core_cython/md/utils.pxi":26
  *         return (
@@ -19599,10 +19617,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
     __pyx_t_5 = ((__pyx_v_a * __pyx_v_b) * __pyx_v_Qx);
     __pyx_t_6 = (__pyx_v_a * (__pyx_v_a + __pyx_v_b));
     if (unlikely(__pyx_t_6 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
       __PYX_ERR(0, 26, __pyx_L1_error)
     }
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E((__pyx_v_i - 1), __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E((__pyx_v_i - 1), __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 26, __pyx_L1_error)
 
     /* "src/stong_core_cython/md/utils.pxi":27
  *             1 / (2 * (a + b)) * E(i - 1, j, t - 1, a, b, Qx)
@@ -19611,7 +19635,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
  *         )
  *     else:  # decrement j
  */
-    __pyx_t_8 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 27, __pyx_L1_error)
+    __pyx_t_8 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_8 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 27, __pyx_L1_error)
     __pyx_r = ((((1.0 / __pyx_t_4) * __pyx_t_3) - ((__pyx_t_5 / __pyx_t_6) * __pyx_t_7)) + ((__pyx_v_t + 1) * __pyx_t_8));
     goto __pyx_L0;
 
@@ -19642,10 +19666,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
  */
     __pyx_t_8 = (2.0 * (__pyx_v_a + __pyx_v_b));
     if (unlikely(__pyx_t_8 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
       __PYX_ERR(0, 31, __pyx_L1_error)
     }
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 31, __pyx_L1_error)
 
     /* "src/stong_core_cython/md/utils.pxi":32
  *         return  (
@@ -19657,10 +19687,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
     __pyx_t_6 = ((__pyx_v_a * __pyx_v_b) * __pyx_v_Qx);
     __pyx_t_5 = (__pyx_v_b * (__pyx_v_a + __pyx_v_b));
     if (unlikely(__pyx_t_5 == 0)) {
+      #ifdef WITH_THREAD
+      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+      #endif
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+      #ifdef WITH_THREAD
+      __Pyx_PyGILState_Release(__pyx_gilstate_save);
+      #endif
       __PYX_ERR(0, 32, __pyx_L1_error)
     }
-    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(__pyx_v_i, (__pyx_v_j - 1), __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_3 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 32, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(__pyx_v_i, (__pyx_v_j - 1), __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 32, __pyx_L1_error)
 
     /* "src/stong_core_cython/md/utils.pxi":33
  *             1 / (2 * (a + b)) * E(i, j - 1, t - 1, a, b, Qx)
@@ -19669,7 +19705,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
  *         )
  * 
  */
-    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_4 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 33, __pyx_L1_error)
+    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 33, __pyx_L1_error)
     __pyx_r = ((((1.0 / __pyx_t_8) * __pyx_t_7) + ((__pyx_t_6 / __pyx_t_5) * __pyx_t_3)) + ((__pyx_v_t + 1) * __pyx_t_4));
     goto __pyx_L0;
   }
@@ -19677,15 +19713,21 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
   /* "src/stong_core_cython/md/utils.pxi":17
  *     return result
  * 
- * cdef double E(long i, long j, long t, double a, double b, double Qx):             # <<<<<<<<<<<<<<
+ * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:             # <<<<<<<<<<<<<<
  *     if i < 0 or j < 0 or t < 0 or i + j < t:
  *         return 0
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  #ifdef WITH_THREAD
+  __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+  #endif
   __Pyx_AddTraceback("src.stong_core_cython.md.sto_ng.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
+  #ifdef WITH_THREAD
+  __Pyx_PyGILState_Release(__pyx_gilstate_save);
+  #endif
   __pyx_L0:;
   return __pyx_r;
 }
@@ -19693,7 +19735,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_E(long __pyx_v_i, lon
 /* "src/stong_core_cython/md/utils.pxi":37
  * 
  * 
- * cdef double boys(int n, double T):             # <<<<<<<<<<<<<<
+ * cdef double boys(int n, double T) nogil:             # <<<<<<<<<<<<<<
  *     return hyp1f1(n + 0.5, n + 1.5, -T) / (2 * n + 1)
  * 
  */
@@ -19705,10 +19747,13 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_boys(int __pyx_v_n, d
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
+  #ifdef WITH_THREAD
+  PyGILState_STATE __pyx_gilstate_save;
+  #endif
 
   /* "src/stong_core_cython/md/utils.pxi":38
  * 
- * cdef double boys(int n, double T):
+ * cdef double boys(int n, double T) nogil:
  *     return hyp1f1(n + 0.5, n + 1.5, -T) / (2 * n + 1)             # <<<<<<<<<<<<<<
  * 
  * 
@@ -19716,7 +19761,13 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_boys(int __pyx_v_n, d
   __pyx_t_1 = __pyx_fuse_1__pyx_f_5scipy_7special_14cython_special_hyp1f1((__pyx_v_n + 0.5), (__pyx_v_n + 1.5), (-__pyx_v_T), 0);
   __pyx_t_2 = ((2 * __pyx_v_n) + 1);
   if (unlikely(__pyx_t_2 == 0)) {
+    #ifdef WITH_THREAD
+    PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+    #endif
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+    #ifdef WITH_THREAD
+    __Pyx_PyGILState_Release(__pyx_gilstate_save);
+    #endif
     __PYX_ERR(0, 38, __pyx_L1_error)
   }
   __pyx_r = (__pyx_t_1 / ((double)__pyx_t_2));
@@ -19725,15 +19776,21 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_boys(int __pyx_v_n, d
   /* "src/stong_core_cython/md/utils.pxi":37
  * 
  * 
- * cdef double boys(int n, double T):             # <<<<<<<<<<<<<<
+ * cdef double boys(int n, double T) nogil:             # <<<<<<<<<<<<<<
  *     return hyp1f1(n + 0.5, n + 1.5, -T) / (2 * n + 1)
  * 
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  #ifdef WITH_THREAD
+  __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+  #endif
   __Pyx_AddTraceback("src.stong_core_cython.md.sto_ng.boys", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
+  #ifdef WITH_THREAD
+  __Pyx_PyGILState_Release(__pyx_gilstate_save);
+  #endif
   __pyx_L0:;
   return __pyx_r;
 }
@@ -19741,64 +19798,33 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_boys(int __pyx_v_n, d
 /* "src/stong_core_cython/md/utils.pxi":41
  * 
  * 
- * cdef double R(int n, int t, int u, int v, double p, double[:] RPC):             # <<<<<<<<<<<<<<
+ * cdef double R(int n, int t, int u, int v, double p, double[3] RPC) nogil:             # <<<<<<<<<<<<<<
  *     cdef double norm_RPC_sq = RPC[0]**2 + RPC[1]**2 + RPC[2]** 2
  * 
  */
 
-static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int __pyx_v_t, int __pyx_v_u, int __pyx_v_v, double __pyx_v_p, __Pyx_memviewslice __pyx_v_RPC) {
+static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int __pyx_v_t, int __pyx_v_u, int __pyx_v_v, double __pyx_v_p, double *__pyx_v_RPC) {
   double __pyx_v_norm_RPC_sq;
   double __pyx_r;
-  Py_ssize_t __pyx_t_1;
+  int __pyx_t_1;
   int __pyx_t_2;
-  Py_ssize_t __pyx_t_3;
-  Py_ssize_t __pyx_t_4;
-  int __pyx_t_5;
-  int __pyx_t_6;
-  double __pyx_t_7;
-  double __pyx_t_8;
+  double __pyx_t_3;
+  double __pyx_t_4;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
+  #ifdef WITH_THREAD
+  PyGILState_STATE __pyx_gilstate_save;
+  #endif
 
   /* "src/stong_core_cython/md/utils.pxi":42
  * 
- * cdef double R(int n, int t, int u, int v, double p, double[:] RPC):
+ * cdef double R(int n, int t, int u, int v, double p, double[3] RPC) nogil:
  *     cdef double norm_RPC_sq = RPC[0]**2 + RPC[1]**2 + RPC[2]** 2             # <<<<<<<<<<<<<<
  * 
  *     cdef double result
  */
-  __pyx_t_1 = 0;
-  __pyx_t_2 = -1;
-  if (__pyx_t_1 < 0) {
-    __pyx_t_1 += __pyx_v_RPC.shape[0];
-    if (unlikely(__pyx_t_1 < 0)) __pyx_t_2 = 0;
-  } else if (unlikely(__pyx_t_1 >= __pyx_v_RPC.shape[0])) __pyx_t_2 = 0;
-  if (unlikely(__pyx_t_2 != -1)) {
-    __Pyx_RaiseBufferIndexError(__pyx_t_2);
-    __PYX_ERR(0, 42, __pyx_L1_error)
-  }
-  __pyx_t_3 = 1;
-  __pyx_t_2 = -1;
-  if (__pyx_t_3 < 0) {
-    __pyx_t_3 += __pyx_v_RPC.shape[0];
-    if (unlikely(__pyx_t_3 < 0)) __pyx_t_2 = 0;
-  } else if (unlikely(__pyx_t_3 >= __pyx_v_RPC.shape[0])) __pyx_t_2 = 0;
-  if (unlikely(__pyx_t_2 != -1)) {
-    __Pyx_RaiseBufferIndexError(__pyx_t_2);
-    __PYX_ERR(0, 42, __pyx_L1_error)
-  }
-  __pyx_t_4 = 2;
-  __pyx_t_2 = -1;
-  if (__pyx_t_4 < 0) {
-    __pyx_t_4 += __pyx_v_RPC.shape[0];
-    if (unlikely(__pyx_t_4 < 0)) __pyx_t_2 = 0;
-  } else if (unlikely(__pyx_t_4 >= __pyx_v_RPC.shape[0])) __pyx_t_2 = 0;
-  if (unlikely(__pyx_t_2 != -1)) {
-    __Pyx_RaiseBufferIndexError(__pyx_t_2);
-    __PYX_ERR(0, 42, __pyx_L1_error)
-  }
-  __pyx_v_norm_RPC_sq = ((pow((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_1 * __pyx_v_RPC.strides[0]) ))), 2.0) + pow((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_3 * __pyx_v_RPC.strides[0]) ))), 2.0)) + pow((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_4 * __pyx_v_RPC.strides[0]) ))), 2.0));
+  __pyx_v_norm_RPC_sq = ((pow((__pyx_v_RPC[0]), 2.0) + pow((__pyx_v_RPC[1]), 2.0)) + pow((__pyx_v_RPC[2]), 2.0));
 
   /* "src/stong_core_cython/md/utils.pxi":45
  * 
@@ -19807,22 +19833,22 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int 
  *         return 0
  *     elif t == 0 and u == 0 and v == 0:
  */
-  __pyx_t_6 = (__pyx_v_t < 0);
-  if (!__pyx_t_6) {
+  __pyx_t_2 = (__pyx_v_t < 0);
+  if (!__pyx_t_2) {
   } else {
-    __pyx_t_5 = __pyx_t_6;
+    __pyx_t_1 = __pyx_t_2;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_6 = (__pyx_v_u < 0);
-  if (!__pyx_t_6) {
+  __pyx_t_2 = (__pyx_v_u < 0);
+  if (!__pyx_t_2) {
   } else {
-    __pyx_t_5 = __pyx_t_6;
+    __pyx_t_1 = __pyx_t_2;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_6 = (__pyx_v_v < 0);
-  __pyx_t_5 = __pyx_t_6;
+  __pyx_t_2 = (__pyx_v_v < 0);
+  __pyx_t_1 = __pyx_t_2;
   __pyx_L4_bool_binop_done:;
-  if (__pyx_t_5) {
+  if (__pyx_t_1) {
 
     /* "src/stong_core_cython/md/utils.pxi":46
  *     cdef double result
@@ -19850,22 +19876,22 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int 
  *         return (-2 * p) ** n * boys(n, p * norm_RPC_sq)
  *     elif t == 0 and u == 0:
  */
-  __pyx_t_6 = (__pyx_v_t == 0);
-  if (__pyx_t_6) {
+  __pyx_t_2 = (__pyx_v_t == 0);
+  if (__pyx_t_2) {
   } else {
-    __pyx_t_5 = __pyx_t_6;
+    __pyx_t_1 = __pyx_t_2;
     goto __pyx_L7_bool_binop_done;
   }
-  __pyx_t_6 = (__pyx_v_u == 0);
-  if (__pyx_t_6) {
+  __pyx_t_2 = (__pyx_v_u == 0);
+  if (__pyx_t_2) {
   } else {
-    __pyx_t_5 = __pyx_t_6;
+    __pyx_t_1 = __pyx_t_2;
     goto __pyx_L7_bool_binop_done;
   }
-  __pyx_t_6 = (__pyx_v_v == 0);
-  __pyx_t_5 = __pyx_t_6;
+  __pyx_t_2 = (__pyx_v_v == 0);
+  __pyx_t_1 = __pyx_t_2;
   __pyx_L7_bool_binop_done:;
-  if (__pyx_t_5) {
+  if (__pyx_t_1) {
 
     /* "src/stong_core_cython/md/utils.pxi":48
  *         return 0
@@ -19874,8 +19900,8 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int 
  *     elif t == 0 and u == 0:
  *         return (v - 1) * R(n + 1, t, u, v - 2, p, RPC) + RPC[2] * R(n + 1, t, u, v - 1, p, RPC)
  */
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_boys(__pyx_v_n, (__pyx_v_p * __pyx_v_norm_RPC_sq)); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 48, __pyx_L1_error)
-    __pyx_r = (pow((-2.0 * __pyx_v_p), ((double)__pyx_v_n)) * __pyx_t_7);
+    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_boys(__pyx_v_n, (__pyx_v_p * __pyx_v_norm_RPC_sq)); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 48, __pyx_L1_error)
+    __pyx_r = (pow((-2.0 * __pyx_v_p), ((double)__pyx_v_n)) * __pyx_t_3);
     goto __pyx_L0;
 
     /* "src/stong_core_cython/md/utils.pxi":47
@@ -19894,16 +19920,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int 
  *         return (v - 1) * R(n + 1, t, u, v - 2, p, RPC) + RPC[2] * R(n + 1, t, u, v - 1, p, RPC)
  *     elif t == 0:
  */
-  __pyx_t_6 = (__pyx_v_t == 0);
-  if (__pyx_t_6) {
+  __pyx_t_2 = (__pyx_v_t == 0);
+  if (__pyx_t_2) {
   } else {
-    __pyx_t_5 = __pyx_t_6;
+    __pyx_t_1 = __pyx_t_2;
     goto __pyx_L10_bool_binop_done;
   }
-  __pyx_t_6 = (__pyx_v_u == 0);
-  __pyx_t_5 = __pyx_t_6;
+  __pyx_t_2 = (__pyx_v_u == 0);
+  __pyx_t_1 = __pyx_t_2;
   __pyx_L10_bool_binop_done:;
-  if (__pyx_t_5) {
+  if (__pyx_t_1) {
 
     /* "src/stong_core_cython/md/utils.pxi":50
  *         return (-2 * p) ** n * boys(n, p * norm_RPC_sq)
@@ -19912,19 +19938,9 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int 
  *     elif t == 0:
  *         return (u - 1) * R(n + 1, t, u - 2, v, p, RPC) + RPC[1] * R(n + 1, t, u - 1, v, p, RPC)
  */
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 2), __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L1_error)
-    __pyx_t_4 = 2;
-    __pyx_t_2 = -1;
-    if (__pyx_t_4 < 0) {
-      __pyx_t_4 += __pyx_v_RPC.shape[0];
-      if (unlikely(__pyx_t_4 < 0)) __pyx_t_2 = 0;
-    } else if (unlikely(__pyx_t_4 >= __pyx_v_RPC.shape[0])) __pyx_t_2 = 0;
-    if (unlikely(__pyx_t_2 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 50, __pyx_L1_error)
-    }
-    __pyx_t_8 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 1), __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L1_error)
-    __pyx_r = (((__pyx_v_v - 1) * __pyx_t_7) + ((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_4 * __pyx_v_RPC.strides[0]) ))) * __pyx_t_8));
+    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 2), __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 1), __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_r = (((__pyx_v_v - 1) * __pyx_t_3) + ((__pyx_v_RPC[2]) * __pyx_t_4));
     goto __pyx_L0;
 
     /* "src/stong_core_cython/md/utils.pxi":49
@@ -19943,8 +19959,8 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int 
  *         return (u - 1) * R(n + 1, t, u - 2, v, p, RPC) + RPC[1] * R(n + 1, t, u - 1, v, p, RPC)
  *     else:
  */
-  __pyx_t_5 = (__pyx_v_t == 0);
-  if (__pyx_t_5) {
+  __pyx_t_1 = (__pyx_v_t == 0);
+  if (__pyx_t_1) {
 
     /* "src/stong_core_cython/md/utils.pxi":52
  *         return (v - 1) * R(n + 1, t, u, v - 2, p, RPC) + RPC[2] * R(n + 1, t, u, v - 1, p, RPC)
@@ -19953,19 +19969,9 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int 
  *     else:
  *         return (t - 1) * R(n + 1, t - 2, u, v, p, RPC) + RPC[0] * R(n + 1, t - 1, u, v, p, RPC)
  */
-    __pyx_t_8 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 2), __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L1_error)
-    __pyx_t_4 = 1;
-    __pyx_t_2 = -1;
-    if (__pyx_t_4 < 0) {
-      __pyx_t_4 += __pyx_v_RPC.shape[0];
-      if (unlikely(__pyx_t_4 < 0)) __pyx_t_2 = 0;
-    } else if (unlikely(__pyx_t_4 >= __pyx_v_RPC.shape[0])) __pyx_t_2 = 0;
-    if (unlikely(__pyx_t_2 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 52, __pyx_L1_error)
-    }
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 1), __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L1_error)
-    __pyx_r = (((__pyx_v_u - 1) * __pyx_t_8) + ((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_4 * __pyx_v_RPC.strides[0]) ))) * __pyx_t_7));
+    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 2), __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 1), __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_r = (((__pyx_v_u - 1) * __pyx_t_4) + ((__pyx_v_RPC[1]) * __pyx_t_3));
     goto __pyx_L0;
 
     /* "src/stong_core_cython/md/utils.pxi":51
@@ -19983,34 +19989,30 @@ static double __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R(int __pyx_v_n, int 
  *         return (t - 1) * R(n + 1, t - 2, u, v, p, RPC) + RPC[0] * R(n + 1, t - 1, u, v, p, RPC)             # <<<<<<<<<<<<<<
  */
   /*else*/ {
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), (__pyx_v_t - 2), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_7 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 54, __pyx_L1_error)
-    __pyx_t_4 = 0;
-    __pyx_t_2 = -1;
-    if (__pyx_t_4 < 0) {
-      __pyx_t_4 += __pyx_v_RPC.shape[0];
-      if (unlikely(__pyx_t_4 < 0)) __pyx_t_2 = 0;
-    } else if (unlikely(__pyx_t_4 >= __pyx_v_RPC.shape[0])) __pyx_t_2 = 0;
-    if (unlikely(__pyx_t_2 != -1)) {
-      __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 54, __pyx_L1_error)
-    }
-    __pyx_t_8 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), (__pyx_v_t - 1), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 54, __pyx_L1_error)
-    __pyx_r = (((__pyx_v_t - 1) * __pyx_t_7) + ((*((double *) ( /* dim=0 */ (__pyx_v_RPC.data + __pyx_t_4 * __pyx_v_RPC.strides[0]) ))) * __pyx_t_8));
+    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), (__pyx_v_t - 2), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_6sto_ng_R((__pyx_v_n + 1), (__pyx_v_t - 1), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_r = (((__pyx_v_t - 1) * __pyx_t_3) + ((__pyx_v_RPC[0]) * __pyx_t_4));
     goto __pyx_L0;
   }
 
   /* "src/stong_core_cython/md/utils.pxi":41
  * 
  * 
- * cdef double R(int n, int t, int u, int v, double p, double[:] RPC):             # <<<<<<<<<<<<<<
+ * cdef double R(int n, int t, int u, int v, double p, double[3] RPC) nogil:             # <<<<<<<<<<<<<<
  *     cdef double norm_RPC_sq = RPC[0]**2 + RPC[1]**2 + RPC[2]** 2
  * 
  */
 
   /* function exit code */
   __pyx_L1_error:;
+  #ifdef WITH_THREAD
+  __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
+  #endif
   __Pyx_AddTraceback("src.stong_core_cython.md.sto_ng.R", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
+  #ifdef WITH_THREAD
+  __Pyx_PyGILState_Release(__pyx_gilstate_save);
+  #endif
   __pyx_L0:;
   return __pyx_r;
 }
@@ -27443,10 +27445,17 @@ static CYTHON_INLINE int __Pyx_HasAttr(PyObject *o, PyObject *n) {
 }
 #endif
 
-/* BufferIndexError */
-static void __Pyx_RaiseBufferIndexError(int axis) {
-  PyErr_Format(PyExc_IndexError,
-     "Out of bounds on buffer access (axis %d)", axis);
+/* ErrOccurredWithGIL */
+static CYTHON_INLINE int __Pyx_ErrOccurredWithGIL(void) {
+  int err;
+  #ifdef WITH_THREAD
+  PyGILState_STATE _save = PyGILState_Ensure();
+  #endif
+  err = !!PyErr_Occurred();
+  #ifdef WITH_THREAD
+  PyGILState_Release(_save);
+  #endif
+  return err;
 }
 
 /* IterFinish */
@@ -27490,6 +27499,12 @@ static double __Pyx_SoftComplexToDouble(__pyx_t_double_complex value, int have_g
         return -1.;
     }
     return __Pyx_CREAL(value);
+}
+
+/* BufferIndexError */
+static void __Pyx_RaiseBufferIndexError(int axis) {
+  PyErr_Format(PyExc_IndexError,
+     "Out of bounds on buffer access (axis %d)", axis);
 }
 
 /* PyObject_GenericGetAttrNoDict */

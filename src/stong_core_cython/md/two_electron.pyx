@@ -7,6 +7,7 @@ import cython
 from scipy.special.cython_special cimport hyp1f1
 from cython cimport view
 from cython.parallel cimport prange
+from libc.stdlib cimport malloc, free
 include "utils.pxi"
 
 @cython.cdivision(True)
@@ -38,15 +39,15 @@ cpdef double[:, :, :, :] get_ERImat(list basis):
 cpdef double electron_repulsion(double a, long[:] lmn1, double[:] A,
                          double b, long[:] lmn2, double[:] B,
                          double c, long[:] lmn3, double[:] C,
-                         double d, long[:] lmn4, double[:] D):
+                         double d, long[:] lmn4, double[:] D) nogil:
     """
     カーテシアンガウス関数の電子間反発積分を計算する関数
     """
     cdef double p = a + b
     cdef double q = c + d
     cdef double alpha = p * q / (p + q)
-    cdef double[:] RPQ = view.array(shape=(3,), itemsize=sizeof(double), format="d")
-
+    cdef double[3] RPQ
+    cdef long i
     for i in range(3):
         RPQ[i] = (a * A[i] + b * B[i]) / p - (c * C[i] + d * D[i]) / q
     cdef long l1 = lmn1[0], m1=lmn1[1], n1 = lmn1[2]
@@ -73,50 +74,187 @@ cpdef double electron_repulsion(double a, long[:] lmn1, double[:] A,
                             )
     return 2 * M_PI**2.5 / (p * q * sqrt(p + q)) * val
 
+## code1
+#@cython.cdivision(True)
+#@cython.boundscheck(False)
+#@cython.wraparound(False)
+#cpdef double ERI(object a, object b, object c, object d, int num_threads=4):
+#    """
+#    縮約されたカーテシアンガウス関数の電子間反発積分を計算する関数
+#    """
+#    cdef double e = 0.0, temp_e
+#    cdef long i, j, k, l
+#    cdef long num_exps = len(a.exps)
+#    cdef double[:] norms_a = a.norm, norms_b = b.norm, norms_c = c.norm, norms_d = d.norm
+#    cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs, coefs_c = c.coefs, coefs_d = d.coefs
+#    cdef double[:] exps_a = a.exps, exps_b = b.exps, exps_c = c.exps, exps_d = d.exps
+#    cdef long[:] lmn_a = a.lmn, lmn_b = b.lmn, lmn_c = c.lmn, lmn_d = d.lmn
+#    cdef double[:] origin_a = a.origin, origin_b = b.origin, origin_c = c.origin, origin_d = d.origin
+#    cdef long num_iterations = num_exps**4
+#
+#    cdef double* partial_sums = <double*>malloc(num_threads * sizeof(double))
+#    for t in range(num_threads):
+#        partial_sums[t] = 0.0
+#
+#    # 並列化対象のループ
+#    for i in prange(num_exps, nogil=True, num_threads=num_threads, schedule='dynamic'):
+#        for j in range(num_exps):
+#            for k in range(num_exps):
+#                for l in range(num_exps):
+#                    partial_sums[i%num_threads] += (
+#                        norms_a[i]
+#                        * norms_b[j]
+#                        * norms_c[k]
+#                        * norms_d[l]
+#                        * coefs_a[i]
+#                        * coefs_b[j]
+#                        * coefs_c[k]
+#                        * coefs_d[l]
+#                        * electron_repulsion(
+#                            exps_a[i],
+#                            lmn_a,
+#                            origin_a,
+#                            exps_b[j],
+#                            lmn_b,
+#                            origin_b,
+#                            exps_c[k],
+#                            lmn_c,
+#                            origin_c,
+#                            exps_d[l],
+#                            lmn_d,
+#                            origin_d,
+#                        )
+#                    )
+#
+#    for t in range(num_threads):
+#        e += partial_sums[t]
+#    
+#    free(partial_sums)
+#
+#    return e
+
+# code2
 @cython.cdivision(True)
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef double ERI(object a, object b, object c, object d):
+cpdef double ERI(object a, object b, object c, object d, int num_threads=4):
     """
     縮約されたカーテシアンガウス関数の電子間反発積分を計算する関数
     """
     cdef double e = 0.0, temp_e
-    cdef long i, j, k, l
+    cdef long i, j, k, l, t, index
+    cdef int thread_id
     cdef long num_exps = len(a.exps)
     cdef double[:] norms_a = a.norm, norms_b = b.norm, norms_c = c.norm, norms_d = d.norm
     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs, coefs_c = c.coefs, coefs_d = d.coefs
     cdef double[:] exps_a = a.exps, exps_b = b.exps, exps_c = c.exps, exps_d = d.exps
     cdef long[:] lmn_a = a.lmn, lmn_b = b.lmn, lmn_c = c.lmn, lmn_d = d.lmn
     cdef double[:] origin_a = a.origin, origin_b = b.origin, origin_c = c.origin, origin_d = d.origin
+    cdef long num_iterations = num_exps**4
+
+    cdef double* partial_sums = <double*>malloc(num_threads * sizeof(double))
+    for t in range(num_threads):
+        partial_sums[t] = 0.0
 
     # 並列化対象のループ
-    for i in range(num_exps):
-        for j in range(num_exps):
-            for k in range(num_exps):
-                for l in range(num_exps):
-                    e += (
-                        norms_a[i]
-                        * norms_b[j]
-                        * norms_c[k]
-                        * norms_d[l]
-                        * coefs_a[i]
-                        * coefs_b[j]
-                        * coefs_c[k]
-                        * coefs_d[l]
-                        * electron_repulsion(
-                            exps_a[i],
-                            lmn_a,
-                            origin_a,
-                            exps_b[j],
-                            lmn_b,
-                            origin_b,
-                            exps_c[k],
-                            lmn_c,
-                            origin_c,
-                            exps_d[l],
-                            lmn_d,
-                            origin_d,
-                        )
-                    )
+    for index in prange(num_iterations, nogil=True, num_threads=num_threads, schedule='static'):
+        i = index // (num_exps ** 3)
+        j = (index % (num_exps ** 3)) // (num_exps ** 2)
+        k = (index % (num_exps ** 2)) // num_exps
+        l = index % num_exps
+        thread_id = cython.parallel.threadid()
+        partial_sums[thread_id] += (
+            norms_a[i]
+            * norms_b[j]
+            * norms_c[k]
+            * norms_d[l]
+            * coefs_a[i]
+            * coefs_b[j]
+            * coefs_c[k]
+            * coefs_d[l]
+            * electron_repulsion(
+                exps_a[i],
+                lmn_a,
+                origin_a,
+                exps_b[j],
+                lmn_b,
+                origin_b,
+                exps_c[k],
+                lmn_c,
+                origin_c,
+                exps_d[l],
+                lmn_d,
+                origin_d,
+            )
+        )
+
+    for t in range(num_threads):
+        e += partial_sums[t]
+    
+    free(partial_sums)
 
     return e
+
+
+
+## code1
+#@cython.cdivision(True)
+#@cython.boundscheck(False)
+#@cython.wraparound(False)
+#cpdef double ERI(object a, object b, object c, object d, int num_threads=4):
+#    """
+#    縮約されたカーテシアンガウス関数の電子間反発積分を計算する関数
+#    """
+#    cdef double e = 0.0, temp_e
+#    cdef long i, j, k, l, ij
+#    cdef int thread_id
+#    cdef long num_exps = len(a.exps)
+#    cdef double[:] norms_a = a.norm, norms_b = b.norm, norms_c = c.norm, norms_d = d.norm
+#    cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs, coefs_c = c.coefs, coefs_d = d.coefs
+#    cdef double[:] exps_a = a.exps, exps_b = b.exps, exps_c = c.exps, exps_d = d.exps
+#    cdef long[:] lmn_a = a.lmn, lmn_b = b.lmn, lmn_c = c.lmn, lmn_d = d.lmn
+#    cdef double[:] origin_a = a.origin, origin_b = b.origin, origin_c = c.origin, origin_d = d.origin
+#    cdef long num_iterations = num_exps**4
+#
+#    cdef double* partial_sums = <double*>malloc(num_threads * sizeof(double))
+#    for t in range(num_threads):
+#        partial_sums[t] = 0.0
+#
+#    # 並列化対象のループ
+#    for ij in prange(num_exps**2, nogil=True, num_threads=num_threads, schedule='dynamic'):
+#        i = ij // num_exps
+#        j = ij % num_exps
+#        thread_id = cython.parallel.threadid()
+#        for k in range(num_exps):
+#            for l in range(num_exps):
+#                partial_sums[thread_id] += (
+#                    norms_a[i]
+#                    * norms_b[j]
+#                    * norms_c[k]
+#                    * norms_d[l]
+#                    * coefs_a[i]
+#                    * coefs_b[j]
+#                    * coefs_c[k]
+#                    * coefs_d[l]
+#                    * electron_repulsion(
+#                        exps_a[i],
+#                        lmn_a,
+#                        origin_a,
+#                        exps_b[j],
+#                        lmn_b,
+#                        origin_b,
+#                        exps_c[k],
+#                        lmn_c,
+#                        origin_c,
+#                        exps_d[l],
+#                        lmn_d,
+#                        origin_d,
+#                    )
+#                )
+#
+#    for t in range(num_threads):
+#        e += partial_sums[t]
+#    
+#    free(partial_sums)
+#
+#    return e

@@ -7,14 +7,14 @@ import cython
 from scipy.special.cython_special cimport hyp1f1
 from cython cimport view
 
-cdef long custom_fact2(long n):
+cdef long custom_fact2(long n) nogil:
     cdef long result = 1
     cdef long i
     for i in range(n, 0, -2):
         result *= i
     return result
 
-cdef double E(long i, long j, long t, double a, double b, double Qx):
+cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:
     if i < 0 or j < 0 or t < 0 or i + j < t:
         return 0
 
@@ -34,11 +34,11 @@ cdef double E(long i, long j, long t, double a, double b, double Qx):
         )
 
 
-cdef double boys(int n, double T):
+cdef double boys(int n, double T) nogil:
     return hyp1f1(n + 0.5, n + 1.5, -T) / (2 * n + 1)
 
 
-cdef double R(int n, int t, int u, int v, double p, double[:] RPC):
+cdef double R(int n, int t, int u, int v, double p, double[3] RPC) nogil:
     cdef double norm_RPC_sq = RPC[0]**2 + RPC[1]**2 + RPC[2]** 2
     
     cdef double result
