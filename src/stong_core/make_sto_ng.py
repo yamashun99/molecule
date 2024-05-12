@@ -52,6 +52,10 @@ def phi_d(alpha, r):
     return (2048 * alpha**7 / np.pi**3) ** 0.25 * r**2 * np.exp(-alpha * r**2)
 
 
+def phi_f(alpha, r):
+    return (32768 * alpha**9 / np.pi**3) ** 0.25 * r**3 * np.exp(-alpha * r**2)
+
+
 def sto_ng_s(a, r):
     sum_phi = 0
     for i in range(len(a.exps)):
@@ -79,6 +83,15 @@ def sto_ng_d(a, r):
     return sum_phi
 
 
+def sto_ng_f(a, r):
+    sum_phi = 0
+    for i in range(len(a.exps)):
+        exp = a.exps[i]
+        coefs = a.coefs[3][i]
+        sum_phi += coefs * phi_f(exp, r)
+    return sum_phi
+
+
 class StoNg:
     def __init__(self, principal_quantum_number):
         self.principal_quantum_number = principal_quantum_number
@@ -88,6 +101,10 @@ class StoNg:
         if principal_quantum_number > 1:
             self.constraints.append(
                 {"type": "eq", "fun": self.constraint, "args": ["p"]}
+            )
+        if principal_quantum_number > 2:
+            self.constraints.append(
+                {"type": "eq", "fun": self.constraint, "args": ["d"]}
             )
 
     def integrand(self, r, a):
@@ -102,12 +119,7 @@ class StoNg:
             return (
                 np.abs(sto_ng_s(a, r) - chi_n(3, r, "s")) ** 2 * 4 * np.pi * r**2
                 + np.abs(sto_ng_p(a, r) - chi_n(3, r, "p")) ** 2 * 4 * np.pi * r**2 / 3
-                + np.abs(sto_ng_d(a, r) - chi_n(3, r, "d")) ** 2
-                * 4
-                * np.pi
-                * r**2
-                * 4
-                / 15
+                + np.abs(sto_ng_d(a, r) - chi_n(3, r, "d")) ** 2 * np.pi * r**2 * 8 / 15
             )
 
     def objective_function(self, params):
@@ -129,7 +141,7 @@ class StoNg:
             )
         elif orbital_type == "d":
             integral, error = quad(
-                lambda r: sto_ng_d(a, r) ** 2 * 4 * np.pi * r**2 * 4 / 15, 0, np.inf
+                lambda r: sto_ng_d(a, r) ** 2 * 8 * np.pi * r**2 / 15, 0, np.inf
             )
         return integral - 1
 

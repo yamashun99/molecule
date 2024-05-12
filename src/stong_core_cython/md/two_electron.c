@@ -1983,7 +1983,7 @@ struct __pyx_fuse_1__pyx_opt_args_5scipy_7special_14cython_special_spherical_kn 
 };
 struct __pyx_opt_args_3src_17stong_core_cython_2md_12two_electron_ERI;
 
-/* "src/stong_core_cython/md/two_electron.pyx":140
+/* "src/stong_core_cython/md/two_electron.pyx":80
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef double ERI(object a, object b, object c, object d, int num_threads=4):             # <<<<<<<<<<<<<<
@@ -20919,7 +20919,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_electron_repul
  *                             )
  *     return 2 * M_PI**2.5 / (p * q * sqrt(p + q)) * val             # <<<<<<<<<<<<<<
  * 
- * ## code1
+ * @cython.cdivision(True)
  */
   __pyx_t_29 = __Pyx_SoftComplexToDouble(__Pyx_c_prod_double(__Pyx_c_quot_double(__Pyx_c_prod_double(__pyx_t_double_complex_from_parts(2, 0), __Pyx_c_pow_double(__pyx_t_double_complex_from_parts(M_PI, 0), __pyx_t_double_complex_from_parts(2.5, 0))), __pyx_t_double_complex_from_parts(((__pyx_v_p * __pyx_v_q) * sqrt((__pyx_v_p + __pyx_v_q))), 0)), __pyx_t_double_complex_from_parts(__pyx_v_val, 0)), 0); if (unlikely(__pyx_t_29 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 75, __pyx_L1_error)
   __pyx_r = __pyx_t_29;
@@ -21261,7 +21261,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12two_electron_2electron_
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/two_electron.pyx":140
+/* "src/stong_core_cython/md/two_electron.pyx":80
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef double ERI(object a, object b, object c, object d, int num_threads=4):             # <<<<<<<<<<<<<<
@@ -21343,7 +21343,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
     }
   }
 
-  /* "src/stong_core_cython/md/two_electron.pyx":144
+  /* "src/stong_core_cython/md/two_electron.pyx":84
  * 
  *     """
  *     cdef double e = 0.0, temp_e             # <<<<<<<<<<<<<<
@@ -21352,200 +21352,200 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
   __pyx_v_e = 0.0;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":147
+  /* "src/stong_core_cython/md/two_electron.pyx":87
  *     cdef long i, j, k, l, t, index
  *     cdef int thread_id
  *     cdef long num_exps = len(a.exps)             # <<<<<<<<<<<<<<
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm, norms_c = c.norm, norms_d = d.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs, coefs_c = c.coefs, coefs_d = d.coefs
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 147, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(2, 147, __pyx_L1_error)
+  __pyx_t_2 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(2, 87, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_num_exps = __pyx_t_2;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":148
+  /* "src/stong_core_cython/md/two_electron.pyx":88
  *     cdef int thread_id
  *     cdef long num_exps = len(a.exps)
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm, norms_c = c.norm, norms_d = d.norm             # <<<<<<<<<<<<<<
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs, coefs_c = c.coefs, coefs_d = d.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps, exps_c = c.exps, exps_d = d.exps
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_norm); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 148, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_norm); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 148, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 88, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_norms_a = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_norm); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 148, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_norm); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 148, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 88, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_norms_b = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_norm); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 148, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_norm); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 148, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 88, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_norms_c = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_norm); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 148, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_norm); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 148, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 88, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_norms_d = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":149
+  /* "src/stong_core_cython/md/two_electron.pyx":89
  *     cdef long num_exps = len(a.exps)
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm, norms_c = c.norm, norms_d = d.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs, coefs_c = c.coefs, coefs_d = d.coefs             # <<<<<<<<<<<<<<
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps, exps_c = c.exps, exps_d = d.exps
  *     cdef long[:] lmn_a = a.lmn, lmn_b = b.lmn, lmn_c = c.lmn, lmn_d = d.lmn
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_coefs); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 149, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_coefs); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 149, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 89, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_coefs_a = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_coefs); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 149, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_coefs); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 149, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 89, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_coefs_b = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_coefs); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 149, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_coefs); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 149, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 89, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_coefs_c = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_coefs); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 149, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_coefs); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 89, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 149, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 89, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_coefs_d = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":150
+  /* "src/stong_core_cython/md/two_electron.pyx":90
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm, norms_c = c.norm, norms_d = d.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs, coefs_c = c.coefs, coefs_d = d.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps, exps_c = c.exps, exps_d = d.exps             # <<<<<<<<<<<<<<
  *     cdef long[:] lmn_a = a.lmn, lmn_b = b.lmn, lmn_c = c.lmn, lmn_d = d.lmn
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin, origin_c = c.origin, origin_d = d.origin
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 150, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 150, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 90, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_exps_a = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 150, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 150, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 90, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_exps_b = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 150, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 150, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 90, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_exps_c = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 150, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 150, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 90, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_exps_d = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":151
+  /* "src/stong_core_cython/md/two_electron.pyx":91
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs, coefs_c = c.coefs, coefs_d = d.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps, exps_c = c.exps, exps_d = d.exps
  *     cdef long[:] lmn_a = a.lmn, lmn_b = b.lmn, lmn_c = c.lmn, lmn_d = d.lmn             # <<<<<<<<<<<<<<
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin, origin_c = c.origin, origin_d = d.origin
  *     cdef long num_iterations = num_exps**4
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_lmn); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 151, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_lmn); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_to_MemoryviewSlice_ds_long(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_4.memview)) __PYX_ERR(2, 151, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_to_MemoryviewSlice_ds_long(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_4.memview)) __PYX_ERR(2, 91, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_lmn_a = __pyx_t_4;
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_lmn); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 151, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_lmn); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_to_MemoryviewSlice_ds_long(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_4.memview)) __PYX_ERR(2, 151, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_to_MemoryviewSlice_ds_long(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_4.memview)) __PYX_ERR(2, 91, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_lmn_b = __pyx_t_4;
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_lmn); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 151, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_lmn); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_to_MemoryviewSlice_ds_long(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_4.memview)) __PYX_ERR(2, 151, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_to_MemoryviewSlice_ds_long(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_4.memview)) __PYX_ERR(2, 91, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_lmn_c = __pyx_t_4;
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_lmn); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 151, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_lmn); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_to_MemoryviewSlice_ds_long(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_4.memview)) __PYX_ERR(2, 151, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_to_MemoryviewSlice_ds_long(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_4.memview)) __PYX_ERR(2, 91, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_lmn_d = __pyx_t_4;
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":152
+  /* "src/stong_core_cython/md/two_electron.pyx":92
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps, exps_c = c.exps, exps_d = d.exps
  *     cdef long[:] lmn_a = a.lmn, lmn_b = b.lmn, lmn_c = c.lmn, lmn_d = d.lmn
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin, origin_c = c.origin, origin_d = d.origin             # <<<<<<<<<<<<<<
  *     cdef long num_iterations = num_exps**4
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_origin); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 152, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_a, __pyx_n_s_origin); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 152, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_origin_a = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_origin); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 152, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_origin); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 152, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_origin_b = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_origin); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 152, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_c, __pyx_n_s_origin); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 152, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_origin_c = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_origin); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 152, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_d, __pyx_n_s_origin); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 152, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_3.memview)) __PYX_ERR(2, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_origin_d = __pyx_t_3;
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":153
+  /* "src/stong_core_cython/md/two_electron.pyx":93
  *     cdef long[:] lmn_a = a.lmn, lmn_b = b.lmn, lmn_c = c.lmn, lmn_d = d.lmn
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin, origin_c = c.origin, origin_d = d.origin
  *     cdef long num_iterations = num_exps**4             # <<<<<<<<<<<<<<
@@ -21554,7 +21554,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
   __pyx_v_num_iterations = __Pyx_pow_long(__pyx_v_num_exps, 4);
 
-  /* "src/stong_core_cython/md/two_electron.pyx":155
+  /* "src/stong_core_cython/md/two_electron.pyx":95
  *     cdef long num_iterations = num_exps**4
  * 
  *     cdef double* partial_sums = <double*>malloc(num_threads * sizeof(double))             # <<<<<<<<<<<<<<
@@ -21563,7 +21563,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
   __pyx_v_partial_sums = ((double *)malloc((__pyx_v_num_threads * (sizeof(double)))));
 
-  /* "src/stong_core_cython/md/two_electron.pyx":156
+  /* "src/stong_core_cython/md/two_electron.pyx":96
  * 
  *     cdef double* partial_sums = <double*>malloc(num_threads * sizeof(double))
  *     for t in range(num_threads):             # <<<<<<<<<<<<<<
@@ -21575,7 +21575,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
   for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_t = __pyx_t_7;
 
-    /* "src/stong_core_cython/md/two_electron.pyx":157
+    /* "src/stong_core_cython/md/two_electron.pyx":97
  *     cdef double* partial_sums = <double*>malloc(num_threads * sizeof(double))
  *     for t in range(num_threads):
  *         partial_sums[t] = 0.0             # <<<<<<<<<<<<<<
@@ -21585,7 +21585,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
     (__pyx_v_partial_sums[__pyx_v_t]) = 0.0;
   }
 
-  /* "src/stong_core_cython/md/two_electron.pyx":160
+  /* "src/stong_core_cython/md/two_electron.pyx":100
  * 
  *     #
  *     for index in prange(num_iterations, nogil=True, num_threads=num_threads, schedule='static'):             # <<<<<<<<<<<<<<
@@ -21645,7 +21645,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
                             __pyx_v_l = ((long)0xbad0bad0);
                             __pyx_v_thread_id = ((int)0xbad0bad0);
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":161
+                            /* "src/stong_core_cython/md/two_electron.pyx":101
  *     #
  *     for index in prange(num_iterations, nogil=True, num_threads=num_threads, schedule='static'):
  *         i = index // (num_exps ** 3)             # <<<<<<<<<<<<<<
@@ -21654,7 +21654,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_v_i = (__pyx_v_index / __Pyx_pow_long(__pyx_v_num_exps, 3));
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":162
+                            /* "src/stong_core_cython/md/two_electron.pyx":102
  *     for index in prange(num_iterations, nogil=True, num_threads=num_threads, schedule='static'):
  *         i = index // (num_exps ** 3)
  *         j = (index % (num_exps ** 3)) // (num_exps ** 2)             # <<<<<<<<<<<<<<
@@ -21663,7 +21663,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_v_j = ((__pyx_v_index % __Pyx_pow_long(__pyx_v_num_exps, 3)) / __Pyx_pow_long(__pyx_v_num_exps, 2));
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":163
+                            /* "src/stong_core_cython/md/two_electron.pyx":103
  *         i = index // (num_exps ** 3)
  *         j = (index % (num_exps ** 3)) // (num_exps ** 2)
  *         k = (index % (num_exps ** 2)) // num_exps             # <<<<<<<<<<<<<<
@@ -21672,7 +21672,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_v_k = ((__pyx_v_index % __Pyx_pow_long(__pyx_v_num_exps, 2)) / __pyx_v_num_exps);
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":164
+                            /* "src/stong_core_cython/md/two_electron.pyx":104
  *         j = (index % (num_exps ** 3)) // (num_exps ** 2)
  *         k = (index % (num_exps ** 2)) // num_exps
  *         l = index % num_exps             # <<<<<<<<<<<<<<
@@ -21681,7 +21681,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_v_l = (__pyx_v_index % __pyx_v_num_exps);
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":165
+                            /* "src/stong_core_cython/md/two_electron.pyx":105
  *         k = (index % (num_exps ** 2)) // num_exps
  *         l = index % num_exps
  *         thread_id = cython.parallel.threadid()             # <<<<<<<<<<<<<<
@@ -21695,7 +21695,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
                             #endif
                             __pyx_v_thread_id = __pyx_t_5;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":166
+                            /* "src/stong_core_cython/md/two_electron.pyx":106
  *         l = index % num_exps
  *         thread_id = cython.parallel.threadid()
  *         partial_sums[thread_id] += (             # <<<<<<<<<<<<<<
@@ -21704,7 +21704,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_5 = __pyx_v_thread_id;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":167
+                            /* "src/stong_core_cython/md/two_electron.pyx":107
  *         thread_id = cython.parallel.threadid()
  *         partial_sums[thread_id] += (
  *             norms_a[i]             # <<<<<<<<<<<<<<
@@ -21713,7 +21713,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_10 = __pyx_v_i;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":168
+                            /* "src/stong_core_cython/md/two_electron.pyx":108
  *         partial_sums[thread_id] += (
  *             norms_a[i]
  *             * norms_b[j]             # <<<<<<<<<<<<<<
@@ -21722,7 +21722,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_11 = __pyx_v_j;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":169
+                            /* "src/stong_core_cython/md/two_electron.pyx":109
  *             norms_a[i]
  *             * norms_b[j]
  *             * norms_c[k]             # <<<<<<<<<<<<<<
@@ -21731,7 +21731,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_12 = __pyx_v_k;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":170
+                            /* "src/stong_core_cython/md/two_electron.pyx":110
  *             * norms_b[j]
  *             * norms_c[k]
  *             * norms_d[l]             # <<<<<<<<<<<<<<
@@ -21740,7 +21740,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_13 = __pyx_v_l;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":171
+                            /* "src/stong_core_cython/md/two_electron.pyx":111
  *             * norms_c[k]
  *             * norms_d[l]
  *             * coefs_a[i]             # <<<<<<<<<<<<<<
@@ -21749,7 +21749,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_14 = __pyx_v_i;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":172
+                            /* "src/stong_core_cython/md/two_electron.pyx":112
  *             * norms_d[l]
  *             * coefs_a[i]
  *             * coefs_b[j]             # <<<<<<<<<<<<<<
@@ -21758,7 +21758,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_15 = __pyx_v_j;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":173
+                            /* "src/stong_core_cython/md/two_electron.pyx":113
  *             * coefs_a[i]
  *             * coefs_b[j]
  *             * coefs_c[k]             # <<<<<<<<<<<<<<
@@ -21767,7 +21767,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_16 = __pyx_v_k;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":174
+                            /* "src/stong_core_cython/md/two_electron.pyx":114
  *             * coefs_b[j]
  *             * coefs_c[k]
  *             * coefs_d[l]             # <<<<<<<<<<<<<<
@@ -21776,7 +21776,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_17 = __pyx_v_l;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":176
+                            /* "src/stong_core_cython/md/two_electron.pyx":116
  *             * coefs_d[l]
  *             * electron_repulsion(
  *                 exps_a[i],             # <<<<<<<<<<<<<<
@@ -21785,7 +21785,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_18 = __pyx_v_i;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":179
+                            /* "src/stong_core_cython/md/two_electron.pyx":119
  *                 lmn_a,
  *                 origin_a,
  *                 exps_b[j],             # <<<<<<<<<<<<<<
@@ -21794,7 +21794,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_19 = __pyx_v_j;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":182
+                            /* "src/stong_core_cython/md/two_electron.pyx":122
  *                 lmn_b,
  *                 origin_b,
  *                 exps_c[k],             # <<<<<<<<<<<<<<
@@ -21803,7 +21803,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_20 = __pyx_v_k;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":185
+                            /* "src/stong_core_cython/md/two_electron.pyx":125
  *                 lmn_c,
  *                 origin_c,
  *                 exps_d[l],             # <<<<<<<<<<<<<<
@@ -21812,16 +21812,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
                             __pyx_t_21 = __pyx_v_l;
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":175
+                            /* "src/stong_core_cython/md/two_electron.pyx":115
  *             * coefs_c[k]
  *             * coefs_d[l]
  *             * electron_repulsion(             # <<<<<<<<<<<<<<
  *                 exps_a[i],
  *                 lmn_a,
  */
-                            __pyx_t_22 = __pyx_f_3src_17stong_core_cython_2md_12two_electron_electron_repulsion((*((double *) ( /* dim=0 */ (__pyx_v_exps_a.data + __pyx_t_18 * __pyx_v_exps_a.strides[0]) ))), __pyx_v_lmn_a, __pyx_v_origin_a, (*((double *) ( /* dim=0 */ (__pyx_v_exps_b.data + __pyx_t_19 * __pyx_v_exps_b.strides[0]) ))), __pyx_v_lmn_b, __pyx_v_origin_b, (*((double *) ( /* dim=0 */ (__pyx_v_exps_c.data + __pyx_t_20 * __pyx_v_exps_c.strides[0]) ))), __pyx_v_lmn_c, __pyx_v_origin_c, (*((double *) ( /* dim=0 */ (__pyx_v_exps_d.data + __pyx_t_21 * __pyx_v_exps_d.strides[0]) ))), __pyx_v_lmn_d, __pyx_v_origin_d, 0); if (unlikely(__pyx_t_22 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 175, __pyx_L10_error)
+                            __pyx_t_22 = __pyx_f_3src_17stong_core_cython_2md_12two_electron_electron_repulsion((*((double *) ( /* dim=0 */ (__pyx_v_exps_a.data + __pyx_t_18 * __pyx_v_exps_a.strides[0]) ))), __pyx_v_lmn_a, __pyx_v_origin_a, (*((double *) ( /* dim=0 */ (__pyx_v_exps_b.data + __pyx_t_19 * __pyx_v_exps_b.strides[0]) ))), __pyx_v_lmn_b, __pyx_v_origin_b, (*((double *) ( /* dim=0 */ (__pyx_v_exps_c.data + __pyx_t_20 * __pyx_v_exps_c.strides[0]) ))), __pyx_v_lmn_c, __pyx_v_origin_c, (*((double *) ( /* dim=0 */ (__pyx_v_exps_d.data + __pyx_t_21 * __pyx_v_exps_d.strides[0]) ))), __pyx_v_lmn_d, __pyx_v_origin_d, 0); if (unlikely(__pyx_t_22 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 115, __pyx_L10_error)
 
-                            /* "src/stong_core_cython/md/two_electron.pyx":166
+                            /* "src/stong_core_cython/md/two_electron.pyx":106
  *         l = index % num_exps
  *         thread_id = cython.parallel.threadid()
  *         partial_sums[thread_id] += (             # <<<<<<<<<<<<<<
@@ -21920,7 +21920,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
         #endif
       }
 
-      /* "src/stong_core_cython/md/two_electron.pyx":160
+      /* "src/stong_core_cython/md/two_electron.pyx":100
  * 
  *     #
  *     for index in prange(num_iterations, nogil=True, num_threads=num_threads, schedule='static'):             # <<<<<<<<<<<<<<
@@ -21946,7 +21946,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
       }
   }
 
-  /* "src/stong_core_cython/md/two_electron.pyx":191
+  /* "src/stong_core_cython/md/two_electron.pyx":131
  *         )
  * 
  *     for t in range(num_threads):             # <<<<<<<<<<<<<<
@@ -21958,7 +21958,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
   for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_6; __pyx_t_9+=1) {
     __pyx_v_t = __pyx_t_9;
 
-    /* "src/stong_core_cython/md/two_electron.pyx":192
+    /* "src/stong_core_cython/md/two_electron.pyx":132
  * 
  *     for t in range(num_threads):
  *         e += partial_sums[t]             # <<<<<<<<<<<<<<
@@ -21968,7 +21968,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
     __pyx_v_e = (__pyx_v_e + (__pyx_v_partial_sums[__pyx_v_t]));
   }
 
-  /* "src/stong_core_cython/md/two_electron.pyx":194
+  /* "src/stong_core_cython/md/two_electron.pyx":134
  *         e += partial_sums[t]
  * 
  *     free(partial_sums)             # <<<<<<<<<<<<<<
@@ -21977,17 +21977,15 @@ static double __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(PyObject *
  */
   free(__pyx_v_partial_sums);
 
-  /* "src/stong_core_cython/md/two_electron.pyx":196
+  /* "src/stong_core_cython/md/two_electron.pyx":136
  *     free(partial_sums)
  * 
  *     return e             # <<<<<<<<<<<<<<
- * 
- * 
  */
   __pyx_r = __pyx_v_e;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":140
+  /* "src/stong_core_cython/md/two_electron.pyx":80
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef double ERI(object a, object b, object c, object d, int num_threads=4):             # <<<<<<<<<<<<<<
@@ -22093,7 +22091,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 140, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 80, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -22101,9 +22099,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 140, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 80, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("ERI", 0, 4, 5, 1); __PYX_ERR(2, 140, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ERI", 0, 4, 5, 1); __PYX_ERR(2, 80, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -22111,9 +22109,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 140, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 80, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("ERI", 0, 4, 5, 2); __PYX_ERR(2, 140, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ERI", 0, 4, 5, 2); __PYX_ERR(2, 80, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -22121,21 +22119,21 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 140, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 80, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("ERI", 0, 4, 5, 3); __PYX_ERR(2, 140, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ERI", 0, 4, 5, 3); __PYX_ERR(2, 80, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_num_threads);
           if (value) { values[4] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 140, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(2, 80, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "ERI") < 0)) __PYX_ERR(2, 140, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "ERI") < 0)) __PYX_ERR(2, 80, __pyx_L3_error)
       }
     } else {
       switch (__pyx_nargs) {
@@ -22154,14 +22152,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_c = values[2];
     __pyx_v_d = values[3];
     if (values[4]) {
-      __pyx_v_num_threads = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_num_threads == (int)-1) && PyErr_Occurred())) __PYX_ERR(2, 140, __pyx_L3_error)
+      __pyx_v_num_threads = __Pyx_PyInt_As_int(values[4]); if (unlikely((__pyx_v_num_threads == (int)-1) && PyErr_Occurred())) __PYX_ERR(2, 80, __pyx_L3_error)
     } else {
       __pyx_v_num_threads = ((int)4);
     }
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("ERI", 0, 4, 5, __pyx_nargs); __PYX_ERR(2, 140, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("ERI", 0, 4, 5, __pyx_nargs); __PYX_ERR(2, 80, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -22201,8 +22199,8 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12two_electron_4ERI(CYTHO
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.num_threads = __pyx_v_num_threads;
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(__pyx_v_a, __pyx_v_b, __pyx_v_c, __pyx_v_d, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(2, 140, __pyx_L1_error)
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(2, 140, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_2md_12two_electron_ERI(__pyx_v_a, __pyx_v_b, __pyx_v_c, __pyx_v_d, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(2, 80, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(2, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
@@ -23537,18 +23535,18 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__24);
   __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(12, 0, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_md_two_ele, __pyx_n_s_electron_repulsion, 39, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(2, 39, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/two_electron.pyx":140
+  /* "src/stong_core_cython/md/two_electron.pyx":80
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef double ERI(object a, object b, object c, object d, int num_threads=4):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_tuple__26 = PyTuple_Pack(5, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_c, __pyx_n_s_d, __pyx_n_s_num_threads); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(2, 140, __pyx_L1_error)
+  __pyx_tuple__26 = PyTuple_Pack(5, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_c, __pyx_n_s_d, __pyx_n_s_num_threads); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(2, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_md_two_ele, __pyx_n_s_ERI, 140, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(2, 140, __pyx_L1_error)
-  __pyx_tuple__28 = PyTuple_Pack(1, __pyx_int_4); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(2, 140, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_md_two_ele, __pyx_n_s_ERI, 80, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(2, 80, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(1, __pyx_int_4); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(2, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
   __Pyx_RefNannyFinishContext();
@@ -24727,17 +24725,17 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_electron_repulsion, __pyx_t_7) < 0) __PYX_ERR(2, 39, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/md/two_electron.pyx":140
+  /* "src/stong_core_cython/md/two_electron.pyx":80
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef double ERI(object a, object b, object c, object d, int num_threads=4):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_2md_12two_electron_5ERI, 0, __pyx_n_s_ERI, NULL, __pyx_n_s_src_stong_core_cython_md_two_ele_2, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(2, 140, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_2md_12two_electron_5ERI, 0, __pyx_n_s_ERI, NULL, __pyx_n_s_src_stong_core_cython_md_two_ele_2, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(2, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_7, __pyx_tuple__28);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ERI, __pyx_t_7) < 0) __PYX_ERR(2, 140, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ERI, __pyx_t_7) < 0) __PYX_ERR(2, 80, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
   /* "src/stong_core_cython/md/two_electron.pyx":1

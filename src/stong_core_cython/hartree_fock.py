@@ -107,5 +107,7 @@ class HartreeFock:
             "P_dn": self.P_dn,
             "val_up": self.val_up,
             "val_dn": self.val_dn,
+            "vec_up": self.vec_up,
+            "vec_dn": self.vec_dn,
             # 他にも必要に応じてデータを追加
         }

@@ -1,13 +1,13 @@
 # cython: language_level=3
 
-from libc.math cimport exp, sqrt, M_PI
+from libc.math cimport exp, sqrt, M_PI, pow
 import numpy as np
 cimport numpy as np
 from scipy.special.cython_special cimport hyp1f1
 from cython cimport view
 include "utils.pxi"
 
-cdef double overlap(double a, long[:] lmn1, double[:] A, double b, long[:] lmn2, double[:] B):
+cdef double overlap(double a, long[3] lmn1, double[:] A, double b, long[3] lmn2, double[:] B) nogil:
     """
     カーテシアンガウス関数の重なり積分を計算する関数
     """
@@ -25,37 +25,51 @@ cpdef double S(object a, object b):
     """
     cdef long num_exps = len(a.exps), i, j
     cdef double s = 0.0
-    for i in range(num_exps):
-        for j in range(num_exps):
-            s += (
-                a.norm[i]
-                * b.norm[j]
-                * a.coefs[i]
-                * b.coefs[j]
-                * overlap(a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin)
-            )
+    cdef double[:] norms_a = a.norm, norms_b = b.norm
+    cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
+    cdef double[:] exps_a = a.exps, exps_b = b.exps
+    cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn
+    cdef double[:] origin_a = a.origin, origin_b = b.origin
+
+    with nogil:
+        for i in range(num_exps):
+            for j in range(num_exps):
+                s += (
+                    norms_a[i]
+                    * norms_b[j]
+                    * coefs_a[i]
+                    * coefs_b[j]
+                    * overlap(exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b)
+                )
     return s
 
 
-cdef double kinetic(double a, long[:] lmn1, double[:] A, double b, long[:] lmn2, double[:] B):
+cdef double kinetic(double a, long[3] lmn1, double[:] A, double b, long[3] lmn2, double[:] B) nogil:
     """
     カーテシアンガウス関数の重なり積分を計算する関数
     """
     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
+    cdef long[3] lmn2_l = [l2 +2, m2, n2]
+    cdef long[3] lmn2_m = [l2, m2 + 2, n2]
+    cdef long[3] lmn2_n = [l2, m2, n2 + 2]
+    cdef long[3] lmnm2_l = [l2 - 2, m2, n2]
+    cdef long[3] lmnm2_m = [l2, m2 - 2, n2]
+    cdef long[3] lmnm2_n = [l2, m2, n2 - 2]
+
     cdef double term0 = b * (2 * (l2 + m2 + n2) + 3) * overlap(a, lmn1, A, b, lmn2, B)
     cdef double term1 = (
         -2
         * b**2
         * (
-            overlap(a, lmn1, A, b, np.array([l2 + 2, m2, n2]), B)
-            + overlap(a, lmn1, A, b, np.array([l2, m2 + 2, n2]), B)
-            + overlap(a, lmn1, A, b, np.array([l2, m2, n2 + 2]), B)
+            overlap(a, lmn1, A, b, lmn2_l, B)
+            + overlap(a, lmn1, A, b, lmn2_m, B)
+            + overlap(a, lmn1, A, b, lmn2_n, B)
         )
     )
     cdef double term2 = -0.5 * (
-        l2 * (l2 - 1) * overlap(a, lmn1, A, b, np.array([l2 - 2, m2, n2]), B)
-        + m2 * (m2 - 1) * overlap(a, lmn1, A, b, np.array([l2, m2 - 2, n2]), B)
-        + n2 * (n2 - 1) * overlap(a, lmn1, A, b, np.array([l2, m2, n2 - 2]), B)
+        l2 * (l2 - 1) * overlap(a, lmn1, A, b, lmnm2_l, B)
+        + m2 * (m2 - 1) * overlap(a, lmn1, A, b, lmnm2_m, B)
+        + n2 * (n2 - 1) * overlap(a, lmn1, A, b, lmnm2_n, B)
     )
     return term0 + term1 + term2
 
@@ -66,19 +80,26 @@ cpdef double T(object a, object b):
     """
     cdef double t = 0.0
     cdef int i, j, num_exps = len(a.exps)
-    for i in range(num_exps):
-        for j in range(num_exps):
-            t += (
-                a.norm[i]
-                * b.norm[j]
-                * a.coefs[i]
-                * b.coefs[j]
-                * kinetic(a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin)
-            )
-    return t
+    cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn
+    cdef double[:] origin_a = a.origin, origin_b = b.origin
+    cdef double[:] norms_a = a.norm, norms_b = b.norm
+    cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
+    cdef double[:] exps_a = a.exps, exps_b = b.exps
 
-cdef double nuclear_attraction(double a, long[:] lmn1, double[:] A,
-                                 double b, long[:] lmn2, double[:] B, double[:] C):
+    with nogil:
+        for i in range(num_exps):
+            for j in range(num_exps):
+                t += (
+                    norms_a[i]
+                    * norms_b[j]
+                    * coefs_a[i]
+                    * coefs_b[j]
+                    * kinetic(exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b)
+                )
+        return t
+
+cdef double nuclear_attraction(double a, long[3] lmn1, double[:] A,
+                                 double b, long[3] lmn2, double[:] B, double[:] C) nogil:
     """
     カーテシアンガウス関数の原子核からのクーロン相互作用を計算する関数
     """
@@ -107,16 +128,21 @@ cpdef double V(object a, object b, double[:] RC):
     """
     cdef double v = 0.0
     cdef long num_exps = len(a.exps), i, j
-
-    for i in range(num_exps):
-        for j in range(num_exps):
-            v += (
-                a.norm[i]
-                * b.norm[j]
-                * a.coefs[i]
-                * b.coefs[j]
-                * nuclear_attraction(
-                    a.exps[i], a.lmn, a.origin, b.exps[j], b.lmn, b.origin, RC
+    cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn
+    cdef double[:] origin_a = a.origin, origin_b = b.origin
+    cdef double[:] norms_a = a.norm, norms_b = b.norm
+    cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
+    cdef double[:] exps_a = a.exps, exps_b = b.exps
+    with nogil:
+        for i in range(num_exps):
+            for j in range(num_exps):
+                v += (
+                    norms_a[i]
+                    * norms_b[j]
+                    * coefs_a[i]
+                    * coefs_b[j]
+                    * nuclear_attraction(
+                        exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b, RC
+                    )
                 )
-            )
-    return v
+        return v
