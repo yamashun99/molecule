@@ -5,26 +5,31 @@ from math import factorial
 
 
 class BasisFunction:
-    def __init__(self, principal_quantum_number, exps, coefs):
+    def __init__(self, n, max_l, exps, coefs):
         self.exps = exps
         self.coefs = coefs
-        self.principal_quantum_number = principal_quantum_number
+        self.principal_quantum_number = n
+        self.max_l = max_l
 
     def params(self):
         return np.concatenate([[self.exps], self.coefs]).flatten()
 
 
-def params2expscoefs(principal_quantum_number, params):
-    num_exps = len(params) // (1 + principal_quantum_number)
+def params2expscoefs(n, max_l, params):
+    num_exps = len(params) // (1 + max_l)
     exps = params[:num_exps]
-    coefs = [
-        params[num_exps * i : num_exps * (i + 1)]
-        for i in range(1, principal_quantum_number + 1)
-    ]
+    coefs = [params[num_exps * i : num_exps * (i + 1)] for i in range(1, n + 1)]
     return (exps, coefs)
 
 
 def chi_n(n, r, orbital_type="s"):
+    """
+    規格化されたSTO
+    C. C. Pye and C. J. Mercer,
+    "On the Least-Squares Fitting of Slater-Type Orbitals with Gaussians:
+    Reproduction of the STO-NG Fits Using Microsoft Excel and Maple,"
+    J. Chem. Educ. 89, 1405 (2012).
+    """
     zeta = 1
     if orbital_type == "p":
         return np.sqrt(3) * chi_n(n, r, "s")
@@ -40,61 +45,24 @@ def chi_n(n, r, orbital_type="s"):
         )
 
 
-def phi_s(alpha, r):
-    return (2 * alpha / np.pi) ** (3 / 4) * np.exp(-alpha * r**2)
+def phi(n, alpha, r):
+    coef = (2 ** (4 * n - 1) * alpha ** (2 * n + 1) / np.pi**3) ** 0.25
+    return coef * r ** (n - 1) * np.exp(-alpha * r**2)
 
 
-def phi_p(alpha, r):
-    return (128 * alpha**5 / np.pi**3) ** 0.25 * r * np.exp(-alpha * r**2)
-
-
-def phi_d(alpha, r):
-    return (2048 * alpha**7 / np.pi**3) ** 0.25 * r**2 * np.exp(-alpha * r**2)
-
-
-def phi_f(alpha, r):
-    return (32768 * alpha**9 / np.pi**3) ** 0.25 * r**3 * np.exp(-alpha * r**2)
-
-
-def sto_ng_s(a, r):
+def sto_ng(a, r, n):
     sum_phi = 0
     for i in range(len(a.exps)):
         exp = a.exps[i]
-        coefs = a.coefs[0][i]
-        sum_phi += coefs * phi_s(exp, r)
-    return sum_phi
-
-
-def sto_ng_p(a, r):
-    sum_phi = 0
-    for i in range(len(a.exps)):
-        exp = a.exps[i]
-        coefs = a.coefs[1][i]
-        sum_phi += coefs * phi_p(exp, r)
-    return sum_phi
-
-
-def sto_ng_d(a, r):
-    sum_phi = 0
-    for i in range(len(a.exps)):
-        exp = a.exps[i]
-        coefs = a.coefs[2][i]
-        sum_phi += coefs * phi_d(exp, r)
-    return sum_phi
-
-
-def sto_ng_f(a, r):
-    sum_phi = 0
-    for i in range(len(a.exps)):
-        exp = a.exps[i]
-        coefs = a.coefs[3][i]
-        sum_phi += coefs * phi_f(exp, r)
+        coefs = a.coefs[n - 1][i]
+        sum_phi += coefs * phi(n, exp, r)
     return sum_phi
 
 
 class StoNg:
-    def __init__(self, principal_quantum_number):
+    def __init__(self, principal_quantum_number, max_l):
         self.principal_quantum_number = principal_quantum_number
+        self.max_l = max_l
         self.constraints = [
             {"type": "eq", "fun": self.constraint, "args": ["s"]},
         ]
@@ -108,50 +76,50 @@ class StoNg:
             )
 
     def integrand(self, r, a):
-        if self.principal_quantum_number == 1:
-            return np.abs(sto_ng_s(a, r) - chi_n(1, r, "s")) ** 2 * 4 * np.pi * r**2
-        elif self.principal_quantum_number == 2:
-            return (
-                np.abs(sto_ng_s(a, r) - chi_n(2, r, "s")) ** 2 * 4 * np.pi * r**2
-                + np.abs(sto_ng_p(a, r) - chi_n(2, r, "p")) ** 2 * 4 * np.pi * r**2 / 3
+        n = self.principal_quantum_number
+        terms = [np.abs(sto_ng(a, r, 1) - chi_n(n, r, "s")) ** 2 * 4 * np.pi * r**2]
+        if n > 1:
+            terms.append(
+                np.abs(sto_ng(a, r, 2) - chi_n(n, r, "p")) ** 2 * 4 * np.pi * r**2 / 3
             )
-        elif self.principal_quantum_number == 3:
-            return (
-                np.abs(sto_ng_s(a, r) - chi_n(3, r, "s")) ** 2 * 4 * np.pi * r**2
-                + np.abs(sto_ng_p(a, r) - chi_n(3, r, "p")) ** 2 * 4 * np.pi * r**2 / 3
-                + np.abs(sto_ng_d(a, r) - chi_n(3, r, "d")) ** 2 * np.pi * r**2 * 8 / 15
+        if n > 2:
+            terms.append(
+                np.abs(sto_ng(a, r, 3) - chi_n(n, r, "d")) ** 2 * np.pi * r**2 * 4 / 15
             )
+        return sum(terms)
 
     def objective_function(self, params):
-        exps, coefs = params2expscoefs(self.principal_quantum_number, params)
-        a = BasisFunction(self.principal_quantum_number, exps, coefs)
+        exps, coefs = params2expscoefs(
+            self.principal_quantum_number, self.max_l, params
+        )
+        a = BasisFunction(self.principal_quantum_number, self.max_l, exps, coefs)
         integral, error = quad(self.integrand, 0, np.inf, args=(a,))
         return integral
 
-    def constraint(self, params, orbital_type="s"):
-        exps, coefs = params2expscoefs(self.principal_quantum_number, params)
-        a = BasisFunction(self.principal_quantum_number, exps, coefs)
+    def constraint(self, params, orbital_type):
+        exps, coefs = params2expscoefs(
+            self.principal_quantum_number, self.max_l, params
+        )
+        a = BasisFunction(self.principal_quantum_number, self.max_l, exps, coefs)
         if orbital_type == "s":
             integral, error = quad(
-                lambda r: sto_ng_s(a, r) ** 2 * 4 * np.pi * r**2, 0, np.inf
+                lambda r: sto_ng(a, r, 1) ** 2 * 4 * np.pi * r**2, 0, np.inf
             )
         elif orbital_type == "p":
             integral, error = quad(
-                lambda r: sto_ng_p(a, r) ** 2 * 4 * np.pi * r**2 / 3, 0, np.inf
+                lambda r: sto_ng(a, r, 2) ** 2 * 4 * np.pi * r**2 / 3, 0, np.inf
             )
         elif orbital_type == "d":
             integral, error = quad(
-                lambda r: sto_ng_d(a, r) ** 2 * 8 * np.pi * r**2 / 15, 0, np.inf
+                lambda r: sto_ng(a, r, 3) ** 2 * 4 * np.pi * r**2 / 15, 0, np.inf
             )
         return integral - 1
 
 
 def optimize_sto_ng(a):
     params = a.params()
-    bounds = [(0, 10)] * len(a.exps) + [(-1, 1)] * len(
-        a.exps
-    ) * a.principal_quantum_number  # パラメータの範囲
-    sto_ng = StoNg(a.principal_quantum_number)
+    bounds = [(0, 10)] * len(a.exps) + [(-2, 2)] * len(a.exps) * a.max_l
+    sto_ng = StoNg(a.principal_quantum_number, a.max_l)
 
     result = minimize(
         sto_ng.objective_function,

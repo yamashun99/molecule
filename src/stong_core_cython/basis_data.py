@@ -67,7 +67,7 @@ def create_basis_data(df, zetas, max_n, max_l):
                 np.array([1, 0, 1]),
                 np.array([0, 1, 1]),
                 np.array([2, 2, 0]),
-                np.array([0, 0, 2]),
+                np.array([-1, -1, 2]),
             ]
             for d, lmn in zip(d_orbitals, lmn_d):
                 basis_data[f"{n}d{d}"] = {
