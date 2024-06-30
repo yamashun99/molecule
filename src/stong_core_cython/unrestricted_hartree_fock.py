@@ -11,9 +11,8 @@ import pandas as pd
 
 
 class UnrestrictedHartreeFock:
-    def __init__(self, molecule, basis_set, max_iter=1000, tol=1e-6):
+    def __init__(self, molecule, max_iter=1000, tol=1e-6):
         self.molecule = molecule
-        self.basis_set = basis_set
         self.S = None
         self.T = None
         self.V = None
@@ -31,7 +30,7 @@ class UnrestrictedHartreeFock:
         self.basis_labels = self.get_basis_labels()
 
         # 各種マトリックスの計算
-        matrices = calculate_matrices(self.molecule, self.basis_set)
+        matrices = calculate_matrices(self.molecule)
         self.S = matrices["Smat"]
         self.T = matrices["Tmat"]
         self.V = matrices["Vmat"]
@@ -43,7 +42,7 @@ class UnrestrictedHartreeFock:
     def get_basis_labels(self):
         # 基底関数のラベルを取得
         labels = []
-        for atom_basis in self.basis_set.values():
+        for atom_basis in self.molecule.basis.values():
             for orbital in atom_basis.keys():
                 labels.append(orbital)
         return labels

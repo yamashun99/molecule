@@ -36,9 +36,10 @@ class Atom:
 
 
 class Molecule:
-    def __init__(self, atoms, charge=0):
+    def __init__(self, atoms, basis, charge=0):
         self.atoms = atoms
         self.charge = charge
+        self.basis = basis
 
     def __repr__(self):
         atom_reprs = ", ".join(repr(atom) for atom in self.atoms)

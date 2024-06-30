@@ -9,9 +9,8 @@ from two_electron import *
 
 
 class RestrictedHartreeFock:
-    def __init__(self, molecule, basis_set, max_iter=1000, tol=1e-6):
+    def __init__(self, molecule, max_iter=1000, tol=1e-6):
         self.molecule = molecule
-        self.basis_set = basis_set
         self.S = None
         self.T = None
         self.V = None
@@ -25,7 +24,7 @@ class RestrictedHartreeFock:
         self.vec = None
 
         # 各種マトリックスの計算
-        matrices = calculate_matrices(self.molecule, self.basis_set)
+        matrices = calculate_matrices(self.molecule)
         self.S = matrices["Smat"]
         self.T = matrices["Tmat"]
         self.V = matrices["Vmat"]
