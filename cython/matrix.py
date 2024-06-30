@@ -1,7 +1,10 @@
+import sys
+
+sys.path.append("..")
 import numpy as np
-from md.one_electron import *
-from md.two_electron import *
-from md.sto_ng import *
+from one_electron import *
+from two_electron import *
+from sto_ng import *
 
 
 def get_Tmat(basis):

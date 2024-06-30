@@ -1,8 +1,12 @@
+import sys
+
+sys.path.append("../../cython")
+sys.path.append("../../../cython")
 from scipy.linalg import eigh
 import numpy as np
-from md.matrix import *
+from matrix import *
 from scipy.ndimage import gaussian_filter1d
-from md.two_electron import *
+from two_electron import *
 import pandas as pd
 
 

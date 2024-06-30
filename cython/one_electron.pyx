@@ -23,7 +23,7 @@ cpdef double S(object a, object b):
     """
     縮約されたカーテシアンガウス関数の重なり積分を計算する関数
     """
-    cdef long num_exps = len(a.exps), i, j
+    cdef long num_exps_a = len(a.exps), num_exps_b = len(b.exps), i, j
     cdef double s = 0.0
     cdef double[:] norms_a = a.norm, norms_b = b.norm
     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
@@ -32,8 +32,8 @@ cpdef double S(object a, object b):
     cdef double[:] origin_a = a.origin, origin_b = b.origin
 
     with nogil:
-        for i in range(num_exps):
-            for j in range(num_exps):
+        for i in range(num_exps_a):
+            for j in range(num_exps_b):
                 s += (
                     norms_a[i]
                     * norms_b[j]

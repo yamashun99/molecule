@@ -1,7 +1,11 @@
+import sys
+
+sys.path.append("../../cython")
+sys.path.append("../../../cython")
 from scipy.linalg import eigh
 import numpy as np
-from md.matrix import *
-from md.two_electron import *
+from matrix import *
+from two_electron import *
 
 
 class RestrictedHartreeFock:

@@ -10,25 +10,21 @@ import numpy as np
 
 extensions = [
     Extension(
-        "src.stong_core_cython.md.sto_ng",
-        ["./src/stong_core_cython/md/sto_ng.pyx"],
-        include_dirs=["./src/stong_core_cython/md"],  # この行を追加
+        "sto_ng",
+        ["./cython/sto_ng.pyx"],
+        include_dirs=["./cython"],
         extra_compile_args=["-fopenmp"],
         extra_link_args=["-fopenmp"],
     ),
     Extension(
-        "src.stong_core_cython.md.one_electron",
-        [
-            "./src/stong_core_cython/md/one_electron.pyx",
-        ],
+        "one_electron",
+        ["./cython/one_electron.pyx"],
         extra_compile_args=["-fopenmp"],
         extra_link_args=["-fopenmp"],
     ),
     Extension(
-        "src.stong_core_cython.md.two_electron",
-        [
-            "./src/stong_core_cython/md/two_electron.pyx",
-        ],
+        "two_electron",
+        ["./cython/two_electron.pyx"],
         extra_compile_args=["-fopenmp"],
         extra_link_args=["-fopenmp"],
     ),
