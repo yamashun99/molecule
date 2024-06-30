@@ -1,7 +1,10 @@
+import sys
+
+sys.path.append("..")
 import numpy as np
-from md.one_electron import *
-from md.two_electron import *
-from md.sto_ng import *
+from one_electron import *
+from two_electron import *
+from sto_ng import *
 
 
 def get_Tmat(basis):
@@ -34,13 +37,13 @@ def get_Smat(basis):
     return mat
 
 
-def create_basis_function(molecule, basis_data):
+def create_basis_function(molecule):
     basis_functions = []
 
     # 各原子に対して基底関数を設定
     for atom in molecule.atoms:
         # 原子番号または元素記号から基底データを取得
-        element_basis = basis_data[atom.symbol]
+        element_basis = molecule.basis[atom.symbol]
         for orbital_type, params in element_basis.items():
             exps = np.array(params["exps"]) * params["zeta"] ** 2
             coefs = np.array(params["coefs"])
@@ -52,8 +55,8 @@ def create_basis_function(molecule, basis_data):
     return basis_functions
 
 
-def calculate_matrices(molecule, basis_data):
-    basis_functions = create_basis_function(molecule, basis_data)
+def calculate_matrices(molecule):
+    basis_functions = create_basis_function(molecule)
 
     # マトリックスの計算
     Tmat = get_Tmat(basis_functions)

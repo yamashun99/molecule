@@ -10,12 +10,12 @@
         "extra_link_args": [
             "-fopenmp"
         ],
-        "name": "src.stong_core_cython.md.one_electron",
+        "name": "one_electron",
         "sources": [
-            "./src/stong_core_cython/md/one_electron.pyx"
+            "./cython/one_electron.pyx"
         ]
     },
-    "module_name": "src.stong_core_cython.md.one_electron"
+    "module_name": "one_electron"
 }
 END: Cython Metadata */
 
@@ -1235,8 +1235,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__src__stong_core_cython__md__one_electron
-#define __PYX_HAVE_API__src__stong_core_cython__md__one_electron
+#define __PYX_HAVE__one_electron
+#define __PYX_HAVE_API__one_electron
 /* Early includes */
 #include <math.h>
 #include <string.h>
@@ -1521,9 +1521,9 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "src/stong_core_cython/md/utils.pxi",
+  "cython/utils.pxi",
   "<stringsource>",
-  "src/stong_core_cython/md/one_electron.pyx",
+  "cython/one_electron.pyx",
   "__init__.cython-30.pxd",
   "type.pxd",
 };
@@ -3223,7 +3223,7 @@ static double (*__pyx_fuse_1__pyx_f_5scipy_7special_14cython_special_hyp1f1)(dou
 
 /* Module declarations from "cython" */
 
-/* Module declarations from "src.stong_core_cython.md.one_electron" */
+/* Module declarations from "one_electron" */
 static PyObject *__pyx_collections_abc_Sequence = 0;
 static PyObject *generic = 0;
 static PyObject *strided = 0;
@@ -3232,15 +3232,15 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long, long, long, double, double, double); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_boys(int, double); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int, int, int, int, double, double *); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double, long *, __Pyx_memviewslice, double, long *, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double, long *, __Pyx_memviewslice, double, long *, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attraction(double, long *, __Pyx_memviewslice, double, long *, __Pyx_memviewslice, __Pyx_memviewslice); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *, PyObject *, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static double __pyx_f_12one_electron_E(long, long, long, double, double, double); /*proto*/
+static double __pyx_f_12one_electron_boys(int, double); /*proto*/
+static double __pyx_f_12one_electron_R(int, int, int, int, double, double *); /*proto*/
+static double __pyx_f_12one_electron_overlap(double, long *, __Pyx_memviewslice, double, long *, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_12one_electron_S(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static double __pyx_f_12one_electron_kinetic(double, long *, __Pyx_memviewslice, double, long *, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_12one_electron_T(PyObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static double __pyx_f_12one_electron_nuclear_attraction(double, long *, __Pyx_memviewslice, double, long *, __Pyx_memviewslice, __Pyx_memviewslice); /*proto*/
+static double __pyx_f_12one_electron_V(PyObject *, PyObject *, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
 static int __Pyx_carray_from_py_long(PyObject *, long *, Py_ssize_t); /*proto*/
 static int __pyx_array_allocate_buffer(struct __pyx_array_obj *); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
@@ -3279,11 +3279,11 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, 
 /* #### Code section: typeinfo ### */
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "src.stong_core_cython.md.one_electron"
-extern int __pyx_module_is_main_src__stong_core_cython__md__one_electron;
-int __pyx_module_is_main_src__stong_core_cython__md__one_electron = 0;
+#define __Pyx_MODULE_NAME "one_electron"
+extern int __pyx_module_is_main_one_electron;
+int __pyx_module_is_main_one_electron = 0;
 
-/* Implementation of "src.stong_core_cython.md.one_electron" */
+/* Implementation of "one_electron" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_TypeError;
@@ -3383,6 +3383,7 @@ static const char __pyx_k_PickleError[] = "PickleError";
 static const char __pyx_k_collections[] = "collections";
 static const char __pyx_k_initializing[] = "_initializing";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
+static const char __pyx_k_one_electron[] = "one_electron";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_stringsource[] = "<stringsource>";
 static const char __pyx_k_version_info[] = "version_info";
@@ -3407,6 +3408,7 @@ static const char __pyx_k_Cannot_index_with_type[] = "Cannot index with type '";
 static const char __pyx_k_MemoryView_of_r_object[] = "<MemoryView of %r object>";
 static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x>";
 static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>";
+static const char __pyx_k_cython_one_electron_pyx[] = "cython/one_electron.pyx";
 static const char __pyx_k_Dimension_d_is_not_direct[] = "Dimension %d is not direct";
 static const char __pyx_k_Index_out_of_bounds_axis_d[] = "Index out of bounds (axis %d)";
 static const char __pyx_k_Step_may_not_be_zero_axis_d[] = "Step may not be zero (axis %d)";
@@ -3429,9 +3431,7 @@ static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to conver
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension ";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
-static const char __pyx_k_src_stong_core_cython_md_one_ele[] = "src/stong_core_cython/md/one_electron.pyx";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
-static const char __pyx_k_src_stong_core_cython_md_one_ele_2[] = "src.stong_core_cython.md.one_electron";
 /* #### Code section: decls ### */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
@@ -3474,9 +3474,9 @@ static void __pyx_memoryviewslice___pyx_pf_15View_dot_MemoryView_16_memoryviewsl
 static PyObject *__pyx_pf___pyx_memoryviewslice___reduce_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf___pyx_memoryviewslice_2__setstate_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_15View_dot_MemoryView___pyx_unpickle_Enum(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_S(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_2T(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b); /* proto */
-static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_4V(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC); /* proto */
+static PyObject *__pyx_pf_12one_electron_S(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b); /* proto */
+static PyObject *__pyx_pf_12one_electron_2T(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b); /* proto */
+static PyObject *__pyx_pf_12one_electron_4V(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC); /* proto */
 static PyObject *__pyx_tp_new_array(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_Enum(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_memoryview(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -3622,6 +3622,7 @@ typedef struct {
   PyObject *__pyx_kp_s_contiguous_and_direct;
   PyObject *__pyx_kp_s_contiguous_and_indirect;
   PyObject *__pyx_n_s_count;
+  PyObject *__pyx_kp_s_cython_one_electron_pyx;
   PyObject *__pyx_n_s_dict;
   PyObject *__pyx_kp_u_disable;
   PyObject *__pyx_n_s_dtype_is_object;
@@ -3661,6 +3662,7 @@ typedef struct {
   PyObject *__pyx_kp_u_numpy_core_multiarray_failed_to;
   PyObject *__pyx_kp_u_numpy_core_umath_failed_to_impor;
   PyObject *__pyx_n_s_obj;
+  PyObject *__pyx_n_s_one_electron;
   PyObject *__pyx_n_s_origin;
   PyObject *__pyx_n_s_pack;
   PyObject *__pyx_n_s_pickle;
@@ -3681,8 +3683,6 @@ typedef struct {
   PyObject *__pyx_n_s_shape;
   PyObject *__pyx_n_s_size;
   PyObject *__pyx_n_s_spec;
-  PyObject *__pyx_kp_s_src_stong_core_cython_md_one_ele;
-  PyObject *__pyx_n_s_src_stong_core_cython_md_one_ele_2;
   PyObject *__pyx_n_s_start;
   PyObject *__pyx_n_s_step;
   PyObject *__pyx_n_s_stop;
@@ -3852,6 +3852,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_s_contiguous_and_direct);
   Py_CLEAR(clear_module_state->__pyx_kp_s_contiguous_and_indirect);
   Py_CLEAR(clear_module_state->__pyx_n_s_count);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_cython_one_electron_pyx);
   Py_CLEAR(clear_module_state->__pyx_n_s_dict);
   Py_CLEAR(clear_module_state->__pyx_kp_u_disable);
   Py_CLEAR(clear_module_state->__pyx_n_s_dtype_is_object);
@@ -3891,6 +3892,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_numpy_core_multiarray_failed_to);
   Py_CLEAR(clear_module_state->__pyx_kp_u_numpy_core_umath_failed_to_impor);
   Py_CLEAR(clear_module_state->__pyx_n_s_obj);
+  Py_CLEAR(clear_module_state->__pyx_n_s_one_electron);
   Py_CLEAR(clear_module_state->__pyx_n_s_origin);
   Py_CLEAR(clear_module_state->__pyx_n_s_pack);
   Py_CLEAR(clear_module_state->__pyx_n_s_pickle);
@@ -3911,8 +3913,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_shape);
   Py_CLEAR(clear_module_state->__pyx_n_s_size);
   Py_CLEAR(clear_module_state->__pyx_n_s_spec);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_src_stong_core_cython_md_one_ele);
-  Py_CLEAR(clear_module_state->__pyx_n_s_src_stong_core_cython_md_one_ele_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_start);
   Py_CLEAR(clear_module_state->__pyx_n_s_step);
   Py_CLEAR(clear_module_state->__pyx_n_s_stop);
@@ -4060,6 +4060,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_s_contiguous_and_direct);
   Py_VISIT(traverse_module_state->__pyx_kp_s_contiguous_and_indirect);
   Py_VISIT(traverse_module_state->__pyx_n_s_count);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_cython_one_electron_pyx);
   Py_VISIT(traverse_module_state->__pyx_n_s_dict);
   Py_VISIT(traverse_module_state->__pyx_kp_u_disable);
   Py_VISIT(traverse_module_state->__pyx_n_s_dtype_is_object);
@@ -4099,6 +4100,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_numpy_core_multiarray_failed_to);
   Py_VISIT(traverse_module_state->__pyx_kp_u_numpy_core_umath_failed_to_impor);
   Py_VISIT(traverse_module_state->__pyx_n_s_obj);
+  Py_VISIT(traverse_module_state->__pyx_n_s_one_electron);
   Py_VISIT(traverse_module_state->__pyx_n_s_origin);
   Py_VISIT(traverse_module_state->__pyx_n_s_pack);
   Py_VISIT(traverse_module_state->__pyx_n_s_pickle);
@@ -4119,8 +4121,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_shape);
   Py_VISIT(traverse_module_state->__pyx_n_s_size);
   Py_VISIT(traverse_module_state->__pyx_n_s_spec);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_src_stong_core_cython_md_one_ele);
-  Py_VISIT(traverse_module_state->__pyx_n_s_src_stong_core_cython_md_one_ele_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_start);
   Py_VISIT(traverse_module_state->__pyx_n_s_step);
   Py_VISIT(traverse_module_state->__pyx_n_s_stop);
@@ -4306,6 +4306,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_s_contiguous_and_direct __pyx_mstate_global->__pyx_kp_s_contiguous_and_direct
 #define __pyx_kp_s_contiguous_and_indirect __pyx_mstate_global->__pyx_kp_s_contiguous_and_indirect
 #define __pyx_n_s_count __pyx_mstate_global->__pyx_n_s_count
+#define __pyx_kp_s_cython_one_electron_pyx __pyx_mstate_global->__pyx_kp_s_cython_one_electron_pyx
 #define __pyx_n_s_dict __pyx_mstate_global->__pyx_n_s_dict
 #define __pyx_kp_u_disable __pyx_mstate_global->__pyx_kp_u_disable
 #define __pyx_n_s_dtype_is_object __pyx_mstate_global->__pyx_n_s_dtype_is_object
@@ -4345,6 +4346,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_numpy_core_multiarray_failed_to __pyx_mstate_global->__pyx_kp_u_numpy_core_multiarray_failed_to
 #define __pyx_kp_u_numpy_core_umath_failed_to_impor __pyx_mstate_global->__pyx_kp_u_numpy_core_umath_failed_to_impor
 #define __pyx_n_s_obj __pyx_mstate_global->__pyx_n_s_obj
+#define __pyx_n_s_one_electron __pyx_mstate_global->__pyx_n_s_one_electron
 #define __pyx_n_s_origin __pyx_mstate_global->__pyx_n_s_origin
 #define __pyx_n_s_pack __pyx_mstate_global->__pyx_n_s_pack
 #define __pyx_n_s_pickle __pyx_mstate_global->__pyx_n_s_pickle
@@ -4365,8 +4367,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_shape __pyx_mstate_global->__pyx_n_s_shape
 #define __pyx_n_s_size __pyx_mstate_global->__pyx_n_s_size
 #define __pyx_n_s_spec __pyx_mstate_global->__pyx_n_s_spec
-#define __pyx_kp_s_src_stong_core_cython_md_one_ele __pyx_mstate_global->__pyx_kp_s_src_stong_core_cython_md_one_ele
-#define __pyx_n_s_src_stong_core_cython_md_one_ele_2 __pyx_mstate_global->__pyx_n_s_src_stong_core_cython_md_one_ele_2
 #define __pyx_n_s_start __pyx_mstate_global->__pyx_n_s_start
 #define __pyx_n_s_step __pyx_mstate_global->__pyx_n_s_step
 #define __pyx_n_s_stop __pyx_mstate_global->__pyx_n_s_stop
@@ -19639,7 +19639,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/utils.pxi":10
+/* "cython/utils.pxi":10
  * from cython cimport view
  * 
  * cdef long custom_fact2(long n) nogil:             # <<<<<<<<<<<<<<
@@ -19647,13 +19647,13 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
  *     cdef long i
  */
 
-static long __pyx_f_3src_17stong_core_cython_2md_12one_electron_custom_fact2(long __pyx_v_n) {
+static long __pyx_f_12one_electron_custom_fact2(long __pyx_v_n) {
   long __pyx_v_result;
   long __pyx_v_i;
   long __pyx_r;
   long __pyx_t_1;
 
-  /* "src/stong_core_cython/md/utils.pxi":11
+  /* "cython/utils.pxi":11
  * 
  * cdef long custom_fact2(long n) nogil:
  *     cdef long result = 1             # <<<<<<<<<<<<<<
@@ -19662,7 +19662,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_12one_electron_custom_fact2(lon
  */
   __pyx_v_result = 1;
 
-  /* "src/stong_core_cython/md/utils.pxi":13
+  /* "cython/utils.pxi":13
  *     cdef long result = 1
  *     cdef long i
  *     for i in range(n, 0, -2):             # <<<<<<<<<<<<<<
@@ -19672,7 +19672,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_12one_electron_custom_fact2(lon
   for (__pyx_t_1 = __pyx_v_n; __pyx_t_1 > 0; __pyx_t_1-=2) {
     __pyx_v_i = __pyx_t_1;
 
-    /* "src/stong_core_cython/md/utils.pxi":14
+    /* "cython/utils.pxi":14
  *     cdef long i
  *     for i in range(n, 0, -2):
  *         result *= i             # <<<<<<<<<<<<<<
@@ -19682,7 +19682,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_12one_electron_custom_fact2(lon
     __pyx_v_result = (__pyx_v_result * __pyx_v_i);
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":15
+  /* "cython/utils.pxi":15
  *     for i in range(n, 0, -2):
  *         result *= i
  *     return result             # <<<<<<<<<<<<<<
@@ -19692,7 +19692,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_12one_electron_custom_fact2(lon
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/md/utils.pxi":10
+  /* "cython/utils.pxi":10
  * from cython cimport view
  * 
  * cdef long custom_fact2(long n) nogil:             # <<<<<<<<<<<<<<
@@ -19705,7 +19705,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_12one_electron_custom_fact2(lon
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/utils.pxi":17
+/* "cython/utils.pxi":17
  *     return result
  * 
  * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:             # <<<<<<<<<<<<<<
@@ -19713,7 +19713,7 @@ static long __pyx_f_3src_17stong_core_cython_2md_12one_electron_custom_fact2(lon
  *         return 0
  */
 
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx) {
+static double __pyx_f_12one_electron_E(long __pyx_v_i, long __pyx_v_j, long __pyx_v_t, double __pyx_v_a, double __pyx_v_b, double __pyx_v_Qx) {
   double __pyx_r;
   int __pyx_t_1;
   int __pyx_t_2;
@@ -19730,7 +19730,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
   PyGILState_STATE __pyx_gilstate_save;
   #endif
 
-  /* "src/stong_core_cython/md/utils.pxi":18
+  /* "cython/utils.pxi":18
  * 
  * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:
  *     if i < 0 or j < 0 or t < 0 or i + j < t:             # <<<<<<<<<<<<<<
@@ -19760,7 +19760,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/md/utils.pxi":19
+    /* "cython/utils.pxi":19
  * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:
  *     if i < 0 or j < 0 or t < 0 or i + j < t:
  *         return 0             # <<<<<<<<<<<<<<
@@ -19770,7 +19770,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
     __pyx_r = 0.0;
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/md/utils.pxi":18
+    /* "cython/utils.pxi":18
  * 
  * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:
  *     if i < 0 or j < 0 or t < 0 or i + j < t:             # <<<<<<<<<<<<<<
@@ -19779,7 +19779,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
  */
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":21
+  /* "cython/utils.pxi":21
  *         return 0
  * 
  *     if i == j == t == 0:             # <<<<<<<<<<<<<<
@@ -19795,7 +19795,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
   }
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/md/utils.pxi":22
+    /* "cython/utils.pxi":22
  * 
  *     if i == j == t == 0:
  *         return exp(-a * b * Qx * Qx / (a + b))             # <<<<<<<<<<<<<<
@@ -19817,7 +19817,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
     __pyx_r = exp((__pyx_t_3 / __pyx_t_4));
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/md/utils.pxi":21
+    /* "cython/utils.pxi":21
  *         return 0
  * 
  *     if i == j == t == 0:             # <<<<<<<<<<<<<<
@@ -19826,7 +19826,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
  */
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":23
+  /* "cython/utils.pxi":23
  *     if i == j == t == 0:
  *         return exp(-a * b * Qx * Qx / (a + b))
  *     elif j == 0:  # decrement i             # <<<<<<<<<<<<<<
@@ -19836,7 +19836,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
   __pyx_t_1 = (__pyx_v_j == 0);
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/md/utils.pxi":25
+    /* "cython/utils.pxi":25
  *     elif j == 0:  # decrement i
  *         return (
  *             1 / (2 * (a + b)) * E(i - 1, j, t - 1, a, b, Qx)             # <<<<<<<<<<<<<<
@@ -19854,9 +19854,9 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
       #endif
       __PYX_ERR(0, 25, __pyx_L1_error)
     }
-    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 25, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_12one_electron_E((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 25, __pyx_L1_error)
 
-    /* "src/stong_core_cython/md/utils.pxi":26
+    /* "cython/utils.pxi":26
  *         return (
  *             1 / (2 * (a + b)) * E(i - 1, j, t - 1, a, b, Qx)
  *             - a * b * Qx / (a * (a + b)) * E(i - 1, j, t, a, b, Qx)             # <<<<<<<<<<<<<<
@@ -19875,20 +19875,20 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
       #endif
       __PYX_ERR(0, 26, __pyx_L1_error)
     }
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E((__pyx_v_i - 1), __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 26, __pyx_L1_error)
+    __pyx_t_7 = __pyx_f_12one_electron_E((__pyx_v_i - 1), __pyx_v_j, __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 26, __pyx_L1_error)
 
-    /* "src/stong_core_cython/md/utils.pxi":27
+    /* "cython/utils.pxi":27
  *             1 / (2 * (a + b)) * E(i - 1, j, t - 1, a, b, Qx)
  *             - a * b * Qx / (a * (a + b)) * E(i - 1, j, t, a, b, Qx)
  *             + (t + 1) * E(i - 1, j, t + 1, a, b, Qx)             # <<<<<<<<<<<<<<
  *         )
  *     else:  # decrement j
  */
-    __pyx_t_8 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_8 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 27, __pyx_L1_error)
+    __pyx_t_8 = __pyx_f_12one_electron_E((__pyx_v_i - 1), __pyx_v_j, (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_8 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 27, __pyx_L1_error)
     __pyx_r = ((((1.0 / __pyx_t_4) * __pyx_t_3) - ((__pyx_t_5 / __pyx_t_6) * __pyx_t_7)) + ((__pyx_v_t + 1) * __pyx_t_8));
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/md/utils.pxi":23
+    /* "cython/utils.pxi":23
  *     if i == j == t == 0:
  *         return exp(-a * b * Qx * Qx / (a + b))
  *     elif j == 0:  # decrement i             # <<<<<<<<<<<<<<
@@ -19897,7 +19897,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
  */
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":30
+  /* "cython/utils.pxi":30
  *         )
  *     else:  # decrement j
  *         return  (             # <<<<<<<<<<<<<<
@@ -19906,7 +19906,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
  */
   /*else*/ {
 
-    /* "src/stong_core_cython/md/utils.pxi":31
+    /* "cython/utils.pxi":31
  *     else:  # decrement j
  *         return  (
  *             1 / (2 * (a + b)) * E(i, j - 1, t - 1, a, b, Qx)             # <<<<<<<<<<<<<<
@@ -19924,9 +19924,9 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
       #endif
       __PYX_ERR(0, 31, __pyx_L1_error)
     }
-    __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_7 = __pyx_f_12one_electron_E(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t - 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 31, __pyx_L1_error)
 
-    /* "src/stong_core_cython/md/utils.pxi":32
+    /* "cython/utils.pxi":32
  *         return  (
  *             1 / (2 * (a + b)) * E(i, j - 1, t - 1, a, b, Qx)
  *             + a * b * Qx / (b * (a + b)) * E(i, j - 1, t, a, b, Qx)             # <<<<<<<<<<<<<<
@@ -19945,21 +19945,21 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
       #endif
       __PYX_ERR(0, 32, __pyx_L1_error)
     }
-    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_i, (__pyx_v_j - 1), __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 32, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_12one_electron_E(__pyx_v_i, (__pyx_v_j - 1), __pyx_v_t, __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 32, __pyx_L1_error)
 
-    /* "src/stong_core_cython/md/utils.pxi":33
+    /* "cython/utils.pxi":33
  *             1 / (2 * (a + b)) * E(i, j - 1, t - 1, a, b, Qx)
  *             + a * b * Qx / (b * (a + b)) * E(i, j - 1, t, a, b, Qx)
  *             + (t + 1) * E(i, j - 1, t + 1, a, b, Qx)             # <<<<<<<<<<<<<<
  *         )
  * 
  */
-    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 33, __pyx_L1_error)
+    __pyx_t_4 = __pyx_f_12one_electron_E(__pyx_v_i, (__pyx_v_j - 1), (__pyx_v_t + 1), __pyx_v_a, __pyx_v_b, __pyx_v_Qx); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 33, __pyx_L1_error)
     __pyx_r = ((((1.0 / __pyx_t_8) * __pyx_t_7) + ((__pyx_t_6 / __pyx_t_5) * __pyx_t_3)) + ((__pyx_v_t + 1) * __pyx_t_4));
     goto __pyx_L0;
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":17
+  /* "cython/utils.pxi":17
  *     return result
  * 
  * cdef double E(long i, long j, long t, double a, double b, double Qx) nogil:             # <<<<<<<<<<<<<<
@@ -19972,7 +19972,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
   #ifdef WITH_THREAD
   __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
   #endif
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.E", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   #ifdef WITH_THREAD
   __Pyx_PyGILState_Release(__pyx_gilstate_save);
@@ -19981,7 +19981,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/utils.pxi":37
+/* "cython/utils.pxi":37
  * 
  * 
  * cdef double boys(int n, double T) nogil:             # <<<<<<<<<<<<<<
@@ -19989,7 +19989,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(long __pyx_v
  * 
  */
 
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_boys(int __pyx_v_n, double __pyx_v_T) {
+static double __pyx_f_12one_electron_boys(int __pyx_v_n, double __pyx_v_T) {
   double __pyx_r;
   double __pyx_t_1;
   long __pyx_t_2;
@@ -20000,7 +20000,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_boys(int __pyx
   PyGILState_STATE __pyx_gilstate_save;
   #endif
 
-  /* "src/stong_core_cython/md/utils.pxi":38
+  /* "cython/utils.pxi":38
  * 
  * cdef double boys(int n, double T) nogil:
  *     return hyp1f1(n + 0.5, n + 1.5, -T) / (2 * n + 1)             # <<<<<<<<<<<<<<
@@ -20022,7 +20022,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_boys(int __pyx
   __pyx_r = (__pyx_t_1 / ((double)__pyx_t_2));
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/md/utils.pxi":37
+  /* "cython/utils.pxi":37
  * 
  * 
  * cdef double boys(int n, double T) nogil:             # <<<<<<<<<<<<<<
@@ -20035,7 +20035,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_boys(int __pyx
   #ifdef WITH_THREAD
   __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
   #endif
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.boys", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.boys", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   #ifdef WITH_THREAD
   __Pyx_PyGILState_Release(__pyx_gilstate_save);
@@ -20044,7 +20044,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_boys(int __pyx
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/utils.pxi":41
+/* "cython/utils.pxi":41
  * 
  * 
  * cdef double R(int n, int t, int u, int v, double p, double[3] RPC) nogil:             # <<<<<<<<<<<<<<
@@ -20052,7 +20052,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_boys(int __pyx
  * 
  */
 
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_n, int __pyx_v_t, int __pyx_v_u, int __pyx_v_v, double __pyx_v_p, double *__pyx_v_RPC) {
+static double __pyx_f_12one_electron_R(int __pyx_v_n, int __pyx_v_t, int __pyx_v_u, int __pyx_v_v, double __pyx_v_p, double *__pyx_v_RPC) {
   double __pyx_v_norm_RPC_sq;
   double __pyx_r;
   int __pyx_t_1;
@@ -20066,7 +20066,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
   PyGILState_STATE __pyx_gilstate_save;
   #endif
 
-  /* "src/stong_core_cython/md/utils.pxi":42
+  /* "cython/utils.pxi":42
  * 
  * cdef double R(int n, int t, int u, int v, double p, double[3] RPC) nogil:
  *     cdef double norm_RPC_sq = RPC[0]**2 + RPC[1]**2 + RPC[2]** 2             # <<<<<<<<<<<<<<
@@ -20075,7 +20075,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
  */
   __pyx_v_norm_RPC_sq = ((pow((__pyx_v_RPC[0]), 2.0) + pow((__pyx_v_RPC[1]), 2.0)) + pow((__pyx_v_RPC[2]), 2.0));
 
-  /* "src/stong_core_cython/md/utils.pxi":45
+  /* "cython/utils.pxi":45
  * 
  *     cdef double result
  *     if t < 0 or u < 0 or v < 0:             # <<<<<<<<<<<<<<
@@ -20099,7 +20099,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/md/utils.pxi":46
+    /* "cython/utils.pxi":46
  *     cdef double result
  *     if t < 0 or u < 0 or v < 0:
  *         return 0             # <<<<<<<<<<<<<<
@@ -20109,7 +20109,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
     __pyx_r = 0.0;
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/md/utils.pxi":45
+    /* "cython/utils.pxi":45
  * 
  *     cdef double result
  *     if t < 0 or u < 0 or v < 0:             # <<<<<<<<<<<<<<
@@ -20118,7 +20118,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
  */
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":47
+  /* "cython/utils.pxi":47
  *     if t < 0 or u < 0 or v < 0:
  *         return 0
  *     elif t == 0 and u == 0 and v == 0:             # <<<<<<<<<<<<<<
@@ -20142,18 +20142,18 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
   __pyx_L7_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/md/utils.pxi":48
+    /* "cython/utils.pxi":48
  *         return 0
  *     elif t == 0 and u == 0 and v == 0:
  *         return (-2 * p) ** n * boys(n, p * norm_RPC_sq)             # <<<<<<<<<<<<<<
  *     elif t == 0 and u == 0:
  *         return (v - 1) * R(n + 1, t, u, v - 2, p, RPC) + RPC[2] * R(n + 1, t, u, v - 1, p, RPC)
  */
-    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_boys(__pyx_v_n, (__pyx_v_p * __pyx_v_norm_RPC_sq)); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 48, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_12one_electron_boys(__pyx_v_n, (__pyx_v_p * __pyx_v_norm_RPC_sq)); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 48, __pyx_L1_error)
     __pyx_r = (pow((-2.0 * __pyx_v_p), ((double)__pyx_v_n)) * __pyx_t_3);
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/md/utils.pxi":47
+    /* "cython/utils.pxi":47
  *     if t < 0 or u < 0 or v < 0:
  *         return 0
  *     elif t == 0 and u == 0 and v == 0:             # <<<<<<<<<<<<<<
@@ -20162,7 +20162,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
  */
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":49
+  /* "cython/utils.pxi":49
  *     elif t == 0 and u == 0 and v == 0:
  *         return (-2 * p) ** n * boys(n, p * norm_RPC_sq)
  *     elif t == 0 and u == 0:             # <<<<<<<<<<<<<<
@@ -20180,19 +20180,19 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
   __pyx_L10_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/md/utils.pxi":50
+    /* "cython/utils.pxi":50
  *         return (-2 * p) ** n * boys(n, p * norm_RPC_sq)
  *     elif t == 0 and u == 0:
  *         return (v - 1) * R(n + 1, t, u, v - 2, p, RPC) + RPC[2] * R(n + 1, t, u, v - 1, p, RPC)             # <<<<<<<<<<<<<<
  *     elif t == 0:
  *         return (u - 1) * R(n + 1, t, u - 2, v, p, RPC) + RPC[1] * R(n + 1, t, u - 1, v, p, RPC)
  */
-    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_R((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 2), __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 50, __pyx_L1_error)
-    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_R((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 1), __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_12one_electron_R((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 2), __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_t_4 = __pyx_f_12one_electron_R((__pyx_v_n + 1), __pyx_v_t, __pyx_v_u, (__pyx_v_v - 1), __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 50, __pyx_L1_error)
     __pyx_r = (((__pyx_v_v - 1) * __pyx_t_3) + ((__pyx_v_RPC[2]) * __pyx_t_4));
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/md/utils.pxi":49
+    /* "cython/utils.pxi":49
  *     elif t == 0 and u == 0 and v == 0:
  *         return (-2 * p) ** n * boys(n, p * norm_RPC_sq)
  *     elif t == 0 and u == 0:             # <<<<<<<<<<<<<<
@@ -20201,7 +20201,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
  */
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":51
+  /* "cython/utils.pxi":51
  *     elif t == 0 and u == 0:
  *         return (v - 1) * R(n + 1, t, u, v - 2, p, RPC) + RPC[2] * R(n + 1, t, u, v - 1, p, RPC)
  *     elif t == 0:             # <<<<<<<<<<<<<<
@@ -20211,19 +20211,19 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
   __pyx_t_1 = (__pyx_v_t == 0);
   if (__pyx_t_1) {
 
-    /* "src/stong_core_cython/md/utils.pxi":52
+    /* "cython/utils.pxi":52
  *         return (v - 1) * R(n + 1, t, u, v - 2, p, RPC) + RPC[2] * R(n + 1, t, u, v - 1, p, RPC)
  *     elif t == 0:
  *         return (u - 1) * R(n + 1, t, u - 2, v, p, RPC) + RPC[1] * R(n + 1, t, u - 1, v, p, RPC)             # <<<<<<<<<<<<<<
  *     else:
  *         return (t - 1) * R(n + 1, t - 2, u, v, p, RPC) + RPC[0] * R(n + 1, t - 1, u, v, p, RPC)
  */
-    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_R((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 2), __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 52, __pyx_L1_error)
-    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_R((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 1), __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_4 = __pyx_f_12one_electron_R((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 2), __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_12one_electron_R((__pyx_v_n + 1), __pyx_v_t, (__pyx_v_u - 1), __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 52, __pyx_L1_error)
     __pyx_r = (((__pyx_v_u - 1) * __pyx_t_4) + ((__pyx_v_RPC[1]) * __pyx_t_3));
     goto __pyx_L0;
 
-    /* "src/stong_core_cython/md/utils.pxi":51
+    /* "cython/utils.pxi":51
  *     elif t == 0 and u == 0:
  *         return (v - 1) * R(n + 1, t, u, v - 2, p, RPC) + RPC[2] * R(n + 1, t, u, v - 1, p, RPC)
  *     elif t == 0:             # <<<<<<<<<<<<<<
@@ -20232,19 +20232,19 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
  */
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":54
+  /* "cython/utils.pxi":54
  *         return (u - 1) * R(n + 1, t, u - 2, v, p, RPC) + RPC[1] * R(n + 1, t, u - 1, v, p, RPC)
  *     else:
  *         return (t - 1) * R(n + 1, t - 2, u, v, p, RPC) + RPC[0] * R(n + 1, t - 1, u, v, p, RPC)             # <<<<<<<<<<<<<<
  */
   /*else*/ {
-    __pyx_t_3 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_R((__pyx_v_n + 1), (__pyx_v_t - 2), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 54, __pyx_L1_error)
-    __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_R((__pyx_v_n + 1), (__pyx_v_t - 1), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_12one_electron_R((__pyx_v_n + 1), (__pyx_v_t - 2), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_3 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_t_4 = __pyx_f_12one_electron_R((__pyx_v_n + 1), (__pyx_v_t - 1), __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 54, __pyx_L1_error)
     __pyx_r = (((__pyx_v_t - 1) * __pyx_t_3) + ((__pyx_v_RPC[0]) * __pyx_t_4));
     goto __pyx_L0;
   }
 
-  /* "src/stong_core_cython/md/utils.pxi":41
+  /* "cython/utils.pxi":41
  * 
  * 
  * cdef double R(int n, int t, int u, int v, double p, double[3] RPC) nogil:             # <<<<<<<<<<<<<<
@@ -20257,7 +20257,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
   #ifdef WITH_THREAD
   __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
   #endif
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.R", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.R", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   #ifdef WITH_THREAD
   __Pyx_PyGILState_Release(__pyx_gilstate_save);
@@ -20266,7 +20266,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/one_electron.pyx":10
+/* "one_electron.pyx":10
  * include "utils.pxi"
  * 
  * cdef double overlap(double a, long[3] lmn1, double[:] A, double b, long[3] lmn2, double[:] B) nogil:             # <<<<<<<<<<<<<<
@@ -20274,7 +20274,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(int __pyx_v_
  * 
  */
 
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double __pyx_v_a, long *__pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, long *__pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B) {
+static double __pyx_f_12one_electron_overlap(double __pyx_v_a, long *__pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, long *__pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B) {
   long __pyx_v_l1;
   long __pyx_v_m1;
   long __pyx_v_n1;
@@ -20296,7 +20296,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
   PyGILState_STATE __pyx_gilstate_save;
   #endif
 
-  /* "src/stong_core_cython/md/one_electron.pyx":14
+  /* "one_electron.pyx":14
  * 
  *     """
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]             # <<<<<<<<<<<<<<
@@ -20307,7 +20307,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
   __pyx_v_m1 = (__pyx_v_lmn1[1]);
   __pyx_v_n1 = (__pyx_v_lmn1[2]);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":15
+  /* "one_electron.pyx":15
  *     """
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]             # <<<<<<<<<<<<<<
@@ -20318,7 +20318,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
   __pyx_v_m2 = (__pyx_v_lmn2[1]);
   __pyx_v_n2 = (__pyx_v_lmn2[2]);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":16
+  /* "one_electron.pyx":16
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef double S1 = E(l1, l2, 0, a, b, A[0] - B[0])             # <<<<<<<<<<<<<<
@@ -20345,10 +20345,10 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
     __Pyx_RaiseBufferIndexErrorNogil(__pyx_t_2);
     __PYX_ERR(2, 16, __pyx_L1_error)
   }
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_l1, __pyx_v_l2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_1 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_3 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 16, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_12one_electron_E(__pyx_v_l1, __pyx_v_l2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_1 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_3 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 16, __pyx_L1_error)
   __pyx_v_S1 = __pyx_t_4;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":17
+  /* "one_electron.pyx":17
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef double S1 = E(l1, l2, 0, a, b, A[0] - B[0])
  *     cdef double S2 = E(m1, m2, 0, a, b, A[1] - B[1])             # <<<<<<<<<<<<<<
@@ -20375,10 +20375,10 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
     __Pyx_RaiseBufferIndexErrorNogil(__pyx_t_2);
     __PYX_ERR(2, 17, __pyx_L1_error)
   }
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_m1, __pyx_v_m2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_3 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_1 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 17, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_12one_electron_E(__pyx_v_m1, __pyx_v_m2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_3 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_1 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 17, __pyx_L1_error)
   __pyx_v_S2 = __pyx_t_4;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":18
+  /* "one_electron.pyx":18
  *     cdef double S1 = E(l1, l2, 0, a, b, A[0] - B[0])
  *     cdef double S2 = E(m1, m2, 0, a, b, A[1] - B[1])
  *     cdef double S3 = E(n1, n2, 0, a, b, A[2] - B[2])             # <<<<<<<<<<<<<<
@@ -20405,10 +20405,10 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
     __Pyx_RaiseBufferIndexErrorNogil(__pyx_t_2);
     __PYX_ERR(2, 18, __pyx_L1_error)
   }
-  __pyx_t_4 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_n1, __pyx_v_n2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_1 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_3 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 18, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_12one_electron_E(__pyx_v_n1, __pyx_v_n2, 0, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_1 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_3 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_4 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 18, __pyx_L1_error)
   __pyx_v_S3 = __pyx_t_4;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":19
+  /* "one_electron.pyx":19
  *     cdef double S2 = E(m1, m2, 0, a, b, A[1] - B[1])
  *     cdef double S3 = E(n1, n2, 0, a, b, A[2] - B[2])
  *     return S1 * S2 * S3 * pow(M_PI / (a+b), 1.5)             # <<<<<<<<<<<<<<
@@ -20429,7 +20429,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
   __pyx_r = (((__pyx_v_S1 * __pyx_v_S2) * __pyx_v_S3) * pow((((double)M_PI) / __pyx_t_4), 1.5));
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":10
+  /* "one_electron.pyx":10
  * include "utils.pxi"
  * 
  * cdef double overlap(double a, long[3] lmn1, double[:] A, double b, long[3] lmn2, double[:] B) nogil:             # <<<<<<<<<<<<<<
@@ -20442,7 +20442,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
   #ifdef WITH_THREAD
   __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
   #endif
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.overlap", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.overlap", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   #ifdef WITH_THREAD
   __Pyx_PyGILState_Release(__pyx_gilstate_save);
@@ -20451,7 +20451,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/one_electron.pyx":22
+/* "one_electron.pyx":22
  * 
  * 
  * cpdef double S(object a, object b):             # <<<<<<<<<<<<<<
@@ -20459,15 +20459,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(double
  * 
  */
 
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_1S(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12one_electron_1S(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__pyx_v_a, PyObject *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
-  long __pyx_v_num_exps;
+static double __pyx_f_12one_electron_S(PyObject *__pyx_v_a, PyObject *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  long __pyx_v_num_exps_a;
+  long __pyx_v_num_exps_b;
   long __pyx_v_i;
   long __pyx_v_j;
   double __pyx_v_s;
@@ -20506,10 +20507,10 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("S", 1);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":26
+  /* "one_electron.pyx":26
  * 
  *     """
- *     cdef long num_exps = len(a.exps), i, j             # <<<<<<<<<<<<<<
+ *     cdef long num_exps_a = len(a.exps), num_exps_b = len(b.exps), i, j             # <<<<<<<<<<<<<<
  *     cdef double s = 0.0
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm
  */
@@ -20517,19 +20518,24 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(2, 26, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_num_exps = __pyx_t_2;
+  __pyx_v_num_exps_a = __pyx_t_2;
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_b, __pyx_n_s_exps); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 26, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_2 == ((Py_ssize_t)-1))) __PYX_ERR(2, 26, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_v_num_exps_b = __pyx_t_2;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":27
+  /* "one_electron.pyx":27
  *     """
- *     cdef long num_exps = len(a.exps), i, j
+ *     cdef long num_exps_a = len(a.exps), num_exps_b = len(b.exps), i, j
  *     cdef double s = 0.0             # <<<<<<<<<<<<<<
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
  */
   __pyx_v_s = 0.0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":28
- *     cdef long num_exps = len(a.exps), i, j
+  /* "one_electron.pyx":28
+ *     cdef long num_exps_a = len(a.exps), num_exps_b = len(b.exps), i, j
  *     cdef double s = 0.0
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm             # <<<<<<<<<<<<<<
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
@@ -20550,7 +20556,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":29
+  /* "one_electron.pyx":29
  *     cdef double s = 0.0
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs             # <<<<<<<<<<<<<<
@@ -20572,7 +20578,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":30
+  /* "one_electron.pyx":30
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps             # <<<<<<<<<<<<<<
@@ -20594,7 +20600,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":31
+  /* "one_electron.pyx":31
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps
  *     cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn             # <<<<<<<<<<<<<<
@@ -20612,7 +20618,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   memcpy(&(__pyx_v_lmn_b[0]), __pyx_t_4, sizeof(__pyx_v_lmn_b[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":32
+  /* "one_electron.pyx":32
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps
  *     cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin             # <<<<<<<<<<<<<<
@@ -20634,12 +20640,12 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":34
+  /* "one_electron.pyx":34
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
- *         for i in range(num_exps):
- *             for j in range(num_exps):
+ *         for i in range(num_exps_a):
+ *             for j in range(num_exps_b):
  */
   {
       #ifdef WITH_THREAD
@@ -20650,32 +20656,32 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
       #endif
       /*try:*/ {
 
-        /* "src/stong_core_cython/md/one_electron.pyx":35
+        /* "one_electron.pyx":35
  * 
  *     with nogil:
- *         for i in range(num_exps):             # <<<<<<<<<<<<<<
- *             for j in range(num_exps):
+ *         for i in range(num_exps_a):             # <<<<<<<<<<<<<<
+ *             for j in range(num_exps_b):
  *                 s += (
  */
-        __pyx_t_5 = __pyx_v_num_exps;
+        __pyx_t_5 = __pyx_v_num_exps_a;
         __pyx_t_6 = __pyx_t_5;
         for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
           __pyx_v_i = __pyx_t_7;
 
-          /* "src/stong_core_cython/md/one_electron.pyx":36
+          /* "one_electron.pyx":36
  *     with nogil:
- *         for i in range(num_exps):
- *             for j in range(num_exps):             # <<<<<<<<<<<<<<
+ *         for i in range(num_exps_a):
+ *             for j in range(num_exps_b):             # <<<<<<<<<<<<<<
  *                 s += (
  *                     norms_a[i]
  */
-          __pyx_t_8 = __pyx_v_num_exps;
+          __pyx_t_8 = __pyx_v_num_exps_b;
           __pyx_t_9 = __pyx_t_8;
           for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
             __pyx_v_j = __pyx_t_10;
 
-            /* "src/stong_core_cython/md/one_electron.pyx":38
- *             for j in range(num_exps):
+            /* "one_electron.pyx":38
+ *             for j in range(num_exps_b):
  *                 s += (
  *                     norms_a[i]             # <<<<<<<<<<<<<<
  *                     * norms_b[j]
@@ -20692,7 +20698,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
               __PYX_ERR(2, 38, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":39
+            /* "one_electron.pyx":39
  *                 s += (
  *                     norms_a[i]
  *                     * norms_b[j]             # <<<<<<<<<<<<<<
@@ -20710,7 +20716,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
               __PYX_ERR(2, 39, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":40
+            /* "one_electron.pyx":40
  *                     norms_a[i]
  *                     * norms_b[j]
  *                     * coefs_a[i]             # <<<<<<<<<<<<<<
@@ -20728,7 +20734,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
               __PYX_ERR(2, 40, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":41
+            /* "one_electron.pyx":41
  *                     * norms_b[j]
  *                     * coefs_a[i]
  *                     * coefs_b[j]             # <<<<<<<<<<<<<<
@@ -20746,7 +20752,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
               __PYX_ERR(2, 41, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":42
+            /* "one_electron.pyx":42
  *                     * coefs_a[i]
  *                     * coefs_b[j]
  *                     * overlap(exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b)             # <<<<<<<<<<<<<<
@@ -20773,11 +20779,11 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
               __Pyx_RaiseBufferIndexErrorNogil(__pyx_t_12);
               __PYX_ERR(2, 42, __pyx_L4_error)
             }
-            __pyx_t_18 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap((*((double *) ( /* dim=0 */ (__pyx_v_exps_a.data + __pyx_t_16 * __pyx_v_exps_a.strides[0]) ))), __pyx_v_lmn_a, __pyx_v_origin_a, (*((double *) ( /* dim=0 */ (__pyx_v_exps_b.data + __pyx_t_17 * __pyx_v_exps_b.strides[0]) ))), __pyx_v_lmn_b, __pyx_v_origin_b); if (unlikely(__pyx_t_18 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 42, __pyx_L4_error)
+            __pyx_t_18 = __pyx_f_12one_electron_overlap((*((double *) ( /* dim=0 */ (__pyx_v_exps_a.data + __pyx_t_16 * __pyx_v_exps_a.strides[0]) ))), __pyx_v_lmn_a, __pyx_v_origin_a, (*((double *) ( /* dim=0 */ (__pyx_v_exps_b.data + __pyx_t_17 * __pyx_v_exps_b.strides[0]) ))), __pyx_v_lmn_b, __pyx_v_origin_b); if (unlikely(__pyx_t_18 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 42, __pyx_L4_error)
 
-            /* "src/stong_core_cython/md/one_electron.pyx":37
- *         for i in range(num_exps):
- *             for j in range(num_exps):
+            /* "one_electron.pyx":37
+ *         for i in range(num_exps_a):
+ *             for j in range(num_exps_b):
  *                 s += (             # <<<<<<<<<<<<<<
  *                     norms_a[i]
  *                     * norms_b[j]
@@ -20787,12 +20793,12 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
         }
       }
 
-      /* "src/stong_core_cython/md/one_electron.pyx":34
+      /* "one_electron.pyx":34
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
- *         for i in range(num_exps):
- *             for j in range(num_exps):
+ *         for i in range(num_exps_a):
+ *             for j in range(num_exps_b):
  */
       /*finally:*/ {
         /*normal exit:*/{
@@ -20813,7 +20819,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
       }
   }
 
-  /* "src/stong_core_cython/md/one_electron.pyx":44
+  /* "one_electron.pyx":44
  *                     * overlap(exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b)
  *                 )
  *     return s             # <<<<<<<<<<<<<<
@@ -20823,7 +20829,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   __pyx_r = __pyx_v_s;
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":22
+  /* "one_electron.pyx":22
  * 
  * 
  * cpdef double S(object a, object b):             # <<<<<<<<<<<<<<
@@ -20835,7 +20841,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_3, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_norms_a, 1);
@@ -20851,16 +20857,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(PyObject *__
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_1S(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12one_electron_1S(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_2md_12one_electron_S, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\207\215\343\201\252\343\202\212\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_2md_12one_electron_1S = {"S", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_2md_12one_electron_1S, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_2md_12one_electron_S};
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_1S(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_12one_electron_S, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\207\215\343\201\252\343\202\212\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
+static PyMethodDef __pyx_mdef_12one_electron_1S = {"S", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12one_electron_1S, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_12one_electron_S};
+static PyObject *__pyx_pw_12one_electron_1S(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -20945,11 +20951,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_2md_12one_electron_S(__pyx_self, __pyx_v_a, __pyx_v_b);
+  __pyx_r = __pyx_pf_12one_electron_S(__pyx_self, __pyx_v_a, __pyx_v_b);
 
   /* function exit code */
   {
@@ -20962,7 +20968,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_S(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
+static PyObject *__pyx_pf_12one_electron_S(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -20972,7 +20978,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_S(CYTHON_U
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("S", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_S(__pyx_v_a, __pyx_v_b, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(2, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12one_electron_S(__pyx_v_a, __pyx_v_b, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(2, 22, __pyx_L1_error)
   __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(2, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -20982,7 +20988,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_S(CYTHON_U
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.S", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -20990,7 +20996,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_S(CYTHON_U
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/one_electron.pyx":47
+/* "one_electron.pyx":47
  * 
  * 
  * cdef double kinetic(double a, long[3] lmn1, double[:] A, double b, long[3] lmn2, double[:] B) nogil:             # <<<<<<<<<<<<<<
@@ -20998,7 +21004,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_S(CYTHON_U
  * 
  */
 
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double __pyx_v_a, long *__pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, long *__pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B) {
+static double __pyx_f_12one_electron_kinetic(double __pyx_v_a, long *__pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, long *__pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B) {
   long __pyx_v_l2;
   long __pyx_v_m2;
   long __pyx_v_n2;
@@ -21028,7 +21034,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   PyGILState_STATE __pyx_gilstate_save;
   #endif
 
-  /* "src/stong_core_cython/md/one_electron.pyx":51
+  /* "one_electron.pyx":51
  * 
  *     """
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]             # <<<<<<<<<<<<<<
@@ -21039,7 +21045,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   __pyx_v_m2 = (__pyx_v_lmn2[1]);
   __pyx_v_n2 = (__pyx_v_lmn2[2]);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":52
+  /* "one_electron.pyx":52
  *     """
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef long[3] lmn2_l = [l2 +2, m2, n2]             # <<<<<<<<<<<<<<
@@ -21051,7 +21057,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   __pyx_t_1[2] = __pyx_v_n2;
   memcpy(&(__pyx_v_lmn2_l[0]), __pyx_t_1, sizeof(__pyx_v_lmn2_l[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":53
+  /* "one_electron.pyx":53
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]
  *     cdef long[3] lmn2_l = [l2 +2, m2, n2]
  *     cdef long[3] lmn2_m = [l2, m2 + 2, n2]             # <<<<<<<<<<<<<<
@@ -21063,7 +21069,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   __pyx_t_2[2] = __pyx_v_n2;
   memcpy(&(__pyx_v_lmn2_m[0]), __pyx_t_2, sizeof(__pyx_v_lmn2_m[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":54
+  /* "one_electron.pyx":54
  *     cdef long[3] lmn2_l = [l2 +2, m2, n2]
  *     cdef long[3] lmn2_m = [l2, m2 + 2, n2]
  *     cdef long[3] lmn2_n = [l2, m2, n2 + 2]             # <<<<<<<<<<<<<<
@@ -21075,7 +21081,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   __pyx_t_3[2] = (__pyx_v_n2 + 2);
   memcpy(&(__pyx_v_lmn2_n[0]), __pyx_t_3, sizeof(__pyx_v_lmn2_n[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":55
+  /* "one_electron.pyx":55
  *     cdef long[3] lmn2_m = [l2, m2 + 2, n2]
  *     cdef long[3] lmn2_n = [l2, m2, n2 + 2]
  *     cdef long[3] lmnm2_l = [l2 - 2, m2, n2]             # <<<<<<<<<<<<<<
@@ -21087,7 +21093,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   __pyx_t_4[2] = __pyx_v_n2;
   memcpy(&(__pyx_v_lmnm2_l[0]), __pyx_t_4, sizeof(__pyx_v_lmnm2_l[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":56
+  /* "one_electron.pyx":56
  *     cdef long[3] lmn2_n = [l2, m2, n2 + 2]
  *     cdef long[3] lmnm2_l = [l2 - 2, m2, n2]
  *     cdef long[3] lmnm2_m = [l2, m2 - 2, n2]             # <<<<<<<<<<<<<<
@@ -21099,7 +21105,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   __pyx_t_5[2] = __pyx_v_n2;
   memcpy(&(__pyx_v_lmnm2_m[0]), __pyx_t_5, sizeof(__pyx_v_lmnm2_m[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":57
+  /* "one_electron.pyx":57
  *     cdef long[3] lmnm2_l = [l2 - 2, m2, n2]
  *     cdef long[3] lmnm2_m = [l2, m2 - 2, n2]
  *     cdef long[3] lmnm2_n = [l2, m2, n2 - 2]             # <<<<<<<<<<<<<<
@@ -21111,44 +21117,44 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   __pyx_t_6[2] = (__pyx_v_n2 - 2);
   memcpy(&(__pyx_v_lmnm2_n[0]), __pyx_t_6, sizeof(__pyx_v_lmnm2_n[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":59
+  /* "one_electron.pyx":59
  *     cdef long[3] lmnm2_n = [l2, m2, n2 - 2]
  * 
  *     cdef double term0 = b * (2 * (l2 + m2 + n2) + 3) * overlap(a, lmn1, A, b, lmn2, B)             # <<<<<<<<<<<<<<
  *     cdef double term1 = (
  *         -2
  */
-  __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2, __pyx_v_B); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 59, __pyx_L1_error)
+  __pyx_t_7 = __pyx_f_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2, __pyx_v_B); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 59, __pyx_L1_error)
   __pyx_v_term0 = ((__pyx_v_b * ((2 * ((__pyx_v_l2 + __pyx_v_m2) + __pyx_v_n2)) + 3)) * __pyx_t_7);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":64
+  /* "one_electron.pyx":64
  *         * b**2
  *         * (
  *             overlap(a, lmn1, A, b, lmn2_l, B)             # <<<<<<<<<<<<<<
  *             + overlap(a, lmn1, A, b, lmn2_m, B)
  *             + overlap(a, lmn1, A, b, lmn2_n, B)
  */
-  __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2_l, __pyx_v_B); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 64, __pyx_L1_error)
+  __pyx_t_7 = __pyx_f_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2_l, __pyx_v_B); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 64, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":65
+  /* "one_electron.pyx":65
  *         * (
  *             overlap(a, lmn1, A, b, lmn2_l, B)
  *             + overlap(a, lmn1, A, b, lmn2_m, B)             # <<<<<<<<<<<<<<
  *             + overlap(a, lmn1, A, b, lmn2_n, B)
  *         )
  */
-  __pyx_t_8 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2_m, __pyx_v_B); if (unlikely(__pyx_t_8 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 65, __pyx_L1_error)
+  __pyx_t_8 = __pyx_f_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2_m, __pyx_v_B); if (unlikely(__pyx_t_8 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 65, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":66
+  /* "one_electron.pyx":66
  *             overlap(a, lmn1, A, b, lmn2_l, B)
  *             + overlap(a, lmn1, A, b, lmn2_m, B)
  *             + overlap(a, lmn1, A, b, lmn2_n, B)             # <<<<<<<<<<<<<<
  *         )
  *     )
  */
-  __pyx_t_9 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2_n, __pyx_v_B); if (unlikely(__pyx_t_9 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 66, __pyx_L1_error)
+  __pyx_t_9 = __pyx_f_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmn2_n, __pyx_v_B); if (unlikely(__pyx_t_9 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 66, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":63
+  /* "one_electron.pyx":63
  *         -2
  *         * b**2
  *         * (             # <<<<<<<<<<<<<<
@@ -21157,34 +21163,34 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
  */
   __pyx_v_term1 = ((-2.0 * pow(__pyx_v_b, 2.0)) * ((__pyx_t_7 + __pyx_t_8) + __pyx_t_9));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":70
+  /* "one_electron.pyx":70
  *     )
  *     cdef double term2 = -0.5 * (
  *         l2 * (l2 - 1) * overlap(a, lmn1, A, b, lmnm2_l, B)             # <<<<<<<<<<<<<<
  *         + m2 * (m2 - 1) * overlap(a, lmn1, A, b, lmnm2_m, B)
  *         + n2 * (n2 - 1) * overlap(a, lmn1, A, b, lmnm2_n, B)
  */
-  __pyx_t_9 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmnm2_l, __pyx_v_B); if (unlikely(__pyx_t_9 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 70, __pyx_L1_error)
+  __pyx_t_9 = __pyx_f_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmnm2_l, __pyx_v_B); if (unlikely(__pyx_t_9 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 70, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":71
+  /* "one_electron.pyx":71
  *     cdef double term2 = -0.5 * (
  *         l2 * (l2 - 1) * overlap(a, lmn1, A, b, lmnm2_l, B)
  *         + m2 * (m2 - 1) * overlap(a, lmn1, A, b, lmnm2_m, B)             # <<<<<<<<<<<<<<
  *         + n2 * (n2 - 1) * overlap(a, lmn1, A, b, lmnm2_n, B)
  *     )
  */
-  __pyx_t_8 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmnm2_m, __pyx_v_B); if (unlikely(__pyx_t_8 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 71, __pyx_L1_error)
+  __pyx_t_8 = __pyx_f_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmnm2_m, __pyx_v_B); if (unlikely(__pyx_t_8 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 71, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":72
+  /* "one_electron.pyx":72
  *         l2 * (l2 - 1) * overlap(a, lmn1, A, b, lmnm2_l, B)
  *         + m2 * (m2 - 1) * overlap(a, lmn1, A, b, lmnm2_m, B)
  *         + n2 * (n2 - 1) * overlap(a, lmn1, A, b, lmnm2_n, B)             # <<<<<<<<<<<<<<
  *     )
  *     return term0 + term1 + term2
  */
-  __pyx_t_7 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmnm2_n, __pyx_v_B); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 72, __pyx_L1_error)
+  __pyx_t_7 = __pyx_f_12one_electron_overlap(__pyx_v_a, __pyx_v_lmn1, __pyx_v_A, __pyx_v_b, __pyx_v_lmnm2_n, __pyx_v_B); if (unlikely(__pyx_t_7 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 72, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":69
+  /* "one_electron.pyx":69
  *         )
  *     )
  *     cdef double term2 = -0.5 * (             # <<<<<<<<<<<<<<
@@ -21193,7 +21199,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
  */
   __pyx_v_term2 = (-0.5 * ((((__pyx_v_l2 * (__pyx_v_l2 - 1)) * __pyx_t_9) + ((__pyx_v_m2 * (__pyx_v_m2 - 1)) * __pyx_t_8)) + ((__pyx_v_n2 * (__pyx_v_n2 - 1)) * __pyx_t_7)));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":74
+  /* "one_electron.pyx":74
  *         + n2 * (n2 - 1) * overlap(a, lmn1, A, b, lmnm2_n, B)
  *     )
  *     return term0 + term1 + term2             # <<<<<<<<<<<<<<
@@ -21203,7 +21209,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   __pyx_r = ((__pyx_v_term0 + __pyx_v_term1) + __pyx_v_term2);
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":47
+  /* "one_electron.pyx":47
  * 
  * 
  * cdef double kinetic(double a, long[3] lmn1, double[:] A, double b, long[3] lmn2, double[:] B) nogil:             # <<<<<<<<<<<<<<
@@ -21216,7 +21222,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   #ifdef WITH_THREAD
   __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
   #endif
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.kinetic", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.kinetic", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   #ifdef WITH_THREAD
   __Pyx_PyGILState_Release(__pyx_gilstate_save);
@@ -21225,7 +21231,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/one_electron.pyx":77
+/* "one_electron.pyx":77
  * 
  * 
  * cpdef double T(object a, object b):             # <<<<<<<<<<<<<<
@@ -21233,14 +21239,14 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic(double
  * 
  */
 
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_3T(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12one_electron_3T(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__pyx_v_a, PyObject *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static double __pyx_f_12one_electron_T(PyObject *__pyx_v_a, PyObject *__pyx_v_b, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double __pyx_v_t;
   int __pyx_v_i;
   int __pyx_v_j;
@@ -21280,7 +21286,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("T", 1);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":81
+  /* "one_electron.pyx":81
  * 
  *     """
  *     cdef double t = 0.0             # <<<<<<<<<<<<<<
@@ -21289,7 +21295,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
  */
   __pyx_v_t = 0.0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":82
+  /* "one_electron.pyx":82
  *     """
  *     cdef double t = 0.0
  *     cdef int i, j, num_exps = len(a.exps)             # <<<<<<<<<<<<<<
@@ -21302,7 +21308,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_num_exps = __pyx_t_2;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":83
+  /* "one_electron.pyx":83
  *     cdef double t = 0.0
  *     cdef int i, j, num_exps = len(a.exps)
  *     cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn             # <<<<<<<<<<<<<<
@@ -21320,7 +21326,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   memcpy(&(__pyx_v_lmn_b[0]), __pyx_t_3, sizeof(__pyx_v_lmn_b[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":84
+  /* "one_electron.pyx":84
  *     cdef int i, j, num_exps = len(a.exps)
  *     cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin             # <<<<<<<<<<<<<<
@@ -21342,7 +21348,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":85
+  /* "one_electron.pyx":85
  *     cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm             # <<<<<<<<<<<<<<
@@ -21364,7 +21370,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":86
+  /* "one_electron.pyx":86
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs             # <<<<<<<<<<<<<<
@@ -21386,7 +21392,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":87
+  /* "one_electron.pyx":87
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps             # <<<<<<<<<<<<<<
@@ -21408,7 +21414,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":89
+  /* "one_electron.pyx":89
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -21424,7 +21430,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
       #endif
       /*try:*/ {
 
-        /* "src/stong_core_cython/md/one_electron.pyx":90
+        /* "one_electron.pyx":90
  * 
  *     with nogil:
  *         for i in range(num_exps):             # <<<<<<<<<<<<<<
@@ -21436,7 +21442,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
         for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
           __pyx_v_i = __pyx_t_7;
 
-          /* "src/stong_core_cython/md/one_electron.pyx":91
+          /* "one_electron.pyx":91
  *     with nogil:
  *         for i in range(num_exps):
  *             for j in range(num_exps):             # <<<<<<<<<<<<<<
@@ -21448,7 +21454,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
           for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
             __pyx_v_j = __pyx_t_10;
 
-            /* "src/stong_core_cython/md/one_electron.pyx":93
+            /* "one_electron.pyx":93
  *             for j in range(num_exps):
  *                 t += (
  *                     norms_a[i]             # <<<<<<<<<<<<<<
@@ -21466,7 +21472,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
               __PYX_ERR(2, 93, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":94
+            /* "one_electron.pyx":94
  *                 t += (
  *                     norms_a[i]
  *                     * norms_b[j]             # <<<<<<<<<<<<<<
@@ -21484,7 +21490,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
               __PYX_ERR(2, 94, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":95
+            /* "one_electron.pyx":95
  *                     norms_a[i]
  *                     * norms_b[j]
  *                     * coefs_a[i]             # <<<<<<<<<<<<<<
@@ -21502,7 +21508,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
               __PYX_ERR(2, 95, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":96
+            /* "one_electron.pyx":96
  *                     * norms_b[j]
  *                     * coefs_a[i]
  *                     * coefs_b[j]             # <<<<<<<<<<<<<<
@@ -21520,7 +21526,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
               __PYX_ERR(2, 96, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":97
+            /* "one_electron.pyx":97
  *                     * coefs_a[i]
  *                     * coefs_b[j]
  *                     * kinetic(exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b)             # <<<<<<<<<<<<<<
@@ -21547,9 +21553,9 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
               __Pyx_RaiseBufferIndexErrorNogil(__pyx_t_12);
               __PYX_ERR(2, 97, __pyx_L4_error)
             }
-            __pyx_t_18 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_kinetic((*((double *) ( /* dim=0 */ (__pyx_v_exps_a.data + __pyx_t_16 * __pyx_v_exps_a.strides[0]) ))), __pyx_v_lmn_a, __pyx_v_origin_a, (*((double *) ( /* dim=0 */ (__pyx_v_exps_b.data + __pyx_t_17 * __pyx_v_exps_b.strides[0]) ))), __pyx_v_lmn_b, __pyx_v_origin_b); if (unlikely(__pyx_t_18 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 97, __pyx_L4_error)
+            __pyx_t_18 = __pyx_f_12one_electron_kinetic((*((double *) ( /* dim=0 */ (__pyx_v_exps_a.data + __pyx_t_16 * __pyx_v_exps_a.strides[0]) ))), __pyx_v_lmn_a, __pyx_v_origin_a, (*((double *) ( /* dim=0 */ (__pyx_v_exps_b.data + __pyx_t_17 * __pyx_v_exps_b.strides[0]) ))), __pyx_v_lmn_b, __pyx_v_origin_b); if (unlikely(__pyx_t_18 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 97, __pyx_L4_error)
 
-            /* "src/stong_core_cython/md/one_electron.pyx":92
+            /* "one_electron.pyx":92
  *         for i in range(num_exps):
  *             for j in range(num_exps):
  *                 t += (             # <<<<<<<<<<<<<<
@@ -21560,7 +21566,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
           }
         }
 
-        /* "src/stong_core_cython/md/one_electron.pyx":99
+        /* "one_electron.pyx":99
  *                     * kinetic(exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b)
  *                 )
  *         return t             # <<<<<<<<<<<<<<
@@ -21571,7 +21577,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
         goto __pyx_L3_return;
       }
 
-      /* "src/stong_core_cython/md/one_electron.pyx":89
+      /* "one_electron.pyx":89
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -21596,7 +21602,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
       }
   }
 
-  /* "src/stong_core_cython/md/one_electron.pyx":77
+  /* "one_electron.pyx":77
  * 
  * 
  * cpdef double T(object a, object b):             # <<<<<<<<<<<<<<
@@ -21608,7 +21614,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_4, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_origin_a, 1);
@@ -21624,16 +21630,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(PyObject *__
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_3T(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12one_electron_3T(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_2md_12one_electron_2T, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\201\213\345\213\225\343\202\250\343\203\215\343\203\253\343\202\256\343\203\274\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_2md_12one_electron_3T = {"T", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_2md_12one_electron_3T, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_2md_12one_electron_2T};
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_3T(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_12one_electron_2T, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\351\201\213\345\213\225\343\202\250\343\203\215\343\203\253\343\202\256\343\203\274\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
+static PyMethodDef __pyx_mdef_12one_electron_3T = {"T", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12one_electron_3T, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_12one_electron_2T};
+static PyObject *__pyx_pw_12one_electron_3T(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21718,11 +21724,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_2md_12one_electron_2T(__pyx_self, __pyx_v_a, __pyx_v_b);
+  __pyx_r = __pyx_pf_12one_electron_2T(__pyx_self, __pyx_v_a, __pyx_v_b);
 
   /* function exit code */
   {
@@ -21735,7 +21741,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_2T(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
+static PyObject *__pyx_pf_12one_electron_2T(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -21745,7 +21751,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_2T(CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("T", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_T(__pyx_v_a, __pyx_v_b, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(2, 77, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12one_electron_T(__pyx_v_a, __pyx_v_b, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(2, 77, __pyx_L1_error)
   __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(2, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -21755,7 +21761,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_2T(CYTHON_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.T", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21763,7 +21769,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_2T(CYTHON_
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/one_electron.pyx":101
+/* "one_electron.pyx":101
  *         return t
  * 
  * cdef double nuclear_attraction(double a, long[3] lmn1, double[:] A,             # <<<<<<<<<<<<<<
@@ -21771,7 +21777,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_2T(CYTHON_
  *     """
  */
 
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attraction(double __pyx_v_a, long *__pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, long *__pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_C) {
+static double __pyx_f_12one_electron_nuclear_attraction(double __pyx_v_a, long *__pyx_v_lmn1, __Pyx_memviewslice __pyx_v_A, double __pyx_v_b, long *__pyx_v_lmn2, __Pyx_memviewslice __pyx_v_B, __Pyx_memviewslice __pyx_v_C) {
   double __pyx_v_p;
   long __pyx_v_l1;
   long __pyx_v_m1;
@@ -21809,7 +21815,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
   PyGILState_STATE __pyx_gilstate_save;
   #endif
 
-  /* "src/stong_core_cython/md/one_electron.pyx":106
+  /* "one_electron.pyx":106
  * 
  *     """
  *     cdef double p = a + b             # <<<<<<<<<<<<<<
@@ -21818,7 +21824,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
  */
   __pyx_v_p = (__pyx_v_a + __pyx_v_b);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":107
+  /* "one_electron.pyx":107
  *     """
  *     cdef double p = a + b
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]             # <<<<<<<<<<<<<<
@@ -21829,7 +21835,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
   __pyx_v_m1 = (__pyx_v_lmn1[1]);
   __pyx_v_n1 = (__pyx_v_lmn1[2]);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":108
+  /* "one_electron.pyx":108
  *     cdef double p = a + b
  *     cdef long l1 = lmn1[0], m1 = lmn1[1], n1 = lmn1[2]
  *     cdef long l2 = lmn2[0], m2 = lmn2[1], n2 = lmn2[2]             # <<<<<<<<<<<<<<
@@ -21840,7 +21846,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
   __pyx_v_m2 = (__pyx_v_lmn2[1]);
   __pyx_v_n2 = (__pyx_v_lmn2[2]);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":111
+  /* "one_electron.pyx":111
  *     cdef double[3] RPC
  *     cdef long t, u, v, i
  *     for i in range(3):             # <<<<<<<<<<<<<<
@@ -21850,7 +21856,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
   for (__pyx_t_1 = 0; __pyx_t_1 < 3; __pyx_t_1+=1) {
     __pyx_v_i = __pyx_t_1;
 
-    /* "src/stong_core_cython/md/one_electron.pyx":112
+    /* "one_electron.pyx":112
  *     cdef long t, u, v, i
  *     for i in range(3):
  *         RPC[i] = (a * A[i] + b * B[i]) / p - C[i]             # <<<<<<<<<<<<<<
@@ -21901,7 +21907,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
     (__pyx_v_RPC[__pyx_v_i]) = ((__pyx_t_5 / __pyx_v_p) - (*((double *) ( /* dim=0 */ (__pyx_v_C.data + __pyx_t_4 * __pyx_v_C.strides[0]) ))));
   }
 
-  /* "src/stong_core_cython/md/one_electron.pyx":113
+  /* "one_electron.pyx":113
  *     for i in range(3):
  *         RPC[i] = (a * A[i] + b * B[i]) / p - C[i]
  *     cdef double val = 0.0             # <<<<<<<<<<<<<<
@@ -21910,7 +21916,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
  */
   __pyx_v_val = 0.0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":114
+  /* "one_electron.pyx":114
  *         RPC[i] = (a * A[i] + b * B[i]) / p - C[i]
  *     cdef double val = 0.0
  *     for t in range(l1 + l2 + 1):             # <<<<<<<<<<<<<<
@@ -21922,7 +21928,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
   for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_t = __pyx_t_7;
 
-    /* "src/stong_core_cython/md/one_electron.pyx":115
+    /* "one_electron.pyx":115
  *     cdef double val = 0.0
  *     for t in range(l1 + l2 + 1):
  *         for u in range(m1 + m2 + 1):             # <<<<<<<<<<<<<<
@@ -21934,7 +21940,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_u = __pyx_t_10;
 
-      /* "src/stong_core_cython/md/one_electron.pyx":116
+      /* "one_electron.pyx":116
  *     for t in range(l1 + l2 + 1):
  *         for u in range(m1 + m2 + 1):
  *             for v in range(n1 + n2 + 1):             # <<<<<<<<<<<<<<
@@ -21946,7 +21952,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
       for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
         __pyx_v_v = __pyx_t_13;
 
-        /* "src/stong_core_cython/md/one_electron.pyx":118
+        /* "one_electron.pyx":118
  *             for v in range(n1 + n2 + 1):
  *                 val += (
  *                     E(l1, l2, t, a, b, A[0] - B[0])             # <<<<<<<<<<<<<<
@@ -21973,9 +21979,9 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
           __Pyx_RaiseBufferIndexErrorNogil(__pyx_t_3);
           __PYX_ERR(2, 118, __pyx_L1_error)
         }
-        __pyx_t_5 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_l1, __pyx_v_l2, __pyx_v_t, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_4 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_2 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_5 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 118, __pyx_L1_error)
+        __pyx_t_5 = __pyx_f_12one_electron_E(__pyx_v_l1, __pyx_v_l2, __pyx_v_t, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_4 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_2 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_5 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 118, __pyx_L1_error)
 
-        /* "src/stong_core_cython/md/one_electron.pyx":119
+        /* "one_electron.pyx":119
  *                 val += (
  *                     E(l1, l2, t, a, b, A[0] - B[0])
  *                     * E(m1, m2, u, a, b, A[1] - B[1])             # <<<<<<<<<<<<<<
@@ -22002,9 +22008,9 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
           __Pyx_RaiseBufferIndexErrorNogil(__pyx_t_3);
           __PYX_ERR(2, 119, __pyx_L1_error)
         }
-        __pyx_t_14 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_m1, __pyx_v_m2, __pyx_v_u, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_2 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_14 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 119, __pyx_L1_error)
+        __pyx_t_14 = __pyx_f_12one_electron_E(__pyx_v_m1, __pyx_v_m2, __pyx_v_u, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_2 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_4 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_14 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 119, __pyx_L1_error)
 
-        /* "src/stong_core_cython/md/one_electron.pyx":120
+        /* "one_electron.pyx":120
  *                     E(l1, l2, t, a, b, A[0] - B[0])
  *                     * E(m1, m2, u, a, b, A[1] - B[1])
  *                     * E(n1, n2, v, a, b, A[2] - B[2])             # <<<<<<<<<<<<<<
@@ -22031,18 +22037,18 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
           __Pyx_RaiseBufferIndexErrorNogil(__pyx_t_3);
           __PYX_ERR(2, 120, __pyx_L1_error)
         }
-        __pyx_t_15 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_E(__pyx_v_n1, __pyx_v_n2, __pyx_v_v, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_4 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_2 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_15 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 120, __pyx_L1_error)
+        __pyx_t_15 = __pyx_f_12one_electron_E(__pyx_v_n1, __pyx_v_n2, __pyx_v_v, __pyx_v_a, __pyx_v_b, ((*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_4 * __pyx_v_A.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_B.data + __pyx_t_2 * __pyx_v_B.strides[0]) ))))); if (unlikely(__pyx_t_15 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 120, __pyx_L1_error)
 
-        /* "src/stong_core_cython/md/one_electron.pyx":121
+        /* "one_electron.pyx":121
  *                     * E(m1, m2, u, a, b, A[1] - B[1])
  *                     * E(n1, n2, v, a, b, A[2] - B[2])
  *                     * R(0, t, u, v, p, RPC)             # <<<<<<<<<<<<<<
  *                 )
  *     return 2 * M_PI / p * val
  */
-        __pyx_t_16 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_R(0, __pyx_v_t, __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_16 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 121, __pyx_L1_error)
+        __pyx_t_16 = __pyx_f_12one_electron_R(0, __pyx_v_t, __pyx_v_u, __pyx_v_v, __pyx_v_p, __pyx_v_RPC); if (unlikely(__pyx_t_16 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 121, __pyx_L1_error)
 
-        /* "src/stong_core_cython/md/one_electron.pyx":117
+        /* "one_electron.pyx":117
  *         for u in range(m1 + m2 + 1):
  *             for v in range(n1 + n2 + 1):
  *                 val += (             # <<<<<<<<<<<<<<
@@ -22054,7 +22060,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
     }
   }
 
-  /* "src/stong_core_cython/md/one_electron.pyx":123
+  /* "one_electron.pyx":123
  *                     * R(0, t, u, v, p, RPC)
  *                 )
  *     return 2 * M_PI / p * val             # <<<<<<<<<<<<<<
@@ -22075,7 +22081,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
   __pyx_r = ((__pyx_t_16 / __pyx_v_p) * __pyx_v_val);
   goto __pyx_L0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":101
+  /* "one_electron.pyx":101
  *         return t
  * 
  * cdef double nuclear_attraction(double a, long[3] lmn1, double[:] A,             # <<<<<<<<<<<<<<
@@ -22088,7 +22094,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
   #ifdef WITH_THREAD
   __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
   #endif
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.nuclear_attraction", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.nuclear_attraction", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   #ifdef WITH_THREAD
   __Pyx_PyGILState_Release(__pyx_gilstate_save);
@@ -22097,7 +22103,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
   return __pyx_r;
 }
 
-/* "src/stong_core_cython/md/one_electron.pyx":125
+/* "one_electron.pyx":125
  *     return 2 * M_PI / p * val
  * 
  * cpdef double V(object a, object b, double[:] RC):             # <<<<<<<<<<<<<<
@@ -22105,14 +22111,14 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attrac
  * 
  */
 
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_5V(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12one_electron_5V(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__pyx_v_a, PyObject *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static double __pyx_f_12one_electron_V(PyObject *__pyx_v_a, PyObject *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC, CYTHON_UNUSED int __pyx_skip_dispatch) {
   double __pyx_v_v;
   long __pyx_v_num_exps;
   long __pyx_v_i;
@@ -22152,7 +22158,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("V", 1);
 
-  /* "src/stong_core_cython/md/one_electron.pyx":129
+  /* "one_electron.pyx":129
  * 
  *     """
  *     cdef double v = 0.0             # <<<<<<<<<<<<<<
@@ -22161,7 +22167,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
  */
   __pyx_v_v = 0.0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":130
+  /* "one_electron.pyx":130
  *     """
  *     cdef double v = 0.0
  *     cdef long num_exps = len(a.exps), i, j             # <<<<<<<<<<<<<<
@@ -22174,7 +22180,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_num_exps = __pyx_t_2;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":131
+  /* "one_electron.pyx":131
  *     cdef double v = 0.0
  *     cdef long num_exps = len(a.exps), i, j
  *     cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn             # <<<<<<<<<<<<<<
@@ -22192,7 +22198,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   memcpy(&(__pyx_v_lmn_b[0]), __pyx_t_3, sizeof(__pyx_v_lmn_b[0]) * (3));
 
-  /* "src/stong_core_cython/md/one_electron.pyx":132
+  /* "one_electron.pyx":132
  *     cdef long num_exps = len(a.exps), i, j
  *     cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin             # <<<<<<<<<<<<<<
@@ -22214,7 +22220,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":133
+  /* "one_electron.pyx":133
  *     cdef long[3] lmn_a = a.lmn, lmn_b = b.lmn
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm             # <<<<<<<<<<<<<<
@@ -22236,7 +22242,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":134
+  /* "one_electron.pyx":134
  *     cdef double[:] origin_a = a.origin, origin_b = b.origin
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs             # <<<<<<<<<<<<<<
@@ -22258,7 +22264,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":135
+  /* "one_electron.pyx":135
  *     cdef double[:] norms_a = a.norm, norms_b = b.norm
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps             # <<<<<<<<<<<<<<
@@ -22280,7 +22286,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
   __pyx_t_4.memview = NULL;
   __pyx_t_4.data = NULL;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":136
+  /* "one_electron.pyx":136
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -22296,7 +22302,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
       #endif
       /*try:*/ {
 
-        /* "src/stong_core_cython/md/one_electron.pyx":137
+        /* "one_electron.pyx":137
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps
  *     with nogil:
  *         for i in range(num_exps):             # <<<<<<<<<<<<<<
@@ -22308,7 +22314,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
         for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
           __pyx_v_i = __pyx_t_7;
 
-          /* "src/stong_core_cython/md/one_electron.pyx":138
+          /* "one_electron.pyx":138
  *     with nogil:
  *         for i in range(num_exps):
  *             for j in range(num_exps):             # <<<<<<<<<<<<<<
@@ -22320,7 +22326,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
           for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
             __pyx_v_j = __pyx_t_10;
 
-            /* "src/stong_core_cython/md/one_electron.pyx":140
+            /* "one_electron.pyx":140
  *             for j in range(num_exps):
  *                 v += (
  *                     norms_a[i]             # <<<<<<<<<<<<<<
@@ -22338,7 +22344,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
               __PYX_ERR(2, 140, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":141
+            /* "one_electron.pyx":141
  *                 v += (
  *                     norms_a[i]
  *                     * norms_b[j]             # <<<<<<<<<<<<<<
@@ -22356,7 +22362,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
               __PYX_ERR(2, 141, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":142
+            /* "one_electron.pyx":142
  *                     norms_a[i]
  *                     * norms_b[j]
  *                     * coefs_a[i]             # <<<<<<<<<<<<<<
@@ -22374,7 +22380,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
               __PYX_ERR(2, 142, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":143
+            /* "one_electron.pyx":143
  *                     * norms_b[j]
  *                     * coefs_a[i]
  *                     * coefs_b[j]             # <<<<<<<<<<<<<<
@@ -22392,7 +22398,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
               __PYX_ERR(2, 143, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":145
+            /* "one_electron.pyx":145
  *                     * coefs_b[j]
  *                     * nuclear_attraction(
  *                         exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b, RC             # <<<<<<<<<<<<<<
@@ -22420,16 +22426,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
               __PYX_ERR(2, 145, __pyx_L4_error)
             }
 
-            /* "src/stong_core_cython/md/one_electron.pyx":144
+            /* "one_electron.pyx":144
  *                     * coefs_a[i]
  *                     * coefs_b[j]
  *                     * nuclear_attraction(             # <<<<<<<<<<<<<<
  *                         exps_a[i], lmn_a, origin_a, exps_b[j], lmn_b, origin_b, RC
  *                     )
  */
-            __pyx_t_18 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_nuclear_attraction((*((double *) ( /* dim=0 */ (__pyx_v_exps_a.data + __pyx_t_16 * __pyx_v_exps_a.strides[0]) ))), __pyx_v_lmn_a, __pyx_v_origin_a, (*((double *) ( /* dim=0 */ (__pyx_v_exps_b.data + __pyx_t_17 * __pyx_v_exps_b.strides[0]) ))), __pyx_v_lmn_b, __pyx_v_origin_b, __pyx_v_RC); if (unlikely(__pyx_t_18 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 144, __pyx_L4_error)
+            __pyx_t_18 = __pyx_f_12one_electron_nuclear_attraction((*((double *) ( /* dim=0 */ (__pyx_v_exps_a.data + __pyx_t_16 * __pyx_v_exps_a.strides[0]) ))), __pyx_v_lmn_a, __pyx_v_origin_a, (*((double *) ( /* dim=0 */ (__pyx_v_exps_b.data + __pyx_t_17 * __pyx_v_exps_b.strides[0]) ))), __pyx_v_lmn_b, __pyx_v_origin_b, __pyx_v_RC); if (unlikely(__pyx_t_18 == ((double)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(2, 144, __pyx_L4_error)
 
-            /* "src/stong_core_cython/md/one_electron.pyx":139
+            /* "one_electron.pyx":139
  *         for i in range(num_exps):
  *             for j in range(num_exps):
  *                 v += (             # <<<<<<<<<<<<<<
@@ -22440,7 +22446,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
           }
         }
 
-        /* "src/stong_core_cython/md/one_electron.pyx":148
+        /* "one_electron.pyx":148
  *                     )
  *                 )
  *         return v             # <<<<<<<<<<<<<<
@@ -22449,7 +22455,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
         goto __pyx_L3_return;
       }
 
-      /* "src/stong_core_cython/md/one_electron.pyx":136
+      /* "one_electron.pyx":136
  *     cdef double[:] coefs_a = a.coefs, coefs_b = b.coefs
  *     cdef double[:] exps_a = a.exps, exps_b = b.exps
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -22474,7 +22480,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
       }
   }
 
-  /* "src/stong_core_cython/md/one_electron.pyx":125
+  /* "one_electron.pyx":125
  *     return 2 * M_PI / p * val
  * 
  * cpdef double V(object a, object b, double[:] RC):             # <<<<<<<<<<<<<<
@@ -22486,7 +22492,7 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_4, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_origin_a, 1);
@@ -22502,16 +22508,16 @@ static double __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(PyObject *__
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_5V(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12one_electron_5V(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_3src_17stong_core_cython_2md_12one_electron_4V, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\345\216\237\345\255\220\346\240\270\343\201\213\343\202\211\343\201\256\343\202\257\343\203\274\343\203\255\343\203\263\347\233\270\344\272\222\344\275\234\347\224\250\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
-static PyMethodDef __pyx_mdef_3src_17stong_core_cython_2md_12one_electron_5V = {"V", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_3src_17stong_core_cython_2md_12one_electron_5V, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_3src_17stong_core_cython_2md_12one_electron_4V};
-static PyObject *__pyx_pw_3src_17stong_core_cython_2md_12one_electron_5V(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_12one_electron_4V, "\n    \347\270\256\347\264\204\343\201\225\343\202\214\343\201\237\343\202\253\343\203\274\343\203\206\343\202\267\343\202\242\343\203\263\343\202\254\343\202\246\343\202\271\351\226\242\346\225\260\343\201\256\345\216\237\345\255\220\346\240\270\343\201\213\343\202\211\343\201\256\343\202\257\343\203\274\343\203\255\343\203\263\347\233\270\344\272\222\344\275\234\347\224\250\347\251\215\345\210\206\343\202\222\350\250\210\347\256\227\343\201\231\343\202\213\351\226\242\346\225\260\n    ");
+static PyMethodDef __pyx_mdef_12one_electron_5V = {"V", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12one_electron_5V, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_12one_electron_4V};
+static PyObject *__pyx_pw_12one_electron_5V(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -22612,11 +22618,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
   }
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_RC, 1);
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3src_17stong_core_cython_2md_12one_electron_4V(__pyx_self, __pyx_v_a, __pyx_v_b, __pyx_v_RC);
+  __pyx_r = __pyx_pf_12one_electron_4V(__pyx_self, __pyx_v_a, __pyx_v_b, __pyx_v_RC);
 
   /* function exit code */
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_RC, 1);
@@ -22630,7 +22636,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_4V(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC) {
+static PyObject *__pyx_pf_12one_electron_4V(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_a, PyObject *__pyx_v_b, __Pyx_memviewslice __pyx_v_RC) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   double __pyx_t_1;
@@ -22641,7 +22647,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_4V(CYTHON_
   __Pyx_RefNannySetupContext("V", 1);
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_RC.memview)) { __Pyx_RaiseUnboundLocalError("RC"); __PYX_ERR(2, 125, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_f_3src_17stong_core_cython_2md_12one_electron_V(__pyx_v_a, __pyx_v_b, __pyx_v_RC, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(2, 125, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12one_electron_V(__pyx_v_a, __pyx_v_b, __pyx_v_RC, 0); if (unlikely(__pyx_t_1 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(2, 125, __pyx_L1_error)
   __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(2, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -22651,7 +22657,7 @@ static PyObject *__pyx_pf_3src_17stong_core_cython_2md_12one_electron_4V(CYTHON_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("src.stong_core_cython.md.one_electron.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("one_electron.V", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -22796,7 +22802,7 @@ static PyType_Slot __pyx_type___pyx_array_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_array_spec = {
-  "src.stong_core_cython.md.one_electron.array",
+  "one_electron.array",
   sizeof(struct __pyx_array_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_SEQUENCE,
@@ -22842,7 +22848,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.md.one_electron.""array", /*tp_name*/
+  "one_electron.""array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -23002,7 +23008,7 @@ static PyType_Slot __pyx_type___pyx_MemviewEnum_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_MemviewEnum_spec = {
-  "src.stong_core_cython.md.one_electron.Enum",
+  "one_electron.Enum",
   sizeof(struct __pyx_MemviewEnum_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
@@ -23012,7 +23018,7 @@ static PyType_Spec __pyx_type___pyx_MemviewEnum_spec = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.md.one_electron.""Enum", /*tp_name*/
+  "one_electron.""Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -23309,7 +23315,7 @@ static PyType_Slot __pyx_type___pyx_memoryview_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_memoryview_spec = {
-  "src.stong_core_cython.md.one_electron.memoryview",
+  "one_electron.memoryview",
   sizeof(struct __pyx_memoryview_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
@@ -23355,7 +23361,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.md.one_electron.""memoryview", /*tp_name*/
+  "one_electron.""memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -23507,7 +23513,7 @@ static PyType_Slot __pyx_type___pyx_memoryviewslice_slots[] = {
   {0, 0},
 };
 static PyType_Spec __pyx_type___pyx_memoryviewslice_spec = {
-  "src.stong_core_cython.md.one_electron._memoryviewslice",
+  "one_electron._memoryviewslice",
   sizeof(struct __pyx_memoryviewslice_obj),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_SEQUENCE,
@@ -23517,7 +23523,7 @@ static PyType_Spec __pyx_type___pyx_memoryviewslice_spec = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "src.stong_core_cython.md.one_electron.""_memoryviewslice", /*tp_name*/
+  "one_electron.""_memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -23681,6 +23687,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_s_contiguous_and_direct, __pyx_k_contiguous_and_direct, sizeof(__pyx_k_contiguous_and_direct), 0, 0, 1, 0},
     {&__pyx_kp_s_contiguous_and_indirect, __pyx_k_contiguous_and_indirect, sizeof(__pyx_k_contiguous_and_indirect), 0, 0, 1, 0},
     {&__pyx_n_s_count, __pyx_k_count, sizeof(__pyx_k_count), 0, 0, 1, 1},
+    {&__pyx_kp_s_cython_one_electron_pyx, __pyx_k_cython_one_electron_pyx, sizeof(__pyx_k_cython_one_electron_pyx), 0, 0, 1, 0},
     {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
     {&__pyx_kp_u_disable, __pyx_k_disable, sizeof(__pyx_k_disable), 0, 1, 0, 0},
     {&__pyx_n_s_dtype_is_object, __pyx_k_dtype_is_object, sizeof(__pyx_k_dtype_is_object), 0, 0, 1, 1},
@@ -23720,6 +23727,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_numpy_core_multiarray_failed_to, __pyx_k_numpy_core_multiarray_failed_to, sizeof(__pyx_k_numpy_core_multiarray_failed_to), 0, 1, 0, 0},
     {&__pyx_kp_u_numpy_core_umath_failed_to_impor, __pyx_k_numpy_core_umath_failed_to_impor, sizeof(__pyx_k_numpy_core_umath_failed_to_impor), 0, 1, 0, 0},
     {&__pyx_n_s_obj, __pyx_k_obj, sizeof(__pyx_k_obj), 0, 0, 1, 1},
+    {&__pyx_n_s_one_electron, __pyx_k_one_electron, sizeof(__pyx_k_one_electron), 0, 0, 1, 1},
     {&__pyx_n_s_origin, __pyx_k_origin, sizeof(__pyx_k_origin), 0, 0, 1, 1},
     {&__pyx_n_s_pack, __pyx_k_pack, sizeof(__pyx_k_pack), 0, 0, 1, 1},
     {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
@@ -23740,8 +23748,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_shape, __pyx_k_shape, sizeof(__pyx_k_shape), 0, 0, 1, 1},
     {&__pyx_n_s_size, __pyx_k_size, sizeof(__pyx_k_size), 0, 0, 1, 1},
     {&__pyx_n_s_spec, __pyx_k_spec, sizeof(__pyx_k_spec), 0, 0, 1, 1},
-    {&__pyx_kp_s_src_stong_core_cython_md_one_ele, __pyx_k_src_stong_core_cython_md_one_ele, sizeof(__pyx_k_src_stong_core_cython_md_one_ele), 0, 0, 1, 0},
-    {&__pyx_n_s_src_stong_core_cython_md_one_ele_2, __pyx_k_src_stong_core_cython_md_one_ele_2, sizeof(__pyx_k_src_stong_core_cython_md_one_ele_2), 0, 0, 1, 1},
     {&__pyx_n_s_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 0, 1, 1},
     {&__pyx_n_s_step, __pyx_k_step, sizeof(__pyx_k_step), 0, 0, 1, 1},
     {&__pyx_n_s_stop, __pyx_k_stop, sizeof(__pyx_k_stop), 0, 0, 1, 1},
@@ -23944,7 +23950,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__20);
   __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_Enum, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(1, 1, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":22
+  /* "one_electron.pyx":22
  * 
  * 
  * cpdef double S(object a, object b):             # <<<<<<<<<<<<<<
@@ -23954,18 +23960,18 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__22 = PyTuple_Pack(2, __pyx_n_s_a, __pyx_n_s_b); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(2, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_md_one_ele, __pyx_n_s_S, 22, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(2, 22, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cython_one_electron_pyx, __pyx_n_s_S, 22, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(2, 22, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":77
+  /* "one_electron.pyx":77
  * 
  * 
  * cpdef double T(object a, object b):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_md_one_ele, __pyx_n_s_T, 77, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(2, 77, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cython_one_electron_pyx, __pyx_n_s_T, 77, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(2, 77, __pyx_L1_error)
 
-  /* "src/stong_core_cython/md/one_electron.pyx":125
+  /* "one_electron.pyx":125
  *     return 2 * M_PI / p * val
  * 
  * cpdef double V(object a, object b, double[:] RC):             # <<<<<<<<<<<<<<
@@ -23975,7 +23981,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__25 = PyTuple_Pack(3, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_RC); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(2, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_stong_core_cython_md_one_ele, __pyx_n_s_V, 125, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(2, 125, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cython_one_electron_pyx, __pyx_n_s_V, 125, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(2, 125, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -24555,14 +24561,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(2, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_src__stong_core_cython__md__one_electron) {
+  if (__pyx_module_is_main_one_electron) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(2, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(2, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "src.stong_core_cython.md.one_electron")) {
-      if (unlikely((PyDict_SetItemString(modules, "src.stong_core_cython.md.one_electron", __pyx_m) < 0))) __PYX_ERR(2, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "one_electron")) {
+      if (unlikely((PyDict_SetItemString(modules, "one_electron", __pyx_m) < 0))) __PYX_ERR(2, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -25096,7 +25102,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_Enum, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":4
+  /* "one_electron.pyx":4
  * 
  * from libc.math cimport exp, sqrt, M_PI, pow
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -25108,7 +25114,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_7) < 0) __PYX_ERR(2, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/md/utils.pxi":4
+  /* "cython/utils.pxi":4
  * 
  * from libc.math cimport exp, sqrt, M_PI
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -25120,43 +25126,43 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_7) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":22
+  /* "one_electron.pyx":22
  * 
  * 
  * cpdef double S(object a, object b):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_2md_12one_electron_1S, 0, __pyx_n_s_S, NULL, __pyx_n_s_src_stong_core_cython_md_one_ele_2, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_7)) __PYX_ERR(2, 22, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_12one_electron_1S, 0, __pyx_n_s_S, NULL, __pyx_n_s_one_electron, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_7)) __PYX_ERR(2, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_S, __pyx_t_7) < 0) __PYX_ERR(2, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":77
+  /* "one_electron.pyx":77
  * 
  * 
  * cpdef double T(object a, object b):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_2md_12one_electron_3T, 0, __pyx_n_s_T, NULL, __pyx_n_s_src_stong_core_cython_md_one_ele_2, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_7)) __PYX_ERR(2, 77, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_12one_electron_3T, 0, __pyx_n_s_T, NULL, __pyx_n_s_one_electron, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_7)) __PYX_ERR(2, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_T, __pyx_t_7) < 0) __PYX_ERR(2, 77, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":125
+  /* "one_electron.pyx":125
  *     return 2 * M_PI / p * val
  * 
  * cpdef double V(object a, object b, double[:] RC):             # <<<<<<<<<<<<<<
  *     """
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_3src_17stong_core_cython_2md_12one_electron_5V, 0, __pyx_n_s_V, NULL, __pyx_n_s_src_stong_core_cython_md_one_ele_2, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_7)) __PYX_ERR(2, 125, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_12one_electron_5V, 0, __pyx_n_s_V, NULL, __pyx_n_s_one_electron, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_7)) __PYX_ERR(2, 125, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_V, __pyx_t_7) < 0) __PYX_ERR(2, 125, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "src/stong_core_cython/md/one_electron.pyx":1
+  /* "one_electron.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * 
  * from libc.math cimport exp, sqrt, M_PI, pow
@@ -25175,7 +25181,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_7);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init src.stong_core_cython.md.one_electron", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init one_electron", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -25189,7 +25195,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init src.stong_core_cython.md.one_electron");
+    PyErr_SetString(PyExc_ImportError, "init one_electron");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

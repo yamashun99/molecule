@@ -36,15 +36,17 @@ class Atom:
 
 
 class Molecule:
-    def __init__(self, atoms):
+    def __init__(self, atoms, basis, charge=0):
         self.atoms = atoms
+        self.charge = charge
+        self.basis = basis
 
     def __repr__(self):
         atom_reprs = ", ".join(repr(atom) for atom in self.atoms)
         return f"Molecule(atoms=[{atom_reprs}])"
 
     def total_electrons(self):
-        return sum(atom.atomic_number for atom in self.atoms)
+        return sum(atom.atomic_number for atom in self.atoms) - self.charge
 
     def spin_electron_counts(self):
         Z = self.total_electrons()
