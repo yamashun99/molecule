@@ -40,6 +40,7 @@ class Molecule:
         self.atoms = atoms
         self.charge = charge
         self.basis = basis
+        self.norb = self.get_norb()
 
     def __repr__(self):
         atom_reprs = ", ".join(repr(atom) for atom in self.atoms)
@@ -53,3 +54,9 @@ class Molecule:
         n_up = Z // 2 + Z % 2  # スピンアップ電子数
         n_dn = Z // 2  # スピンダウン電子数
         return n_up, n_dn
+
+    def get_norb(self):
+        norb = 0
+        for atom in self.atoms:
+            norb += len(self.basis[atom.symbol])
+        return norb
